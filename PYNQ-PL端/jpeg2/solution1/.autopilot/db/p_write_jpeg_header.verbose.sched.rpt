@@ -1,0 +1,838 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_write_jpeg_header'
+================================================================
+* Date:           Tue Nov 19 20:39:21 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.254|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  1199|  1199|  1199|  1199|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 84
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.17>
+ST_1 : Operation 85 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -40, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:430]   --->   Operation 85 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 86 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -40, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:430]   --->   Operation 86 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 2.17>
+ST_3 : Operation 87 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -32, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:432]   --->   Operation 87 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 88 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -32, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:432]   --->   Operation 88 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 2.17>
+ST_5 : Operation 89 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 0, i8 16, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:433]   --->   Operation 89 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 90 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 0, i8 16, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:433]   --->   Operation 90 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 91 [2/2] (0.00ns)   --->   "call fastcc void @_write_5bytes_(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:434]   --->   Operation 91 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 3.25>
+ST_8 : Operation 92 [1/2] (3.25ns)   --->   "call fastcc void @_write_5bytes_(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:434]   --->   Operation 92 'call' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 2.73>
+ST_9 : Operation 93 [1/1] (2.73ns)   --->   "%empty = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:435]   --->   Operation 93 'call' 'empty' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 2.73>
+ST_10 : Operation 94 [1/1] (2.73ns)   --->   "%empty_35 = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:436]   --->   Operation 94 'call' 'empty_35' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 2.73>
+ST_11 : Operation 95 [1/1] (2.73ns)   --->   "%empty_36 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:437]   --->   Operation 95 'call' 'empty_36' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 2.17>
+ST_12 : Operation 96 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 0, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:438]   --->   Operation 96 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 0.00>
+ST_13 : Operation 97 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 0, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:438]   --->   Operation 97 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 2.17>
+ST_14 : Operation 98 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 0, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:439]   --->   Operation 98 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 0.00>
+ST_15 : Operation 99 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 0, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:439]   --->   Operation 99 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 2.73>
+ST_16 : Operation 100 [1/1] (2.73ns)   --->   "%empty_37 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:440]   --->   Operation 100 'call' 'empty_37' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 2.73>
+ST_17 : Operation 101 [1/1] (2.73ns)   --->   "%empty_38 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:441]   --->   Operation 101 'call' 'empty_38' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 2.17>
+ST_18 : Operation 102 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -37, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:443]   --->   Operation 102 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 0.00>
+ST_19 : Operation 103 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -37, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:443]   --->   Operation 103 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 2.17>
+ST_20 : Operation 104 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 0, i8 -124, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:444]   --->   Operation 104 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 105 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 0, i8 -124, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:444]   --->   Operation 105 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 2.73>
+ST_22 : Operation 106 [1/1] (2.73ns)   --->   "%JpegEncoder_outhebyt = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:445]   --->   Operation 106 'call' 'JpegEncoder_outhebyt' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 23 <SV = 22> <Delay = 1.76>
+ST_23 : Operation 107 [2/2] (1.76ns)   --->   "call fastcc void @_write_64bytes_([64 x i8]* %JpegEncoder_m_YTable, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:448]   --->   Operation 107 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 2.32>
+ST_24 : Operation 108 [1/2] (2.32ns)   --->   "call fastcc void @_write_64bytes_([64 x i8]* %JpegEncoder_m_YTable, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:448]   --->   Operation 108 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 2.73>
+ST_25 : Operation 109 [1/1] (2.73ns)   --->   "%JpegEncoder_outhebyt_5 = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:449]   --->   Operation 109 'call' 'JpegEncoder_outhebyt_5' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 1.76>
+ST_26 : Operation 110 [2/2] (1.76ns)   --->   "call fastcc void @_write_64bytes_([64 x i8]* %JpegEncoder_m_CbCrTable, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:450]   --->   Operation 110 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 2.32>
+ST_27 : Operation 111 [1/2] (2.32ns)   --->   "call fastcc void @_write_64bytes_([64 x i8]* %JpegEncoder_m_CbCrTable, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:450]   --->   Operation 111 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 2.17>
+ST_28 : Operation 112 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -64, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:453]   --->   Operation 112 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 28> <Delay = 0.00>
+ST_29 : Operation 113 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -64, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:453]   --->   Operation 113 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 29> <Delay = 2.17>
+ST_30 : Operation 114 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 0, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:454]   --->   Operation 114 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 30> <Delay = 0.00>
+ST_31 : Operation 115 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 0, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:454]   --->   Operation 115 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 32 <SV = 31> <Delay = 2.73>
+ST_32 : Operation 116 [1/1] (2.73ns)   --->   "%empty_39 = call fastcc i8 @_write_byte_(i1 false, i8 8, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:455]   --->   Operation 116 'call' 'empty_39' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 33 <SV = 32> <Delay = 2.17>
+ST_33 : Operation 117 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 1, i8 -32, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:456]   --->   Operation 117 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 34 <SV = 33> <Delay = 0.00>
+ST_34 : Operation 118 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 1, i8 -32, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:456]   --->   Operation 118 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 35 <SV = 34> <Delay = 2.17>
+ST_35 : Operation 119 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 2, i8 -128, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:457]   --->   Operation 119 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 36 <SV = 35> <Delay = 0.00>
+ST_36 : Operation 120 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 2, i8 -128, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:457]   --->   Operation 120 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 37 <SV = 36> <Delay = 2.73>
+ST_37 : Operation 121 [1/1] (2.73ns)   --->   "%empty_40 = call fastcc i8 @_write_byte_(i1 false, i8 3, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:458]   --->   Operation 121 'call' 'empty_40' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 38 <SV = 37> <Delay = 2.73>
+ST_38 : Operation 122 [1/1] (2.73ns)   --->   "%empty_41 = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:460]   --->   Operation 122 'call' 'empty_41' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 39 <SV = 38> <Delay = 2.73>
+ST_39 : Operation 123 [1/1] (2.73ns)   --->   "%empty_42 = call fastcc i8 @_write_byte_(i1 false, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:461]   --->   Operation 123 'call' 'empty_42' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 40 <SV = 39> <Delay = 2.73>
+ST_40 : Operation 124 [1/1] (2.73ns)   --->   "%empty_43 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:462]   --->   Operation 124 'call' 'empty_43' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 41 <SV = 40> <Delay = 2.73>
+ST_41 : Operation 125 [1/1] (2.73ns)   --->   "%empty_44 = call fastcc i8 @_write_byte_(i1 false, i8 2, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:464]   --->   Operation 125 'call' 'empty_44' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 42 <SV = 41> <Delay = 2.73>
+ST_42 : Operation 126 [1/1] (2.73ns)   --->   "%empty_45 = call fastcc i8 @_write_byte_(i1 false, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:465]   --->   Operation 126 'call' 'empty_45' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 43 <SV = 42> <Delay = 2.73>
+ST_43 : Operation 127 [1/1] (2.73ns)   --->   "%empty_46 = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:466]   --->   Operation 127 'call' 'empty_46' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 44 <SV = 43> <Delay = 2.73>
+ST_44 : Operation 128 [1/1] (2.73ns)   --->   "%empty_47 = call fastcc i8 @_write_byte_(i1 false, i8 3, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:468]   --->   Operation 128 'call' 'empty_47' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 45 <SV = 44> <Delay = 2.73>
+ST_45 : Operation 129 [1/1] (2.73ns)   --->   "%empty_48 = call fastcc i8 @_write_byte_(i1 false, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:469]   --->   Operation 129 'call' 'empty_48' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 46 <SV = 45> <Delay = 2.73>
+ST_46 : Operation 130 [1/1] (2.73ns)   --->   "%empty_49 = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:470]   --->   Operation 130 'call' 'empty_49' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 47 <SV = 46> <Delay = 2.17>
+ST_47 : Operation 131 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -60, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:473]   --->   Operation 131 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 48 <SV = 47> <Delay = 0.00>
+ST_48 : Operation 132 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -60, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:473]   --->   Operation 132 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 49 <SV = 48> <Delay = 2.17>
+ST_49 : Operation 133 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 1, i8 -94, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:474]   --->   Operation 133 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 50 <SV = 49> <Delay = 0.00>
+ST_50 : Operation 134 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 1, i8 -94, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:474]   --->   Operation 134 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 51 <SV = 50> <Delay = 2.73>
+ST_51 : Operation 135 [1/1] (2.73ns)   --->   "%JpegEncoder_outhebyt_6 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:475]   --->   Operation 135 'call' 'JpegEncoder_outhebyt_6' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 52 <SV = 51> <Delay = 1.86>
+ST_52 : Operation 136 [2/2] (1.86ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_5, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:478]   --->   Operation 136 'call' <Predicate = true> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 53 <SV = 52> <Delay = 2.32>
+ST_53 : Operation 137 [1/2] (2.32ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_5, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:478]   --->   Operation 137 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 54 <SV = 53> <Delay = 1.76>
+ST_54 : Operation 138 [2/2] (1.76ns)   --->   "call fastcc void @_write_12bytes_([12 x i8]* @p_anonymous_namespace, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:479]   --->   Operation 138 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 55 <SV = 54> <Delay = 2.32>
+ST_55 : Operation 139 [1/2] (2.32ns)   --->   "call fastcc void @_write_12bytes_([12 x i8]* @p_anonymous_namespace, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:479]   --->   Operation 139 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 56 <SV = 55> <Delay = 2.73>
+ST_56 : Operation 140 [1/1] (2.73ns)   --->   "%JpegEncoder_outhebyt_7 = call fastcc i8 @_write_byte_(i1 false, i8 16, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:480]   --->   Operation 140 'call' 'JpegEncoder_outhebyt_7' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 57 <SV = 56> <Delay = 1.86>
+ST_57 : Operation 141 [2/2] (1.86ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_10, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:481]   --->   Operation 141 'call' <Predicate = true> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 58 <SV = 57> <Delay = 2.32>
+ST_58 : Operation 142 [1/2] (2.32ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_10, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:481]   --->   Operation 142 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 59 <SV = 58> <Delay = 1.76>
+ST_59 : Operation 143 [2/2] (1.76ns)   --->   "call fastcc void @_write_162bytes_([162 x i8]* @p_anonymous_namespace_1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:482]   --->   Operation 143 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 60 <SV = 59> <Delay = 3.25>
+ST_60 : Operation 144 [1/2] (3.25ns)   --->   "call fastcc void @_write_162bytes_([162 x i8]* @p_anonymous_namespace_1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:482]   --->   Operation 144 'call' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 61 <SV = 60> <Delay = 2.73>
+ST_61 : Operation 145 [1/1] (2.73ns)   --->   "%JpegEncoder_outhebyt_8 = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:483]   --->   Operation 145 'call' 'JpegEncoder_outhebyt_8' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 62 <SV = 61> <Delay = 1.86>
+ST_62 : Operation 146 [2/2] (1.86ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_3, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:484]   --->   Operation 146 'call' <Predicate = true> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 63 <SV = 62> <Delay = 2.32>
+ST_63 : Operation 147 [1/2] (2.32ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_3, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:484]   --->   Operation 147 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 64 <SV = 63> <Delay = 1.76>
+ST_64 : Operation 148 [2/2] (1.76ns)   --->   "call fastcc void @_write_12bytes_([12 x i8]* @p_anonymous_namespace_4, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:485]   --->   Operation 148 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 65 <SV = 64> <Delay = 2.32>
+ST_65 : Operation 149 [1/2] (2.32ns)   --->   "call fastcc void @_write_12bytes_([12 x i8]* @p_anonymous_namespace_4, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:485]   --->   Operation 149 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 66 <SV = 65> <Delay = 2.73>
+ST_66 : Operation 150 [1/1] (2.73ns)   --->   "%JpegEncoder_outhebyt_9 = call fastcc i8 @_write_byte_(i1 false, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:486]   --->   Operation 150 'call' 'JpegEncoder_outhebyt_9' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 67 <SV = 66> <Delay = 1.86>
+ST_67 : Operation 151 [2/2] (1.86ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_8, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:487]   --->   Operation 151 'call' <Predicate = true> <Delay = 1.86> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 68 <SV = 67> <Delay = 2.32>
+ST_68 : Operation 152 [1/2] (2.32ns)   --->   "call fastcc void @_write_16bytes_([16 x i8]* @p_anonymous_namespace_8, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:487]   --->   Operation 152 'call' <Predicate = true> <Delay = 2.32> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 69 <SV = 68> <Delay = 1.76>
+ST_69 : Operation 153 [2/2] (1.76ns)   --->   "call fastcc void @_write_162bytes_([162 x i8]* @p_anonymous_namespace_9, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:488]   --->   Operation 153 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 70 <SV = 69> <Delay = 3.25>
+ST_70 : Operation 154 [1/2] (3.25ns)   --->   "call fastcc void @_write_162bytes_([162 x i8]* @p_anonymous_namespace_9, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:488]   --->   Operation 154 'call' <Predicate = true> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 71 <SV = 70> <Delay = 2.17>
+ST_71 : Operation 155 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -38, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:491]   --->   Operation 155 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 72 <SV = 71> <Delay = 0.00>
+ST_72 : Operation 156 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 -1, i8 -38, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:491]   --->   Operation 156 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 73 <SV = 72> <Delay = 2.17>
+ST_73 : Operation 157 [2/2] (2.17ns)   --->   "call fastcc void @_write_word_(i3 0, i8 12, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:492]   --->   Operation 157 'call' <Predicate = true> <Delay = 2.17> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 74 <SV = 73> <Delay = 0.00>
+ST_74 : Operation 158 [1/2] (0.00ns)   --->   "call fastcc void @_write_word_(i3 0, i8 12, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:492]   --->   Operation 158 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 75 <SV = 74> <Delay = 2.73>
+ST_75 : Operation 159 [1/1] (2.73ns)   --->   "%empty_50 = call fastcc i8 @_write_byte_(i1 false, i8 3, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:493]   --->   Operation 159 'call' 'empty_50' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 76 <SV = 75> <Delay = 2.73>
+ST_76 : Operation 160 [1/1] (2.73ns)   --->   "%empty_51 = call fastcc i8 @_write_byte_(i1 false, i8 1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:495]   --->   Operation 160 'call' 'empty_51' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 77 <SV = 76> <Delay = 2.73>
+ST_77 : Operation 161 [1/1] (2.73ns)   --->   "%empty_52 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:496]   --->   Operation 161 'call' 'empty_52' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 78 <SV = 77> <Delay = 2.73>
+ST_78 : Operation 162 [1/1] (2.73ns)   --->   "%empty_53 = call fastcc i8 @_write_byte_(i1 false, i8 2, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:498]   --->   Operation 162 'call' 'empty_53' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 79 <SV = 78> <Delay = 2.73>
+ST_79 : Operation 163 [1/1] (2.73ns)   --->   "%empty_54 = call fastcc i8 @_write_byte_(i1 false, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:499]   --->   Operation 163 'call' 'empty_54' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 80 <SV = 79> <Delay = 2.73>
+ST_80 : Operation 164 [1/1] (2.73ns)   --->   "%empty_55 = call fastcc i8 @_write_byte_(i1 false, i8 3, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:501]   --->   Operation 164 'call' 'empty_55' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 81 <SV = 80> <Delay = 2.73>
+ST_81 : Operation 165 [1/1] (2.73ns)   --->   "%empty_56 = call fastcc i8 @_write_byte_(i1 false, i8 17, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:502]   --->   Operation 165 'call' 'empty_56' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 82 <SV = 81> <Delay = 2.73>
+ST_82 : Operation 166 [1/1] (2.73ns)   --->   "%empty_57 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:504]   --->   Operation 166 'call' 'empty_57' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 83 <SV = 82> <Delay = 2.73>
+ST_83 : Operation 167 [1/1] (2.73ns)   --->   "%empty_58 = call fastcc i8 @_write_byte_(i1 false, i8 63, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:505]   --->   Operation 167 'call' 'empty_58' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 84 <SV = 83> <Delay = 2.73>
+ST_84 : Operation 168 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind"   --->   Operation 168 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_84 : Operation 169 [1/1] (2.73ns)   --->   "%JpegEncoder_outhebyt_2 = call fastcc i8 @_write_byte_(i1 false, i8 0, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:506]   --->   Operation 169 'call' 'JpegEncoder_outhebyt_2' <Predicate = true> <Delay = 2.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_84 : Operation 170 [1/1] (0.00ns)   --->   "ret i8 %JpegEncoder_outhebyt_2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:507]   --->   Operation 170 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln430', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:430) to '_write_word_' [17]  (2.17 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln432', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:432) to '_write_word_' [18]  (2.17 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln433', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:433) to '_write_word_' [19]  (2.17 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ln434', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:434) to '_write_5bytes_' [20]  (3.25 ns)
+
+ <State 9>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:435) to '_write_byte_' [21]  (2.73 ns)
+
+ <State 10>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_35', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:436) to '_write_byte_' [22]  (2.73 ns)
+
+ <State 11>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_36', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:437) to '_write_byte_' [23]  (2.73 ns)
+
+ <State 12>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln438', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:438) to '_write_word_' [24]  (2.17 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln439', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:439) to '_write_word_' [25]  (2.17 ns)
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+ <State 16>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_37', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:440) to '_write_byte_' [26]  (2.73 ns)
+
+ <State 17>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_38', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:441) to '_write_byte_' [27]  (2.73 ns)
+
+ <State 18>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln443', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:443) to '_write_word_' [28]  (2.17 ns)
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln444', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:444) to '_write_word_' [29]  (2.17 ns)
+
+ <State 21>: 0ns
+The critical path consists of the following:
+
+ <State 22>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('JpegEncoder_outhebyt', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:445) to '_write_byte_' [30]  (2.73 ns)
+
+ <State 23>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln448', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:448) to '_write_64bytes_' [31]  (1.77 ns)
+
+ <State 24>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln448', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:448) to '_write_64bytes_' [31]  (2.32 ns)
+
+ <State 25>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('JpegEncoder_outhebyt_5', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:449) to '_write_byte_' [32]  (2.73 ns)
+
+ <State 26>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln450', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:450) to '_write_64bytes_' [33]  (1.77 ns)
+
+ <State 27>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln450', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:450) to '_write_64bytes_' [33]  (2.32 ns)
+
+ <State 28>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln453', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:453) to '_write_word_' [34]  (2.17 ns)
+
+ <State 29>: 0ns
+The critical path consists of the following:
+
+ <State 30>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln454', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:454) to '_write_word_' [35]  (2.17 ns)
+
+ <State 31>: 0ns
+The critical path consists of the following:
+
+ <State 32>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_39', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:455) to '_write_byte_' [36]  (2.73 ns)
+
+ <State 33>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln456', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:456) to '_write_word_' [37]  (2.17 ns)
+
+ <State 34>: 0ns
+The critical path consists of the following:
+
+ <State 35>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln457', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:457) to '_write_word_' [38]  (2.17 ns)
+
+ <State 36>: 0ns
+The critical path consists of the following:
+
+ <State 37>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_40', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:458) to '_write_byte_' [39]  (2.73 ns)
+
+ <State 38>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_41', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:460) to '_write_byte_' [40]  (2.73 ns)
+
+ <State 39>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_42', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:461) to '_write_byte_' [41]  (2.73 ns)
+
+ <State 40>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_43', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:462) to '_write_byte_' [42]  (2.73 ns)
+
+ <State 41>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_44', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:464) to '_write_byte_' [43]  (2.73 ns)
+
+ <State 42>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_45', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:465) to '_write_byte_' [44]  (2.73 ns)
+
+ <State 43>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_46', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:466) to '_write_byte_' [45]  (2.73 ns)
+
+ <State 44>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_47', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:468) to '_write_byte_' [46]  (2.73 ns)
+
+ <State 45>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_48', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:469) to '_write_byte_' [47]  (2.73 ns)
+
+ <State 46>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_49', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:470) to '_write_byte_' [48]  (2.73 ns)
+
+ <State 47>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln473', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:473) to '_write_word_' [49]  (2.17 ns)
+
+ <State 48>: 0ns
+The critical path consists of the following:
+
+ <State 49>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln474', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:474) to '_write_word_' [50]  (2.17 ns)
+
+ <State 50>: 0ns
+The critical path consists of the following:
+
+ <State 51>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('JpegEncoder_outhebyt_6', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:475) to '_write_byte_' [51]  (2.73 ns)
+
+ <State 52>: 1.86ns
+The critical path consists of the following:
+	'call' operation ('call_ln478', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:478) to '_write_16bytes_' [52]  (1.86 ns)
+
+ <State 53>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln478', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:478) to '_write_16bytes_' [52]  (2.32 ns)
+
+ <State 54>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln479', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:479) to '_write_12bytes_' [53]  (1.77 ns)
+
+ <State 55>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln479', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:479) to '_write_12bytes_' [53]  (2.32 ns)
+
+ <State 56>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('JpegEncoder_outhebyt_7', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:480) to '_write_byte_' [54]  (2.73 ns)
+
+ <State 57>: 1.86ns
+The critical path consists of the following:
+	'call' operation ('call_ln481', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:481) to '_write_16bytes_' [55]  (1.86 ns)
+
+ <State 58>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln481', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:481) to '_write_16bytes_' [55]  (2.32 ns)
+
+ <State 59>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln482', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:482) to '_write_162bytes_' [56]  (1.77 ns)
+
+ <State 60>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ln482', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:482) to '_write_162bytes_' [56]  (3.25 ns)
+
+ <State 61>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('JpegEncoder_outhebyt_8', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:483) to '_write_byte_' [57]  (2.73 ns)
+
+ <State 62>: 1.86ns
+The critical path consists of the following:
+	'call' operation ('call_ln484', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:484) to '_write_16bytes_' [58]  (1.86 ns)
+
+ <State 63>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln484', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:484) to '_write_16bytes_' [58]  (2.32 ns)
+
+ <State 64>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln485', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:485) to '_write_12bytes_' [59]  (1.77 ns)
+
+ <State 65>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln485', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:485) to '_write_12bytes_' [59]  (2.32 ns)
+
+ <State 66>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('JpegEncoder_outhebyt_9', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:486) to '_write_byte_' [60]  (2.73 ns)
+
+ <State 67>: 1.86ns
+The critical path consists of the following:
+	'call' operation ('call_ln487', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:487) to '_write_16bytes_' [61]  (1.86 ns)
+
+ <State 68>: 2.32ns
+The critical path consists of the following:
+	'call' operation ('call_ln487', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:487) to '_write_16bytes_' [61]  (2.32 ns)
+
+ <State 69>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ln488', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:488) to '_write_162bytes_' [62]  (1.77 ns)
+
+ <State 70>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ln488', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:488) to '_write_162bytes_' [62]  (3.25 ns)
+
+ <State 71>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln491', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:491) to '_write_word_' [63]  (2.17 ns)
+
+ <State 72>: 0ns
+The critical path consists of the following:
+
+ <State 73>: 2.17ns
+The critical path consists of the following:
+	'call' operation ('call_ln492', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:492) to '_write_word_' [64]  (2.17 ns)
+
+ <State 74>: 0ns
+The critical path consists of the following:
+
+ <State 75>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_50', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:493) to '_write_byte_' [65]  (2.73 ns)
+
+ <State 76>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_51', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:495) to '_write_byte_' [66]  (2.73 ns)
+
+ <State 77>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_52', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:496) to '_write_byte_' [67]  (2.73 ns)
+
+ <State 78>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_53', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:498) to '_write_byte_' [68]  (2.73 ns)
+
+ <State 79>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_54', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:499) to '_write_byte_' [69]  (2.73 ns)
+
+ <State 80>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_55', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:501) to '_write_byte_' [70]  (2.73 ns)
+
+ <State 81>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_56', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:502) to '_write_byte_' [71]  (2.73 ns)
+
+ <State 82>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_57', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:504) to '_write_byte_' [72]  (2.73 ns)
+
+ <State 83>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('empty_58', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:505) to '_write_byte_' [73]  (2.73 ns)
+
+ <State 84>: 2.73ns
+The critical path consists of the following:
+	'call' operation ('JpegEncoder_outhebyt_2', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:506) to '_write_byte_' [74]  (2.73 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,292 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "jpeg2",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "off",
+                "value": "",
+                "positionalBoolean": "register_mode"
+              },
+              {
+                "name": "port",
+                "value": "rgb_in",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "jpeg2",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "off",
+                "value": "",
+                "positionalBoolean": "register_mode"
+              },
+              {
+                "name": "port",
+                "value": "jpeg_out",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_write_bitstring_",
+          "label": "wb2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "17"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::encodeToJPG",
+          "label": "en2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "81"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::readFromBMP",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INLINE",
+            "option": [{
+                "name": "off",
+                "value": "",
+                "positionalBoolean": "1"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::main",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "axis",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "register",
+                "value": "",
+                "positionalBoolean": "1"
+              },
+              {
+                "name": "both",
+                "value": "",
+                "positionalBoolean": "register_mode"
+              },
+              {
+                "name": "port",
+                "value": "rgb_in",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::readFromBMP",
+          "label": "regiion",
+          "functionLabel": "",
+          "pragma": {"name": "LOOP_MERGE"}
+        },
+        {
+          "functionName": "JpegEncoder::readFromBMP",
+          "label": "RB",
+          "functionLabel": "",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "8"
+              }]
+          }
+        },
+        {
+          "functionName": "jpeg2",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "s_axilite",
+                "value": "",
+                "positionalBoolean": "mode"
+              },
+              {
+                "name": "port",
+                "value": "return",
+                "positionalBoolean": "4"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_foword_FDC",
+          "label": "FDC5",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "JpegEncoder::_foword_FDC",
+          "label": "FDC9",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "JpegEncoder::_foword_FDC",
+          "label": "FDC1",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "JpegEncoder::_doHuffmanEncoding",
+          "label": "huff4",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "5"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_computeHuffmanTable",
+          "label": "comhuff2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "128"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_convertColorSpace",
+          "label": "conver_col1",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "JpegEncoder::_convertColorSpace",
+          "label": "conver_col2",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "JpegEncoder::_doHuffmanEncoding",
+          "label": "huff2",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "64"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_doHuffmanEncoding",
+          "label": "huff3",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "64"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_doHuffmanEncoding",
+          "label": "huff1",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "64"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_getBitCode",
+          "label": "bit1",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LOOP_TRIPCOUNT",
+            "option": [{
+                "name": "max",
+                "value": "16"
+              }]
+          }
+        },
+        {
+          "functionName": "JpegEncoder::_doHuffmanEncoding",
+          "label": "huff1",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "JpegEncoder::_getBitCode",
+          "label": "bit1",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "JpegEncoder::_write_bitstring_",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "JpegEncoder::_doHuffmanEncoding",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "JpegEncoder::encodeToJPG",
+          "label": "en2",
+          "functionLabel": "",
+          "pragma": {"name": "UNROLL"}
+        }
+      ]
+    }]}

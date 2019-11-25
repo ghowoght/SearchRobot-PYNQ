@@ -1,0 +1,242 @@
+<stg><name>_write_word_</name>
+
+
+<trans_list>
+
+<trans id="10" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+:1  %inf_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %inf)
+
+]]></Node>
+<StgValue><ssdm name="inf_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="8" op_0_bw="3">
+<![CDATA[
+:2  %tmp_data_V = sext i3 %inf_read to i8
+
+]]></Node>
+<StgValue><ssdm name="tmp_data_V"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>AXI4Stream</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8" op_6_bw="1" op_7_bw="1" op_8_bw="1">
+<![CDATA[
+:4  call void @_ssdm_op_Write.axis.volatile.i8P.i1P.i1P.i1P(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V, i8 %tmp_data_V, i1 true, i1 undef, i1 false)
+
+]]></Node>
+<StgValue><ssdm name="write_ln519"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:0  %tmp_data_V_8 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %sec)
+
+]]></Node>
+<StgValue><ssdm name="tmp_data_V_8"/></StgValue>
+</operation>
+
+<operation id="7" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="32" op_10_bw="32" op_11_bw="0" op_12_bw="0" op_13_bw="0" op_14_bw="32" op_15_bw="32" op_16_bw="32" op_17_bw="32" op_18_bw="0" op_19_bw="0">
+<![CDATA[
+:3  call void (...)* @_ssdm_op_SpecInterface(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>AXI4Stream</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="8" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="0">
+<![CDATA[
+:5  call void @_ssdm_op_Write.axis.volatile.i8P.i1P.i1P.i1P(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V, i8 %tmp_data_V_8, i1 true, i1 undef, i1 false)
+
+]]></Node>
+<StgValue><ssdm name="write_ln521"/></StgValue>
+</operation>
+
+<operation id="9" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="0">
+<![CDATA[
+:6  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln0"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="11" name="inf" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="inf"/></StgValue>
+</port>
+<port id="12" name="sec" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="sec"/></StgValue>
+</port>
+<port id="13" name="jpeg_out_V_data_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="jpeg_out_V_data_V"/></StgValue>
+</port>
+<port id="14" name="jpeg_out_V_keep_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="jpeg_out_V_keep_V"/></StgValue>
+</port>
+<port id="15" name="jpeg_out_V_strb_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="jpeg_out_V_strb_V"/></StgValue>
+</port>
+<port id="16" name="jpeg_out_V_last_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="jpeg_out_V_last_V"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="18" from="_ssdm_op_Read.ap_auto.i3" to="inf_read" fromId="17" toId="3">
+</dataflow>
+<dataflow id="19" from="inf" to="inf_read" fromId="11" toId="3">
+</dataflow>
+<dataflow id="20" from="inf_read" to="tmp_data_V" fromId="3" toId="4">
+</dataflow>
+<dataflow id="22" from="_ssdm_op_Write.axis.volatile.i8P.i1P.i1P.i1P" to="write_ln519" fromId="21" toId="5">
+</dataflow>
+<dataflow id="23" from="jpeg_out_V_data_V" to="write_ln519" fromId="13" toId="5">
+</dataflow>
+<dataflow id="24" from="jpeg_out_V_keep_V" to="write_ln519" fromId="14" toId="5">
+</dataflow>
+<dataflow id="25" from="jpeg_out_V_strb_V" to="write_ln519" fromId="15" toId="5">
+</dataflow>
+<dataflow id="26" from="jpeg_out_V_last_V" to="write_ln519" fromId="16" toId="5">
+</dataflow>
+<dataflow id="27" from="tmp_data_V" to="write_ln519" fromId="4" toId="5">
+</dataflow>
+<dataflow id="29" from="StgValue_28" to="write_ln519" fromId="28" toId="5">
+</dataflow>
+<dataflow id="31" from="StgValue_30" to="write_ln519" fromId="30" toId="5">
+</dataflow>
+<dataflow id="33" from="StgValue_32" to="write_ln519" fromId="32" toId="5">
+</dataflow>
+<dataflow id="35" from="_ssdm_op_Read.ap_auto.i8" to="tmp_data_V_8" fromId="34" toId="6">
+</dataflow>
+<dataflow id="36" from="sec" to="tmp_data_V_8" fromId="12" toId="6">
+</dataflow>
+<dataflow id="38" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="37" toId="7">
+</dataflow>
+<dataflow id="39" from="jpeg_out_V_data_V" to="specinterface_ln0" fromId="13" toId="7">
+</dataflow>
+<dataflow id="40" from="jpeg_out_V_keep_V" to="specinterface_ln0" fromId="14" toId="7">
+</dataflow>
+<dataflow id="41" from="jpeg_out_V_strb_V" to="specinterface_ln0" fromId="15" toId="7">
+</dataflow>
+<dataflow id="42" from="jpeg_out_V_last_V" to="specinterface_ln0" fromId="16" toId="7">
+</dataflow>
+<dataflow id="44" from="p_str39" to="specinterface_ln0" fromId="43" toId="7">
+</dataflow>
+<dataflow id="46" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="47" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="49" from="p_str" to="specinterface_ln0" fromId="48" toId="7">
+</dataflow>
+<dataflow id="50" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="51" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="52" from="p_str" to="specinterface_ln0" fromId="48" toId="7">
+</dataflow>
+<dataflow id="53" from="p_str" to="specinterface_ln0" fromId="48" toId="7">
+</dataflow>
+<dataflow id="54" from="p_str" to="specinterface_ln0" fromId="48" toId="7">
+</dataflow>
+<dataflow id="55" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="56" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="57" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="58" from="StgValue_45" to="specinterface_ln0" fromId="45" toId="7">
+</dataflow>
+<dataflow id="59" from="p_str" to="specinterface_ln0" fromId="48" toId="7">
+</dataflow>
+<dataflow id="60" from="p_str" to="specinterface_ln0" fromId="48" toId="7">
+</dataflow>
+<dataflow id="61" from="_ssdm_op_Write.axis.volatile.i8P.i1P.i1P.i1P" to="write_ln521" fromId="21" toId="8">
+</dataflow>
+<dataflow id="62" from="jpeg_out_V_data_V" to="write_ln521" fromId="13" toId="8">
+</dataflow>
+<dataflow id="63" from="jpeg_out_V_keep_V" to="write_ln521" fromId="14" toId="8">
+</dataflow>
+<dataflow id="64" from="jpeg_out_V_strb_V" to="write_ln521" fromId="15" toId="8">
+</dataflow>
+<dataflow id="65" from="jpeg_out_V_last_V" to="write_ln521" fromId="16" toId="8">
+</dataflow>
+<dataflow id="66" from="tmp_data_V_8" to="write_ln521" fromId="6" toId="8">
+</dataflow>
+<dataflow id="67" from="StgValue_28" to="write_ln521" fromId="28" toId="8">
+</dataflow>
+<dataflow id="68" from="StgValue_30" to="write_ln521" fromId="30" toId="8">
+</dataflow>
+<dataflow id="69" from="StgValue_32" to="write_ln521" fromId="32" toId="8">
+</dataflow>
+</dataflows>
+
+
+</stg>

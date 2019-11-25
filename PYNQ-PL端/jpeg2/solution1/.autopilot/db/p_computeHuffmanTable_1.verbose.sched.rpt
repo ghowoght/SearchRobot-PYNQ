@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_computeHuffmanTable_1'
+================================================================
+* Date:           Tue Nov 19 20:39:18 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.684|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-------+-----+-------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    | min |  max  | min |  max  |   Type  |
+    +-----+-------+-----+-------+---------+
+    |   65|  10305|   65|  10305|   none  |
+    +-----+-------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-------+----------+-----------+-----------+---------+----------+
+        |             |   Latency   | Iteration|  Initiation Interval  |   Trip  |          |
+        |  Loop Name  | min |  max  |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------+-----+-------+----------+-----------+-----------+---------+----------+
+        |- comhuff1   |   64|  10304|  4 ~ 644 |          -|          -|       16|    no    |
+        | + comhuff2  |    2|    642|         5|          -|          -| 0 ~ 128 |    no    |
+        +-------------+-----+-------+----------+-----------+-----------+---------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 2 
+6 --> 7 
+7 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%pos_in_table_1 = alloca i8"   --->   Operation 8 'alloca' 'pos_in_table_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (1.76ns)   --->   "store i8 0, i8* %pos_in_table_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:315]   --->   Operation 9 'store' <Predicate = true> <Delay = 1.76>
+ST_1 : Operation 10 [1/1] (1.76ns)   --->   "br label %1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:315]   --->   Operation 10 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.78>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%code_value_0 = phi i16 [ 0, %0 ], [ %code_value, %comhuff1_end ]"   --->   Operation 11 'phi' 'code_value_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%k_0 = phi i5 [ 1, %0 ], [ %k, %comhuff1_end ]"   --->   Operation 12 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (1.36ns)   --->   "%icmp_ln315 = icmp eq i5 %k_0, -15" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:315]   --->   Operation 13 'icmp' 'icmp_ln315' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 16, i64 16, i64 16)"   --->   Operation 14 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln315, label %3, label %comhuff1_begin" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:315]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str25) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:316]   --->   Operation 16 'specloopname' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str25)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:316]   --->   Operation 17 'specregionbegin' 'tmp' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.78ns)   --->   "%add_ln317 = add i5 %k_0, -1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 18 'add' 'add_ln317' <Predicate = (!icmp_ln315)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln317_1 = zext i5 %add_ln317 to i64" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 19 'zext' 'zext_ln317_1' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%nr_codes_addr = getelementptr [16 x i8]* %nr_codes, i64 0, i64 %zext_ln317_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 20 'getelementptr' 'nr_codes_addr' <Predicate = (!icmp_ln315)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.76ns)   --->   "br label %2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 21 'br' <Predicate = (!icmp_ln315)> <Delay = 1.76>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "ret void" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:326]   --->   Operation 22 'ret' <Predicate = (icmp_ln315)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 23 [2/2] (2.32ns)   --->   "%nr_codes_load = load i8* %nr_codes_addr, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 23 'load' 'nr_codes_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 12> <RAM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 24 [1/2] (2.32ns)   --->   "%nr_codes_load = load i8* %nr_codes_addr, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 24 'load' 'nr_codes_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 12> <RAM>
+
+State 5 <SV = 4> <Delay = 3.68>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%code_value_1 = phi i16 [ %code_value_0, %comhuff1_begin ], [ %code_value_2, %comhuff2 ]"   --->   Operation 25 'phi' 'code_value_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%j_0 = phi i32 [ 1, %comhuff1_begin ], [ %j, %comhuff2 ]"   --->   Operation 26 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln317 = zext i8 %nr_codes_load to i32" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 27 'zext' 'zext_ln317' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (2.47ns)   --->   "%icmp_ln317 = icmp sgt i32 %j_0, %zext_ln317" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 28 'icmp' 'icmp_ln317' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "br i1 %icmp_ln317, label %comhuff1_end, label %comhuff2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/1] (0.00ns)   --->   "%pos_in_table_1_load = load i8* %pos_in_table_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:321]   --->   Operation 30 'load' 'pos_in_table_1_load' <Predicate = (!icmp_ln317)> <Delay = 0.00>
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%zext_ln319 = zext i8 %pos_in_table_1_load to i64" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 31 'zext' 'zext_ln319' <Predicate = (!icmp_ln317)> <Delay = 0.00>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%std_table_addr = getelementptr [12 x i8]* %std_table, i64 0, i64 %zext_ln319" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 32 'getelementptr' 'std_table_addr' <Predicate = (!icmp_ln317)> <Delay = 0.00>
+ST_5 : Operation 33 [2/2] (2.32ns)   --->   "%std_table_load = load i8* %std_table_addr, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 33 'load' 'std_table_load' <Predicate = (!icmp_ln317)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 12> <RAM>
+ST_5 : Operation 34 [1/1] (1.91ns)   --->   "%pos_in_table = add i8 %pos_in_table_1_load, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:321]   --->   Operation 34 'add' 'pos_in_table' <Predicate = (!icmp_ln317)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 35 [1/1] (2.55ns)   --->   "%j = add nsw i32 %j_0, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 35 'add' 'j' <Predicate = (!icmp_ln317)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 36 [1/1] (1.76ns)   --->   "store i8 %pos_in_table, i8* %pos_in_table_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 36 'store' <Predicate = (!icmp_ln317)> <Delay = 1.76>
+ST_5 : Operation 37 [1/1] (0.00ns)   --->   "%code_value = shl i16 %code_value_1, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:324]   --->   Operation 37 'shl' 'code_value' <Predicate = (icmp_ln317)> <Delay = 0.00>
+ST_5 : Operation 38 [1/1] (0.00ns)   --->   "%empty_143 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str25, i32 %tmp)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:325]   --->   Operation 38 'specregionend' 'empty_143' <Predicate = (icmp_ln317)> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (1.78ns)   --->   "%k = add i5 1, %k_0" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:315]   --->   Operation 39 'add' 'k' <Predicate = (icmp_ln317)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "br label %1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:315]   --->   Operation 40 'br' <Predicate = (icmp_ln317)> <Delay = 0.00>
+
+State 6 <SV = 5> <Delay = 2.32>
+ST_6 : Operation 41 [1/2] (2.32ns)   --->   "%std_table_load = load i8* %std_table_addr, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 41 'load' 'std_table_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 12> <RAM>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str26) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:318]   --->   Operation 42 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str26)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:318]   --->   Operation 43 'specregionbegin' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 128, i32 64, [1 x i8]* @p_str) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 44 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln319_1 = zext i8 %std_table_load to i64" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 45 'zext' 'zext_ln319_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (0.00ns)   --->   "%huffman_table_value_s = getelementptr [12 x i16]* %huffman_table_value, i64 0, i64 %zext_ln319_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 46 'getelementptr' 'huffman_table_value_s' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 47 [1/1] (2.32ns)   --->   "store i16 %code_value_1, i16* %huffman_table_value_s, align 2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:319]   --->   Operation 47 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 12> <RAM>
+ST_7 : Operation 48 [1/1] (0.00ns)   --->   "%huffman_table_length_1 = getelementptr [12 x i5]* %huffman_table_length, i64 0, i64 %zext_ln319_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:320]   --->   Operation 48 'getelementptr' 'huffman_table_length_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 49 [1/1] (2.32ns)   --->   "store i5 %k_0, i5* %huffman_table_length_1, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:320]   --->   Operation 49 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 12> <RAM>
+ST_7 : Operation 50 [1/1] (2.07ns)   --->   "%code_value_2 = add i16 %code_value_1, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:322]   --->   Operation 50 'add' 'code_value_2' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str26, i32 %tmp_s)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:323]   --->   Operation 51 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (0.00ns)   --->   "br label %2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:317]   --->   Operation 52 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	'alloca' operation ('pos_in_table') [5]  (0 ns)
+	'store' operation ('store_ln315', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:315) of constant 0 on local variable 'pos_in_table' [6]  (1.77 ns)
+
+ <State 2>: 1.78ns
+The critical path consists of the following:
+	'phi' operation ('k') with incoming values : ('k', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:315) [10]  (0 ns)
+	'add' operation ('add_ln317', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:317) [17]  (1.78 ns)
+
+ <State 3>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('nr_codes_load', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:317) on array 'nr_codes' [24]  (2.32 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('nr_codes_load', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:317) on array 'nr_codes' [24]  (2.32 ns)
+
+ <State 5>: 3.68ns
+The critical path consists of the following:
+	'load' operation ('pos_in_table_1_load', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:321) on local variable 'pos_in_table' [29]  (0 ns)
+	'add' operation ('pos_in_table', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:321) [41]  (1.92 ns)
+	'store' operation ('store_ln317', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:317) of variable 'pos_in_table', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:321 on local variable 'pos_in_table' [45]  (1.77 ns)
+
+ <State 6>: 2.32ns
+The critical path consists of the following:
+	'load' operation ('std_table_load', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:319) on array 'std_table' [35]  (2.32 ns)
+
+ <State 7>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('huffman_table_value_s', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:319) [37]  (0 ns)
+	'store' operation ('store_ln319', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:319) of variable 'code_value' on array 'huffman_table_value' [38]  (2.32 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

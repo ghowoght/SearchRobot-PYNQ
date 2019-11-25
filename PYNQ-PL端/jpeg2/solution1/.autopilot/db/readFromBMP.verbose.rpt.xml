@@ -1,0 +1,191 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'readFromBMP'" level="0">
+<item name = "Date">Tue Nov 19 20:39:47 2019
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">jpeg2</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 3.254, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">8321, 8321, 8321, 8321, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- RB">8320, 8320, 13, -, -, 640, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 695, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 268, -</column>
+<column name="Register">-, -, 379, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, 1, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln163_fu_803_p2">+, 0, 0, 17, 4, 13</column>
+<column name="add_ln167_1_fu_558_p2">+, 0, 0, 23, 1, 16</column>
+<column name="add_ln167_2_fu_689_p2">+, 0, 0, 23, 1, 16</column>
+<column name="add_ln167_3_fu_825_p2">+, 0, 0, 23, 1, 16</column>
+<column name="add_ln167_fu_428_p2">+, 0, 0, 23, 1, 16</column>
+<column name="add_ln168_1_fu_509_p2">+, 0, 0, 23, 2, 16</column>
+<column name="add_ln168_2_fu_567_p2">+, 0, 0, 23, 2, 16</column>
+<column name="add_ln168_3_fu_698_p2">+, 0, 0, 23, 2, 16</column>
+<column name="add_ln168_4_fu_770_p2">+, 0, 0, 23, 2, 16</column>
+<column name="add_ln168_5_fu_834_p2">+, 0, 0, 23, 2, 16</column>
+<column name="add_ln168_fu_437_p2">+, 0, 0, 23, 2, 16</column>
+<column name="sub_ln166_1_fu_400_p2">-, 0, 0, 23, 16, 16</column>
+<column name="sub_ln166_2_fu_480_p2">-, 0, 0, 23, 16, 16</column>
+<column name="sub_ln166_3_fu_536_p2">-, 0, 0, 23, 16, 16</column>
+<column name="sub_ln166_4_fu_610_p2">-, 0, 0, 23, 16, 16</column>
+<column name="sub_ln166_5_fu_661_p2">-, 0, 0, 23, 16, 16</column>
+<column name="sub_ln166_6_fu_741_p2">-, 0, 0, 23, 16, 16</column>
+<column name="sub_ln166_7_fu_797_p2">-, 0, 0, 23, 16, 16</column>
+<column name="sub_ln166_fu_349_p2">-, 0, 0, 23, 16, 16</column>
+<column name="icmp_ln163_fu_331_p2">icmp, 0, 0, 13, 13, 13</column>
+<column name="or_ln163_1_fu_458_p2">or, 0, 0, 13, 13, 2</column>
+<column name="or_ln163_2_fu_514_p2">or, 0, 0, 13, 13, 2</column>
+<column name="or_ln163_3_fu_588_p2">or, 0, 0, 13, 13, 3</column>
+<column name="or_ln163_4_fu_639_p2">or, 0, 0, 13, 13, 3</column>
+<column name="or_ln163_5_fu_719_p2">or, 0, 0, 13, 13, 3</column>
+<column name="or_ln163_6_fu_775_p2">or, 0, 0, 13, 13, 3</column>
+<column name="or_ln163_fu_378_p2">or, 0, 0, 13, 13, 1</column>
+<column name="or_ln167_1_fu_494_p2">or, 0, 0, 32, 32, 1</column>
+<column name="or_ln167_2_fu_624_p2">or, 0, 0, 32, 32, 1</column>
+<column name="or_ln167_3_fu_755_p2">or, 0, 0, 32, 32, 1</column>
+<column name="or_ln167_fu_363_p2">or, 0, 0, 32, 32, 1</column>
+<column name="or_ln168_1_fu_667_p2">or, 0, 0, 16, 16, 2</column>
+<column name="or_ln168_fu_406_p2">or, 0, 0, 16, 16, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="JpegEncoder_buffer_address0">56, 13, 14, 182</column>
+<column name="JpegEncoder_buffer_address1">56, 13, 14, 182</column>
+<column name="JpegEncoder_buffer_d0">38, 7, 8, 56</column>
+<column name="JpegEncoder_buffer_d1">38, 7, 8, 56</column>
+<column name="ap_NS_fsm">62, 15, 1, 15</column>
+<column name="i_0_0_reg_283">9, 2, 13, 26</column>
+<column name="rgb_in_TDATA_blk_n">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln163_reg_985">13, 0, 13, 0</column>
+<column name="add_ln167_1_reg_914">14, 0, 16, 2</column>
+<column name="add_ln167_2_reg_947">15, 0, 16, 1</column>
+<column name="add_ln167_3_reg_990">13, 0, 16, 3</column>
+<column name="add_ln167_reg_876">15, 0, 16, 1</column>
+<column name="add_ln168_1_reg_902">16, 0, 16, 0</column>
+<column name="add_ln168_2_reg_924">14, 0, 16, 2</column>
+<column name="add_ln168_3_reg_957">15, 0, 16, 1</column>
+<column name="add_ln168_4_reg_973">16, 0, 16, 0</column>
+<column name="add_ln168_5_reg_1000">13, 0, 16, 3</column>
+<column name="add_ln168_reg_886">15, 0, 16, 1</column>
+<column name="ap_CS_fsm">14, 0, 14, 0</column>
+<column name="i_0_0_reg_283">13, 0, 13, 0</column>
+<column name="reg_322">8, 0, 8, 0</column>
+<column name="sub_ln166_1_reg_869">15, 0, 16, 1</column>
+<column name="sub_ln166_2_reg_891">16, 0, 16, 0</column>
+<column name="sub_ln166_3_reg_907">14, 0, 16, 2</column>
+<column name="sub_ln166_4_reg_929">16, 0, 16, 0</column>
+<column name="sub_ln166_5_reg_940">15, 0, 16, 1</column>
+<column name="sub_ln166_6_reg_962">16, 0, 16, 0</column>
+<column name="sub_ln166_7_reg_978">13, 0, 16, 3</column>
+<column name="sub_ln166_reg_858">16, 0, 16, 0</column>
+<column name="trunc_ln168_1_reg_881">8, 0, 8, 0</column>
+<column name="trunc_ln168_2_reg_897">8, 0, 8, 0</column>
+<column name="trunc_ln168_3_reg_919">8, 0, 8, 0</column>
+<column name="trunc_ln168_4_reg_935">8, 0, 8, 0</column>
+<column name="trunc_ln168_5_reg_952">8, 0, 8, 0</column>
+<column name="trunc_ln168_6_reg_968">8, 0, 8, 0</column>
+<column name="trunc_ln168_7_reg_995">8, 0, 8, 0</column>
+<column name="trunc_ln168_reg_864">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, readFromBMP, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, readFromBMP, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, readFromBMP, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, readFromBMP, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, readFromBMP, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, readFromBMP, return value</column>
+<column name="JpegEncoder_buffer_address0">out, 14, ap_memory, JpegEncoder_buffer, array</column>
+<column name="JpegEncoder_buffer_ce0">out, 1, ap_memory, JpegEncoder_buffer, array</column>
+<column name="JpegEncoder_buffer_we0">out, 1, ap_memory, JpegEncoder_buffer, array</column>
+<column name="JpegEncoder_buffer_d0">out, 8, ap_memory, JpegEncoder_buffer, array</column>
+<column name="JpegEncoder_buffer_address1">out, 14, ap_memory, JpegEncoder_buffer, array</column>
+<column name="JpegEncoder_buffer_ce1">out, 1, ap_memory, JpegEncoder_buffer, array</column>
+<column name="JpegEncoder_buffer_we1">out, 1, ap_memory, JpegEncoder_buffer, array</column>
+<column name="JpegEncoder_buffer_d1">out, 8, ap_memory, JpegEncoder_buffer, array</column>
+<column name="rgb_in_TDATA">in, 24, axis, rgb_in_V_data_V, pointer</column>
+<column name="rgb_in_TVALID">in, 1, axis, rgb_in_V_data_V, pointer</column>
+<column name="rgb_in_TREADY">out, 1, axis, rgb_in_V_last_V, pointer</column>
+<column name="rgb_in_TLAST">in, 1, axis, rgb_in_V_last_V, pointer</column>
+<column name="rgb_in_TKEEP">in, 3, axis, rgb_in_V_keep_V, pointer</column>
+<column name="rgb_in_TSTRB">in, 3, axis, rgb_in_V_strb_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

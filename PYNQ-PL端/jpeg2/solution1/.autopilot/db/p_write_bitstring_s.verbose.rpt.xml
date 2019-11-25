@@ -1,0 +1,167 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'p_write_bitstring_s'" level="0">
+<item name = "Date">Tue Nov 19 20:40:02 2019
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">jpeg2</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 4.367, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1, 13675, 1, 13675, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_p_write_byte_s_fu_193">p_write_byte_s, 0, 0, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- wb1">0, 13674, 4 ~ 106, -, -, 0 ~ 129, no</column>
+<column name=" + wb2">0, 102, 6, -, -, 0 ~ 17, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 253, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, 1, 9, -</column>
+<column name="Memory">0, -, 16, 4, -</column>
+<column name="Multiplexer">-, -, -, 158, -</column>
+<column name="Register">-, -, 307, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_p_write_byte_s_fu_193">p_write_byte_s, 0, 0, 1, 9, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="mask1_U">p_write_bitstringEe0, 0, 16, 4, 0, 16, 16, 1, 256</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln597_fu_348_p2">+, 0, 0, 39, 2, 32</column>
+<column name="i_fu_244_p2">+, 0, 0, 38, 31, 1</column>
+<column name="posval_fu_281_p2">+, 0, 0, 39, 32, 2</column>
+<column name="and_ln592_fu_302_p2">and, 0, 0, 16, 16, 16</column>
+<column name="ap_block_state11">and, 0, 0, 2, 1, 1</column>
+<column name="ap_predicate_op89_call_state11">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln583_fu_239_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln590_fu_287_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="icmp_ln592_fu_306_p2">icmp, 0, 0, 13, 16, 1</column>
+<column name="icmp_ln602_fu_374_p2">icmp, 0, 0, 18, 32, 8</column>
+<column name="grp_p_write_byte_s_fu_193_jpeg_out_TREADY">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln594_fu_316_p2">or, 0, 0, 16, 16, 16</column>
+<column name="select_ln592_fu_340_p3">select, 0, 0, 32, 1, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="JpegEncoder_outhebyt_fu_90">9, 2, 8, 16</column>
+<column name="ap_NS_fsm">53, 12, 1, 12</column>
+<column name="grp_p_write_byte_s_fu_193_value_r">15, 3, 8, 24</column>
+<column name="i_0_reg_173">9, 2, 31, 62</column>
+<column name="jpeg_out_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="jpeg_out_TVALID">9, 2, 1, 2</column>
+<column name="mask1_address0">15, 3, 4, 12</column>
+<column name="newBytePos_0_fu_94">15, 3, 32, 96</column>
+<column name="newByte_0_fu_98">15, 3, 32, 96</column>
+<column name="posval_0_in_reg_184">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="JpegEncoder_outhebyt_fu_90">8, 0, 8, 0</column>
+<column name="ap_CS_fsm">11, 0, 11, 0</column>
+<column name="bs_length_load_reg_440">32, 0, 32, 0</column>
+<column name="i_0_reg_173">31, 0, 31, 0</column>
+<column name="i_reg_420">31, 0, 31, 0</column>
+<column name="icmp_ln602_reg_485">1, 0, 1, 0</column>
+<column name="mask1_load_reg_464">16, 0, 16, 0</column>
+<column name="newBytePos_0_fu_94">32, 0, 32, 0</column>
+<column name="newByte_0_fu_98">32, 0, 32, 0</column>
+<column name="posval_0_in_reg_184">32, 0, 32, 0</column>
+<column name="posval_reg_445">32, 0, 32, 0</column>
+<column name="select_ln592_reg_474">32, 0, 32, 0</column>
+<column name="tmp_1_reg_481">1, 0, 1, 0</column>
+<column name="trunc_ln588_reg_435">16, 0, 16, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_return_0">out, 32, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_return_1">out, 32, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="ap_return_2">out, 8, ap_ctrl_hs, _write_bitstring_, return value</column>
+<column name="JpegEncoder_outhebyte_data_V_read">in, 8, ap_none, JpegEncoder_outhebyte_data_V_read, scalar</column>
+<column name="bs_length_address0">out, 7, ap_memory, bs_length, array</column>
+<column name="bs_length_ce0">out, 1, ap_memory, bs_length, array</column>
+<column name="bs_length_q0">in, 32, ap_memory, bs_length, array</column>
+<column name="bs_value_address0">out, 7, ap_memory, bs_value, array</column>
+<column name="bs_value_ce0">out, 1, ap_memory, bs_value, array</column>
+<column name="bs_value_q0">in, 32, ap_memory, bs_value, array</column>
+<column name="counts">in, 32, ap_none, counts, scalar</column>
+<column name="newByte_read">in, 32, ap_none, newByte_read, scalar</column>
+<column name="newBytePos_read">in, 32, ap_none, newBytePos_read, scalar</column>
+<column name="jpeg_out_TDATA">out, 8, axis, jpeg_out_V_data_V, pointer</column>
+<column name="jpeg_out_TVALID">out, 1, axis, jpeg_out_V_last_V, pointer</column>
+<column name="jpeg_out_TREADY">in, 1, axis, jpeg_out_V_last_V, pointer</column>
+<column name="jpeg_out_TLAST">out, 1, axis, jpeg_out_V_last_V, pointer</column>
+<column name="jpeg_out_TKEEP">out, 1, axis, jpeg_out_V_keep_V, pointer</column>
+<column name="jpeg_out_TSTRB">out, 1, axis, jpeg_out_V_strb_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

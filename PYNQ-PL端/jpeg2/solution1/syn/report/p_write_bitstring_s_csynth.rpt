@@ -1,0 +1,198 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_write_bitstring_s'
+================================================================
+* Date:           Tue Nov 19 20:40:02 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.367|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-------+-----+-------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    | min |  max  | min |  max  |   Type  |
+    +-----+-------+-----+-------+---------+
+    |    1|  13675|    1|  13675|   none  |
+    +-----+-------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+----------------+-----+-----+-----+-----+----------+
+        |                           |                |  Latency  |  Interval | Pipeline |
+        |          Instance         |     Module     | min | max | min | max |   Type   |
+        +---------------------------+----------------+-----+-----+-----+-----+----------+
+        |grp_p_write_byte_s_fu_193  |p_write_byte_s  |    0|    0|    1|    1| function |
+        +---------------------------+----------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        +----------+-----+-------+----------+-----------+-----------+---------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  |   Trip  |          |
+        | Loop Name| min |  max  |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +----------+-----+-------+----------+-----------+-----------+---------+----------+
+        |- wb1     |    0|  13674|  4 ~ 106 |          -|          -| 0 ~ 129 |    no    |
+        | + wb2    |    0|    102|         6|          -|          -|  0 ~ 17 |    no    |
+        +----------+-----+-------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    253|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       1|      9|    -|
+|Memory           |        0|      -|      16|      4|    -|
+|Multiplexer      |        -|      -|       -|    158|    -|
+|Register         |        -|      -|     307|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     324|    424|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------+---------+-------+---+----+-----+
+    |          Instance         |     Module     | BRAM_18K| DSP48E| FF| LUT| URAM|
+    +---------------------------+----------------+---------+-------+---+----+-----+
+    |grp_p_write_byte_s_fu_193  |p_write_byte_s  |        0|      0|  1|   9|    0|
+    +---------------------------+----------------+---------+-------+---+----+-----+
+    |Total                      |                |        0|      0|  1|   9|    0|
+    +---------------------------+----------------+---------+-------+---+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |  Memory |        Module        | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |mask1_U  |p_write_bitstringEe0  |        0|  16|   4|    0|    16|   16|     1|          256|
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total    |                      |        0|  16|   4|    0|    16|   16|     1|          256|
+    +---------+----------------------+---------+----+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln597_fu_348_p2                        |     +    |      0|  0|  39|           2|          32|
+    |i_fu_244_p2                                |     +    |      0|  0|  38|          31|           1|
+    |posval_fu_281_p2                           |     +    |      0|  0|  39|          32|           2|
+    |and_ln592_fu_302_p2                        |    and   |      0|  0|  16|          16|          16|
+    |ap_block_state11                           |    and   |      0|  0|   2|           1|           1|
+    |ap_predicate_op89_call_state11             |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln583_fu_239_p2                       |   icmp   |      0|  0|  18|          32|          32|
+    |icmp_ln590_fu_287_p2                       |   icmp   |      0|  0|  18|          32|           1|
+    |icmp_ln592_fu_306_p2                       |   icmp   |      0|  0|  13|          16|           1|
+    |icmp_ln602_fu_374_p2                       |   icmp   |      0|  0|  18|          32|           8|
+    |grp_p_write_byte_s_fu_193_jpeg_out_TREADY  |    or    |      0|  0|   2|           1|           1|
+    |or_ln594_fu_316_p2                         |    or    |      0|  0|  16|          16|          16|
+    |select_ln592_fu_340_p3                     |  select  |      0|  0|  32|           1|          32|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                      |          |      0|  0| 253|         213|         144|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------------+----+-----------+-----+-----------+
+    |                Name               | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |JpegEncoder_outhebyt_fu_90         |   9|          2|    8|         16|
+    |ap_NS_fsm                          |  53|         12|    1|         12|
+    |grp_p_write_byte_s_fu_193_value_r  |  15|          3|    8|         24|
+    |i_0_reg_173                        |   9|          2|   31|         62|
+    |jpeg_out_TDATA_blk_n               |   9|          2|    1|          2|
+    |jpeg_out_TVALID                    |   9|          2|    1|          2|
+    |mask1_address0                     |  15|          3|    4|         12|
+    |newBytePos_0_fu_94                 |  15|          3|   32|         96|
+    |newByte_0_fu_98                    |  15|          3|   32|         96|
+    |posval_0_in_reg_184                |   9|          2|   32|         64|
+    +-----------------------------------+----+-----------+-----+-----------+
+    |Total                              | 158|         34|  150|        386|
+    +-----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------+----+----+-----+-----------+
+    |            Name            | FF | LUT| Bits| Const Bits|
+    +----------------------------+----+----+-----+-----------+
+    |JpegEncoder_outhebyt_fu_90  |   8|   0|    8|          0|
+    |ap_CS_fsm                   |  11|   0|   11|          0|
+    |bs_length_load_reg_440      |  32|   0|   32|          0|
+    |i_0_reg_173                 |  31|   0|   31|          0|
+    |i_reg_420                   |  31|   0|   31|          0|
+    |icmp_ln602_reg_485          |   1|   0|    1|          0|
+    |mask1_load_reg_464          |  16|   0|   16|          0|
+    |newBytePos_0_fu_94          |  32|   0|   32|          0|
+    |newByte_0_fu_98             |  32|   0|   32|          0|
+    |posval_0_in_reg_184         |  32|   0|   32|          0|
+    |posval_reg_445              |  32|   0|   32|          0|
+    |select_ln592_reg_474        |  32|   0|   32|          0|
+    |tmp_1_reg_481               |   1|   0|    1|          0|
+    |trunc_ln588_reg_435         |  16|   0|   16|          0|
+    +----------------------------+----+----+-----+-----------+
+    |Total                       | 307|   0|  307|          0|
+    +----------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|             RTL Ports             | Dir | Bits|  Protocol  |           Source Object           |    C Type    |
++-----------------------------------+-----+-----+------------+-----------------------------------+--------------+
+|ap_clk                             |  in |    1| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_rst                             |  in |    1| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_start                           |  in |    1| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_done                            | out |    1| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_idle                            | out |    1| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_ready                           | out |    1| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_return_0                        | out |   32| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_return_1                        | out |   32| ap_ctrl_hs |         _write_bitstring_         | return value |
+|ap_return_2                        | out |    8| ap_ctrl_hs |         _write_bitstring_         | return value |
+|JpegEncoder_outhebyte_data_V_read  |  in |    8|   ap_none  | JpegEncoder_outhebyte_data_V_read |    scalar    |
+|bs_length_address0                 | out |    7|  ap_memory |             bs_length             |     array    |
+|bs_length_ce0                      | out |    1|  ap_memory |             bs_length             |     array    |
+|bs_length_q0                       |  in |   32|  ap_memory |             bs_length             |     array    |
+|bs_value_address0                  | out |    7|  ap_memory |              bs_value             |     array    |
+|bs_value_ce0                       | out |    1|  ap_memory |              bs_value             |     array    |
+|bs_value_q0                        |  in |   32|  ap_memory |              bs_value             |     array    |
+|counts                             |  in |   32|   ap_none  |               counts              |    scalar    |
+|newByte_read                       |  in |   32|   ap_none  |            newByte_read           |    scalar    |
+|newBytePos_read                    |  in |   32|   ap_none  |          newBytePos_read          |    scalar    |
+|jpeg_out_TDATA                     | out |    8|    axis    |         jpeg_out_V_data_V         |    pointer   |
+|jpeg_out_TVALID                    | out |    1|    axis    |         jpeg_out_V_last_V         |    pointer   |
+|jpeg_out_TREADY                    |  in |    1|    axis    |         jpeg_out_V_last_V         |    pointer   |
+|jpeg_out_TLAST                     | out |    1|    axis    |         jpeg_out_V_last_V         |    pointer   |
+|jpeg_out_TKEEP                     | out |    1|    axis    |         jpeg_out_V_keep_V         |    pointer   |
+|jpeg_out_TSTRB                     | out |    1|    axis    |         jpeg_out_V_strb_V         |    pointer   |
++-----------------------------------+-----+-----+------------+-----------------------------------+--------------+
+

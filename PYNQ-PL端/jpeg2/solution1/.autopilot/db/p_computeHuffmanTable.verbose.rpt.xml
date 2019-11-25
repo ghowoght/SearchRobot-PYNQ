@@ -1,0 +1,145 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'p_computeHuffmanTable'" level="0">
+<item name = "Date">Tue Nov 19 20:39:44 2019
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">jpeg2</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 3.684, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">65, 10305, 65, 10305, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- comhuff1">64, 10304, 4 ~ 644, -, -, 16, no</column>
+<column name=" + comhuff2">2, 642, 5, -, -, 0 ~ 128, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 136, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 86, -</column>
+<column name="Register">-, -, 135, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln317_fu_162_p2">+, 0, 0, 15, 5, 2</column>
+<column name="code_value_3_fu_224_p2">+, 0, 0, 23, 16, 1</column>
+<column name="j_fu_196_p2">+, 0, 0, 39, 32, 1</column>
+<column name="k_fu_213_p2">+, 0, 0, 15, 1, 5</column>
+<column name="pos_in_table_fu_190_p2">+, 0, 0, 15, 8, 1</column>
+<column name="icmp_ln315_fu_156_p2">icmp, 0, 0, 11, 5, 5</column>
+<column name="icmp_ln317_fu_176_p2">icmp, 0, 0, 18, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">41, 8, 1, 8</column>
+<column name="code_value_0_reg_103">9, 2, 15, 30</column>
+<column name="code_value_1_reg_128">9, 2, 16, 32</column>
+<column name="j_0_reg_140">9, 2, 32, 64</column>
+<column name="k_0_reg_115">9, 2, 5, 10</column>
+<column name="pos_in_table_2_fu_48">9, 2, 8, 16</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="code_value_0_reg_103">15, 0, 16, 1</column>
+<column name="code_value_1_reg_128">16, 0, 16, 0</column>
+<column name="j_0_reg_140">32, 0, 32, 0</column>
+<column name="j_reg_258">32, 0, 32, 0</column>
+<column name="k_0_reg_115">5, 0, 5, 0</column>
+<column name="nr_codes_addr_reg_240">4, 0, 4, 0</column>
+<column name="nr_codes_load_reg_245">8, 0, 8, 0</column>
+<column name="pos_in_table_2_fu_48">8, 0, 8, 0</column>
+<column name="std_table_load_reg_273">8, 0, 8, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, _computeHuffmanTable, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, _computeHuffmanTable, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, _computeHuffmanTable, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, _computeHuffmanTable, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, _computeHuffmanTable, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, _computeHuffmanTable, return value</column>
+<column name="nr_codes_address0">out, 4, ap_memory, nr_codes, array</column>
+<column name="nr_codes_ce0">out, 1, ap_memory, nr_codes, array</column>
+<column name="nr_codes_q0">in, 8, ap_memory, nr_codes, array</column>
+<column name="std_table_address0">out, 8, ap_memory, std_table, array</column>
+<column name="std_table_ce0">out, 1, ap_memory, std_table, array</column>
+<column name="std_table_q0">in, 8, ap_memory, std_table, array</column>
+<column name="huffman_table_length_address0">out, 8, ap_memory, huffman_table_length, array</column>
+<column name="huffman_table_length_ce0">out, 1, ap_memory, huffman_table_length, array</column>
+<column name="huffman_table_length_we0">out, 1, ap_memory, huffman_table_length, array</column>
+<column name="huffman_table_length_d0">out, 5, ap_memory, huffman_table_length, array</column>
+<column name="huffman_table_value_address0">out, 8, ap_memory, huffman_table_value, array</column>
+<column name="huffman_table_value_ce0">out, 1, ap_memory, huffman_table_value, array</column>
+<column name="huffman_table_value_we0">out, 1, ap_memory, huffman_table_value, array</column>
+<column name="huffman_table_value_d0">out, 16, ap_memory, huffman_table_value, array</column>
+</table>
+</item>
+</section>
+</profile>

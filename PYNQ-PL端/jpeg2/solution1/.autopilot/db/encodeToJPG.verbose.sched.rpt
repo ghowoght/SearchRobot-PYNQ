@@ -1,0 +1,413 @@
+
+
+================================================================
+== Vivado HLS Report for 'encodeToJPG'
+================================================================
+* Date:           Tue Nov 19 20:39:37 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.520|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+-----------+---------+-----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |   min   |    max    |   min   |    max    |   Type  |
+    +---------+-----------+---------+-----------+---------+
+    |  2540834|  274935540|  2540834|  274935540|   none  |
+    +---------+-----------+---------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+-----------+-----------------+-----------+-----------+------+----------+
+        |          |       Latency       |    Iteration    |  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |    max    |     Latency     |  achieved |   target  | Count| Pipelined|
+        +----------+---------+-----------+-----------------+-----------+-----------+------+----------+
+        |- initq1  |      192|        192|                3|          -|          -|    64|    no    |
+        |- en1     |  2539440|  274925040| 42324 ~ 4582084 |          -|          -|    60|    no    |
+        | + en2    |    34000|    4573760|   425 ~ 57172   |          -|          -|    80|    no    |
+        +----------+---------+-----------+-----------------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 19
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 5 
+3 --> 4 
+4 --> 2 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 6 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 8 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind"   --->   Operation 20 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind"   --->   Operation 21 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%yData_0 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 22 'alloca' 'yData_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%yData_1 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 23 'alloca' 'yData_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%yData_2 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 24 'alloca' 'yData_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%yData_3 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 25 'alloca' 'yData_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%yData_4 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 26 'alloca' 'yData_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%yData_5 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 27 'alloca' 'yData_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%yData_6 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 28 'alloca' 'yData_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%yData_7 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 29 'alloca' 'yData_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%cbData_0 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 30 'alloca' 'cbData_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%cbData_1 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 31 'alloca' 'cbData_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%cbData_2 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 32 'alloca' 'cbData_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%cbData_3 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 33 'alloca' 'cbData_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%cbData_4 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 34 'alloca' 'cbData_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%cbData_5 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 35 'alloca' 'cbData_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%cbData_6 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 36 'alloca' 'cbData_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%cbData_7 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 37 'alloca' 'cbData_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%crData_0 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 38 'alloca' 'crData_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%crData_1 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 39 'alloca' 'crData_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%crData_2 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 40 'alloca' 'crData_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%crData_3 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 41 'alloca' 'crData_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%crData_4 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 42 'alloca' 'crData_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%crData_5 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 43 'alloca' 'crData_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%crData_6 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 44 'alloca' 'crData_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%crData_7 = alloca [8 x i8], align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:635]   --->   Operation 45 'alloca' 'crData_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%yQuant = alloca [64 x i11], align 2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:639]   --->   Operation 46 'alloca' 'yQuant' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%cbQuant = alloca [64 x i11], align 2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:639]   --->   Operation 47 'alloca' 'cbQuant' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%crQuant = alloca [64 x i11], align 2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:639]   --->   Operation 48 'alloca' 'crQuant' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%outputBitString_y_le = alloca [128 x i32], align 4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:642]   --->   Operation 49 'alloca' 'outputBitString_y_le' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%outputBitString_y_va = alloca [128 x i32], align 4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:642]   --->   Operation 50 'alloca' 'outputBitString_y_va' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%outputBitString_cr_l = alloca [128 x i32], align 4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:643]   --->   Operation 51 'alloca' 'outputBitString_cr_l' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%outputBitString_cr_v = alloca [128 x i32], align 4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:643]   --->   Operation 52 'alloca' 'outputBitString_cr_v' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%outputBitString_cb_l = alloca [128 x i32], align 4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:644]   --->   Operation 53 'alloca' 'outputBitString_cb_l' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%outputBitString_cb_v = alloca [128 x i32], align 4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:644]   --->   Operation 54 'alloca' 'outputBitString_cb_v' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (1.76ns)   --->   "br label %1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:293->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 55 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%i_0_i = phi i7 [ 0, %0 ], [ %i, %2 ]"   --->   Operation 56 'phi' 'i_0_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (1.48ns)   --->   "%icmp_ln293 = icmp eq i7 %i_0_i, -64" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:293->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 57 'icmp' 'icmp_ln293' <Predicate = true> <Delay = 1.48> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)"   --->   Operation 58 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (1.87ns)   --->   "%i = add i7 %i_0_i, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:293->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 59 'add' 'i' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "br i1 %icmp_ln293, label %_initQualityTables.exit, label %2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:293->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 60 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%zext_ln295 = zext i7 %i_0_i to i64" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 61 'zext' 'zext_ln295' <Predicate = (!icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (0.00ns)   --->   "%p_anonymous_namespace_11 = getelementptr inbounds [64 x i8]* @p_anonymous_namespace_7, i64 0, i64 %zext_ln295" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 62 'getelementptr' 'p_anonymous_namespace_11' <Predicate = (!icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 63 [2/2] (3.25ns)   --->   "%p_anonymous_namespace_12 = load i8* %p_anonymous_namespace_11, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 63 'load' 'p_anonymous_namespace_12' <Predicate = (!icmp_ln293)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 64> <ROM>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%ZigZag_addr = getelementptr [64 x i6]* @ZigZag, i64 0, i64 %zext_ln295" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 64 'getelementptr' 'ZigZag_addr' <Predicate = (!icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 65 [2/2] (3.25ns)   --->   "%ZigZag_load = load i6* %ZigZag_addr, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 65 'load' 'ZigZag_load' <Predicate = (!icmp_ln293)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 64> <ROM>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%p_anonymous_namespace_13 = getelementptr inbounds [64 x i8]* @p_anonymous_namespace_6, i64 0, i64 %zext_ln295" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:296->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 66 'getelementptr' 'p_anonymous_namespace_13' <Predicate = (!icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 67 [2/2] (3.25ns)   --->   "%p_anonymous_namespace_14 = load i8* %p_anonymous_namespace_13, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:296->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 67 'load' 'p_anonymous_namespace_14' <Predicate = (!icmp_ln293)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 64> <ROM>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%JpegEncoder_outhebyt = alloca i8"   --->   Operation 68 'alloca' 'JpegEncoder_outhebyt' <Predicate = (icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%prev_DC_Y_1 = alloca i16"   --->   Operation 69 'alloca' 'prev_DC_Y_1' <Predicate = (icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%prev_DC_Cb_1 = alloca i16"   --->   Operation 70 'alloca' 'prev_DC_Cb_1' <Predicate = (icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%prev_DC_Cr_1 = alloca i16"   --->   Operation 71 'alloca' 'prev_DC_Cr_1' <Predicate = (icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%newByte_1 = alloca i32"   --->   Operation 72 'alloca' 'newByte_1' <Predicate = (icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (0.00ns)   --->   "%newBytePos_1 = alloca i32"   --->   Operation 73 'alloca' 'newBytePos_1' <Predicate = (icmp_ln293)> <Delay = 0.00>
+ST_2 : Operation 74 [2/2] (1.76ns)   --->   "call fastcc void @_computeHuffmanTable.1([16 x i8]* @p_anonymous_namespace_5, [12 x i8]* @p_anonymous_namespace, [12 x i5]* %JpegEncoder_m_Y_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_Y_DC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:331->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 74 'call' <Predicate = (icmp_ln293)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 75 [2/2] (1.76ns)   --->   "call fastcc void @_computeHuffmanTable([16 x i8]* @p_anonymous_namespace_10, [162 x i8]* @p_anonymous_namespace_1, [256 x i5]* %JpegEncoder_m_Y_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_Y_AC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:332->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 75 'call' <Predicate = (icmp_ln293)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 76 [2/2] (1.76ns)   --->   "call fastcc void @_computeHuffmanTable.1([16 x i8]* @p_anonymous_namespace_3, [12 x i8]* @p_anonymous_namespace_4, [12 x i5]* %JpegEncoder_m_CbCr_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_CbCr_DC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:333->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 76 'call' <Predicate = (icmp_ln293)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 77 [2/2] (1.76ns)   --->   "call fastcc void @_computeHuffmanTable([16 x i8]* @p_anonymous_namespace_8, [162 x i8]* @p_anonymous_namespace_9, [256 x i5]* %JpegEncoder_m_CbCr_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_CbCr_AC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:334->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 77 'call' <Predicate = (icmp_ln293)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 78 [2/2] (0.00ns)   --->   "%call_ret4 = call fastcc i8 @_write_jpeg_header([64 x i8]* %JpegEncoder_m_YTable, [64 x i8]* %JpegEncoder_m_CbCrTable, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:626]   --->   Operation 78 'call' 'call_ret4' <Predicate = (icmp_ln293)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 79 [1/1] (1.76ns)   --->   "store i32 7, i32* %newBytePos_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 79 'store' <Predicate = (icmp_ln293)> <Delay = 1.76>
+ST_2 : Operation 80 [1/1] (1.76ns)   --->   "store i32 0, i32* %newByte_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 80 'store' <Predicate = (icmp_ln293)> <Delay = 1.76>
+ST_2 : Operation 81 [1/1] (1.76ns)   --->   "store i16 0, i16* %prev_DC_Cr_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 81 'store' <Predicate = (icmp_ln293)> <Delay = 1.76>
+ST_2 : Operation 82 [1/1] (1.76ns)   --->   "store i16 0, i16* %prev_DC_Cb_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 82 'store' <Predicate = (icmp_ln293)> <Delay = 1.76>
+ST_2 : Operation 83 [1/1] (1.76ns)   --->   "store i16 0, i16* %prev_DC_Y_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 83 'store' <Predicate = (icmp_ln293)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 84 [1/2] (3.25ns)   --->   "%p_anonymous_namespace_12 = load i8* %p_anonymous_namespace_11, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 84 'load' 'p_anonymous_namespace_12' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 64> <ROM>
+ST_3 : Operation 85 [1/2] (3.25ns)   --->   "%ZigZag_load = load i6* %ZigZag_addr, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 85 'load' 'ZigZag_load' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 64> <ROM>
+ST_3 : Operation 86 [1/2] (3.25ns)   --->   "%p_anonymous_namespace_14 = load i8* %p_anonymous_namespace_13, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:296->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 86 'load' 'p_anonymous_namespace_14' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 8> <Depth = 64> <ROM>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([7 x i8]* @p_str24) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:294->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 87 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln295_1 = zext i6 %ZigZag_load to i64" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 88 'zext' 'zext_ln295_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%JpegEncoder_m_YTable_1 = getelementptr [64 x i8]* %JpegEncoder_m_YTable, i64 0, i64 %zext_ln295_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 89 'getelementptr' 'JpegEncoder_m_YTable_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (2.32ns)   --->   "store i8 %p_anonymous_namespace_12, i8* %JpegEncoder_m_YTable_1, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 90 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%JpegEncoder_m_CbCrTa = getelementptr [64 x i8]* %JpegEncoder_m_CbCrTable, i64 0, i64 %zext_ln295_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:296->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 91 'getelementptr' 'JpegEncoder_m_CbCrTa' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (2.32ns)   --->   "store i8 %p_anonymous_namespace_14, i8* %JpegEncoder_m_CbCrTa, align 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:296->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 92 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 64> <RAM>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "br label %1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:293->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624]   --->   Operation 93 'br' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 2> <Delay = 1.76>
+ST_5 : Operation 94 [1/2] (0.00ns)   --->   "call fastcc void @_computeHuffmanTable.1([16 x i8]* @p_anonymous_namespace_5, [12 x i8]* @p_anonymous_namespace, [12 x i5]* %JpegEncoder_m_Y_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_Y_DC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:331->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 94 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 95 [1/2] (0.00ns)   --->   "call fastcc void @_computeHuffmanTable([16 x i8]* @p_anonymous_namespace_10, [162 x i8]* @p_anonymous_namespace_1, [256 x i5]* %JpegEncoder_m_Y_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_Y_AC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:332->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 95 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 96 [1/2] (0.00ns)   --->   "call fastcc void @_computeHuffmanTable.1([16 x i8]* @p_anonymous_namespace_3, [12 x i8]* @p_anonymous_namespace_4, [12 x i5]* %JpegEncoder_m_CbCr_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_CbCr_DC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:333->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 96 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 97 [1/2] (0.00ns)   --->   "call fastcc void @_computeHuffmanTable([16 x i8]* @p_anonymous_namespace_8, [162 x i8]* @p_anonymous_namespace_9, [256 x i5]* %JpegEncoder_m_CbCr_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_CbCr_AC_Huffman_Table_value)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:334->../../../Users/fantwen/Desktop/jpeg_V2.cpp:625]   --->   Operation 97 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 98 [1/2] (0.00ns)   --->   "%call_ret4 = call fastcc i8 @_write_jpeg_header([64 x i8]* %JpegEncoder_m_YTable, [64 x i8]* %JpegEncoder_m_CbCrTable, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:626]   --->   Operation 98 'call' 'call_ret4' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 99 [1/1] (1.76ns)   --->   "store i8 %call_ret4, i8* %JpegEncoder_outhebyt" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 99 'store' <Predicate = true> <Delay = 1.76>
+ST_5 : Operation 100 [1/1] (1.76ns)   --->   "br label %3" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 100 'br' <Predicate = true> <Delay = 1.76>
+
+State 6 <SV = 3> <Delay = 3.25>
+ST_6 : Operation 101 [1/1] (0.00ns)   --->   "%count_0 = phi i6 [ 0, %_initQualityTables.exit ], [ %count, %en1_end ]"   --->   Operation 101 'phi' 'count_0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 102 [1/1] (1.42ns)   --->   "%icmp_ln630 = icmp eq i6 %count_0, -4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 102 'icmp' 'icmp_ln630' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 103 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 60, i64 60, i64 60)"   --->   Operation 103 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 104 [1/1] (1.82ns)   --->   "%count = add i6 %count_0, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 104 'add' 'count' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "br i1 %icmp_ln630, label %6, label %en1_begin" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 105 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 106 [2/2] (3.25ns)   --->   "call fastcc void @readFromBMP([15360 x i8]* %JpegEncoder_buffer, i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:632]   --->   Operation 106 'call' <Predicate = (!icmp_ln630)> <Delay = 3.25> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 107 'ret' <Predicate = (icmp_ln630)> <Delay = 0.00>
+
+State 7 <SV = 4> <Delay = 1.76>
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str36) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:631]   --->   Operation 108 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 109 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str36)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:631]   --->   Operation 109 'specregionbegin' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 110 [1/2] (0.00ns)   --->   "call fastcc void @readFromBMP([15360 x i8]* %JpegEncoder_buffer, i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:632]   --->   Operation 110 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_7 : Operation 111 [1/1] (1.76ns)   --->   "br label %4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 111 'br' <Predicate = true> <Delay = 1.76>
+
+State 8 <SV = 5> <Delay = 1.77>
+ST_8 : Operation 112 [1/1] (0.00ns)   --->   "%xPos_0 = phi i10 [ 0, %en1_begin ], [ %xPos, %5 ]"   --->   Operation 112 'phi' 'xPos_0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 113 [1/1] (1.77ns)   --->   "%icmp_ln633 = icmp ult i10 %xPos_0, -384" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 113 'icmp' 'icmp_ln633' <Predicate = true> <Delay = 1.77> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 114 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 80, i64 80, i64 80)"   --->   Operation 114 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 115 [1/1] (0.00ns)   --->   "br i1 %icmp_ln633, label %5, label %en1_end" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 115 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 116 [2/2] (0.00ns)   --->   "call fastcc void @_convertColorSpace([15360 x i8]* %JpegEncoder_buffer, i10 %xPos_0, [8 x i8]* %yData_0, [8 x i8]* %yData_1, [8 x i8]* %yData_2, [8 x i8]* %yData_3, [8 x i8]* %yData_4, [8 x i8]* %yData_5, [8 x i8]* %yData_6, [8 x i8]* %yData_7, [8 x i8]* %cbData_0, [8 x i8]* %cbData_1, [8 x i8]* %cbData_2, [8 x i8]* %cbData_3, [8 x i8]* %cbData_4, [8 x i8]* %cbData_5, [8 x i8]* %cbData_6, [8 x i8]* %cbData_7, [8 x i8]* %crData_0, [8 x i8]* %crData_1, [8 x i8]* %crData_2, [8 x i8]* %crData_3, [8 x i8]* %crData_4, [8 x i8]* %crData_5, [8 x i8]* %crData_6, [8 x i8]* %crData_7)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:640]   --->   Operation 116 'call' <Predicate = (icmp_ln633)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_8 : Operation 117 [1/1] (1.73ns)   --->   "%xPos = add i10 %xPos_0, 8" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 117 'add' 'xPos' <Predicate = (icmp_ln633)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 118 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str36, i32 %tmp)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:663]   --->   Operation 118 'specregionend' 'empty' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "br label %3" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:630]   --->   Operation 119 'br' <Predicate = (!icmp_ln633)> <Delay = 0.00>
+
+State 9 <SV = 6> <Delay = 0.00>
+ST_9 : Operation 120 [1/2] (0.00ns)   --->   "call fastcc void @_convertColorSpace([15360 x i8]* %JpegEncoder_buffer, i10 %xPos_0, [8 x i8]* %yData_0, [8 x i8]* %yData_1, [8 x i8]* %yData_2, [8 x i8]* %yData_3, [8 x i8]* %yData_4, [8 x i8]* %yData_5, [8 x i8]* %yData_6, [8 x i8]* %yData_7, [8 x i8]* %cbData_0, [8 x i8]* %cbData_1, [8 x i8]* %cbData_2, [8 x i8]* %cbData_3, [8 x i8]* %cbData_4, [8 x i8]* %cbData_5, [8 x i8]* %cbData_6, [8 x i8]* %cbData_7, [8 x i8]* %crData_0, [8 x i8]* %crData_1, [8 x i8]* %crData_2, [8 x i8]* %crData_3, [8 x i8]* %crData_4, [8 x i8]* %crData_5, [8 x i8]* %crData_6, [8 x i8]* %crData_7)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:640]   --->   Operation 120 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 7> <Delay = 1.81>
+ST_10 : Operation 121 [2/2] (1.81ns)   --->   "call fastcc void @_foword_FDC([8 x i8]* %yData_0, [8 x i8]* %yData_1, [8 x i8]* %yData_2, [8 x i8]* %yData_3, [8 x i8]* %yData_4, [8 x i8]* %yData_5, [8 x i8]* %yData_6, [8 x i8]* %yData_7, i4 6, i5 6, i5 7, i5 8, i5 8, i5 9, i5 9, i4 6, i4 6, i5 7, i5 7, i5 8, i5 9, i5 9, i5 9, i5 7, i5 7, i5 7, i5 8, i5 8, i5 9, i5 9, i5 9, i5 7, i5 7, i5 7, i5 8, i5 9, i5 9, i5 9, i5 9, i5 7, i5 7, i5 8, i5 9, i5 9, i5 9, i5 7, i5 8, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, [64 x i11]* %yQuant)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:649]   --->   Operation 121 'call' <Predicate = true> <Delay = 1.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 8> <Delay = 0.00>
+ST_11 : Operation 122 [1/2] (0.00ns)   --->   "call fastcc void @_foword_FDC([8 x i8]* %yData_0, [8 x i8]* %yData_1, [8 x i8]* %yData_2, [8 x i8]* %yData_3, [8 x i8]* %yData_4, [8 x i8]* %yData_5, [8 x i8]* %yData_6, [8 x i8]* %yData_7, i4 6, i5 6, i5 7, i5 8, i5 8, i5 9, i5 9, i4 6, i4 6, i5 7, i5 7, i5 8, i5 9, i5 9, i5 9, i5 7, i5 7, i5 7, i5 8, i5 8, i5 9, i5 9, i5 9, i5 7, i5 7, i5 7, i5 8, i5 9, i5 9, i5 9, i5 9, i5 7, i5 7, i5 8, i5 9, i5 9, i5 9, i5 7, i5 8, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, i5 9, [64 x i11]* %yQuant)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:649]   --->   Operation 122 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 9> <Delay = 4.24>
+ST_12 : Operation 123 [1/1] (0.00ns)   --->   "%prev_DC_Y_1_load = load i16* %prev_DC_Y_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:653]   --->   Operation 123 'load' 'prev_DC_Y_1_load' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 124 [2/2] (1.81ns)   --->   "call fastcc void @_foword_FDC([8 x i8]* %cbData_0, [8 x i8]* %cbData_1, [8 x i8]* %cbData_2, [8 x i8]* %cbData_3, [8 x i8]* %cbData_4, [8 x i8]* %cbData_5, [8 x i8]* %cbData_6, [8 x i8]* %cbData_7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i4 7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 8, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, [64 x i11]* %cbQuant)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:650]   --->   Operation 124 'call' <Predicate = true> <Delay = 1.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 125 [2/2] (4.24ns)   --->   "%call_ret1 = call fastcc { i16, i32 } @_doHuffmanEncoding([64 x i11]* %yQuant, i16 %prev_DC_Y_1_load, [12 x i5]* %JpegEncoder_m_Y_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_Y_DC_Huffman_Table_value, [256 x i5]* %JpegEncoder_m_Y_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_Y_AC_Huffman_Table_value, [128 x i32]* %outputBitString_y_le, [128 x i32]* %outputBitString_y_va)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:653]   --->   Operation 125 'call' 'call_ret1' <Predicate = true> <Delay = 4.24> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 10> <Delay = 1.76>
+ST_13 : Operation 126 [1/2] (0.00ns)   --->   "call fastcc void @_foword_FDC([8 x i8]* %cbData_0, [8 x i8]* %cbData_1, [8 x i8]* %cbData_2, [8 x i8]* %cbData_3, [8 x i8]* %cbData_4, [8 x i8]* %cbData_5, [8 x i8]* %cbData_6, [8 x i8]* %cbData_7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i4 7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 8, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, [64 x i11]* %cbQuant)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:650]   --->   Operation 126 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 127 [1/2] (0.00ns)   --->   "%call_ret1 = call fastcc { i16, i32 } @_doHuffmanEncoding([64 x i11]* %yQuant, i16 %prev_DC_Y_1_load, [12 x i5]* %JpegEncoder_m_Y_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_Y_DC_Huffman_Table_value, [256 x i5]* %JpegEncoder_m_Y_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_Y_AC_Huffman_Table_value, [128 x i32]* %outputBitString_y_le, [128 x i32]* %outputBitString_y_va)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:653]   --->   Operation 127 'call' 'call_ret1' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 128 [1/1] (0.00ns)   --->   "%prev_DC_Y = extractvalue { i16, i32 } %call_ret1, 0" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:653]   --->   Operation 128 'extractvalue' 'prev_DC_Y' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 129 [1/1] (0.00ns)   --->   "%bitStringCounts_y = extractvalue { i16, i32 } %call_ret1, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:653]   --->   Operation 129 'extractvalue' 'bitStringCounts_y' <Predicate = true> <Delay = 0.00>
+ST_13 : Operation 130 [1/1] (1.76ns)   --->   "store i16 %prev_DC_Y, i16* %prev_DC_Y_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 130 'store' <Predicate = true> <Delay = 1.76>
+
+State 14 <SV = 11> <Delay = 4.24>
+ST_14 : Operation 131 [1/1] (0.00ns)   --->   "%JpegEncoder_outhebyt_1 = load i8* %JpegEncoder_outhebyt" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 131 'load' 'JpegEncoder_outhebyt_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 132 [1/1] (0.00ns)   --->   "%prev_DC_Cb_1_load = load i16* %prev_DC_Cb_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:654]   --->   Operation 132 'load' 'prev_DC_Cb_1_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 133 [1/1] (0.00ns)   --->   "%newByte_1_load = load i32* %newByte_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 133 'load' 'newByte_1_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 134 [1/1] (0.00ns)   --->   "%newBytePos_1_load = load i32* %newBytePos_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 134 'load' 'newBytePos_1_load' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 135 [2/2] (1.81ns)   --->   "call fastcc void @_foword_FDC([8 x i8]* %crData_0, [8 x i8]* %crData_1, [8 x i8]* %crData_2, [8 x i8]* %crData_3, [8 x i8]* %crData_4, [8 x i8]* %crData_5, [8 x i8]* %crData_6, [8 x i8]* %crData_7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i4 7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 8, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, [64 x i11]* %crQuant)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:651]   --->   Operation 135 'call' <Predicate = true> <Delay = 1.81> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 136 [2/2] (4.24ns)   --->   "%call_ret2 = call fastcc { i16, i32 } @_doHuffmanEncoding([64 x i11]* %cbQuant, i16 %prev_DC_Cb_1_load, [12 x i5]* %JpegEncoder_m_CbCr_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_CbCr_DC_Huffman_Table_value, [256 x i5]* %JpegEncoder_m_CbCr_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_CbCr_AC_Huffman_Table_value, [128 x i32]* %outputBitString_cb_l, [128 x i32]* %outputBitString_cb_v)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:654]   --->   Operation 136 'call' 'call_ret2' <Predicate = true> <Delay = 4.24> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_14 : Operation 137 [2/2] (3.62ns)   --->   "%call_ret = call fastcc { i32, i32, i8 } @_write_bitstring_(i8 %JpegEncoder_outhebyt_1, [128 x i32]* %outputBitString_y_le, [128 x i32]* %outputBitString_y_va, i32 %bitStringCounts_y, i32 %newByte_1_load, i32 %newBytePos_1_load, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 137 'call' 'call_ret' <Predicate = true> <Delay = 3.62> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 12> <Delay = 1.76>
+ST_15 : Operation 138 [1/2] (0.00ns)   --->   "call fastcc void @_foword_FDC([8 x i8]* %crData_0, [8 x i8]* %crData_1, [8 x i8]* %crData_2, [8 x i8]* %crData_3, [8 x i8]* %crData_4, [8 x i8]* %crData_5, [8 x i8]* %crData_6, [8 x i8]* %crData_7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i4 7, i4 7, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 8, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 8, i5 9, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, i5 10, [64 x i11]* %crQuant)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:651]   --->   Operation 138 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 139 [1/2] (0.00ns)   --->   "%call_ret2 = call fastcc { i16, i32 } @_doHuffmanEncoding([64 x i11]* %cbQuant, i16 %prev_DC_Cb_1_load, [12 x i5]* %JpegEncoder_m_CbCr_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_CbCr_DC_Huffman_Table_value, [256 x i5]* %JpegEncoder_m_CbCr_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_CbCr_AC_Huffman_Table_value, [128 x i32]* %outputBitString_cb_l, [128 x i32]* %outputBitString_cb_v)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:654]   --->   Operation 139 'call' 'call_ret2' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 140 [1/1] (0.00ns)   --->   "%prev_DC_Cb = extractvalue { i16, i32 } %call_ret2, 0" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:654]   --->   Operation 140 'extractvalue' 'prev_DC_Cb' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 141 [1/1] (0.00ns)   --->   "%bitStringCounts_cb = extractvalue { i16, i32 } %call_ret2, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:654]   --->   Operation 141 'extractvalue' 'bitStringCounts_cb' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 142 [1/2] (0.00ns)   --->   "%call_ret = call fastcc { i32, i32, i8 } @_write_bitstring_(i8 %JpegEncoder_outhebyt_1, [128 x i32]* %outputBitString_y_le, [128 x i32]* %outputBitString_y_va, i32 %bitStringCounts_y, i32 %newByte_1_load, i32 %newBytePos_1_load, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 142 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 143 [1/1] (0.00ns)   --->   "%newBytePos = extractvalue { i32, i32, i8 } %call_ret, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 143 'extractvalue' 'newBytePos' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 144 [1/1] (0.00ns)   --->   "%newByte = extractvalue { i32, i32, i8 } %call_ret, 0" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 144 'extractvalue' 'newByte' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 145 [1/1] (0.00ns)   --->   "%JpegEncoder_outhebyt_2 = extractvalue { i32, i32, i8 } %call_ret, 2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:657]   --->   Operation 145 'extractvalue' 'JpegEncoder_outhebyt_2' <Predicate = true> <Delay = 0.00>
+ST_15 : Operation 146 [1/1] (1.76ns)   --->   "store i16 %prev_DC_Cb, i16* %prev_DC_Cb_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 146 'store' <Predicate = true> <Delay = 1.76>
+
+State 16 <SV = 13> <Delay = 4.24>
+ST_16 : Operation 147 [1/1] (0.00ns)   --->   "%prev_DC_Cr_1_load = load i16* %prev_DC_Cr_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:655]   --->   Operation 147 'load' 'prev_DC_Cr_1_load' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 148 [2/2] (4.24ns)   --->   "%call_ret3 = call fastcc { i16, i32 } @_doHuffmanEncoding([64 x i11]* %crQuant, i16 %prev_DC_Cr_1_load, [12 x i5]* %JpegEncoder_m_CbCr_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_CbCr_DC_Huffman_Table_value, [256 x i5]* %JpegEncoder_m_CbCr_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_CbCr_AC_Huffman_Table_value, [128 x i32]* %outputBitString_cr_l, [128 x i32]* %outputBitString_cr_v)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:655]   --->   Operation 148 'call' 'call_ret3' <Predicate = true> <Delay = 4.24> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_16 : Operation 149 [2/2] (3.62ns)   --->   "%call_ret8 = call fastcc { i32, i32, i8 } @_write_bitstring_(i8 %JpegEncoder_outhebyt_2, [128 x i32]* %outputBitString_cb_l, [128 x i32]* %outputBitString_cb_v, i32 %bitStringCounts_cb, i32 %newByte, i32 %newBytePos, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:659]   --->   Operation 149 'call' 'call_ret8' <Predicate = true> <Delay = 3.62> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 14> <Delay = 1.76>
+ST_17 : Operation 150 [1/2] (0.00ns)   --->   "%call_ret3 = call fastcc { i16, i32 } @_doHuffmanEncoding([64 x i11]* %crQuant, i16 %prev_DC_Cr_1_load, [12 x i5]* %JpegEncoder_m_CbCr_DC_Huffman_Table_length, [12 x i16]* %JpegEncoder_m_CbCr_DC_Huffman_Table_value, [256 x i5]* %JpegEncoder_m_CbCr_AC_Huffman_Table_length, [256 x i16]* %JpegEncoder_m_CbCr_AC_Huffman_Table_value, [128 x i32]* %outputBitString_cr_l, [128 x i32]* %outputBitString_cr_v)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:655]   --->   Operation 150 'call' 'call_ret3' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 151 [1/1] (0.00ns)   --->   "%prev_DC_Cr = extractvalue { i16, i32 } %call_ret3, 0" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:655]   --->   Operation 151 'extractvalue' 'prev_DC_Cr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 152 [1/1] (0.00ns)   --->   "%bitStringCounts_cr = extractvalue { i16, i32 } %call_ret3, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:655]   --->   Operation 152 'extractvalue' 'bitStringCounts_cr' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 153 [1/2] (0.00ns)   --->   "%call_ret8 = call fastcc { i32, i32, i8 } @_write_bitstring_(i8 %JpegEncoder_outhebyt_2, [128 x i32]* %outputBitString_cb_l, [128 x i32]* %outputBitString_cb_v, i32 %bitStringCounts_cb, i32 %newByte, i32 %newBytePos, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:659]   --->   Operation 153 'call' 'call_ret8' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_17 : Operation 154 [1/1] (0.00ns)   --->   "%newBytePos_2 = extractvalue { i32, i32, i8 } %call_ret8, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:659]   --->   Operation 154 'extractvalue' 'newBytePos_2' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 155 [1/1] (0.00ns)   --->   "%newByte_2 = extractvalue { i32, i32, i8 } %call_ret8, 0" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:659]   --->   Operation 155 'extractvalue' 'newByte_2' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 156 [1/1] (0.00ns)   --->   "%JpegEncoder_outhebyt_3 = extractvalue { i32, i32, i8 } %call_ret8, 2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:659]   --->   Operation 156 'extractvalue' 'JpegEncoder_outhebyt_3' <Predicate = true> <Delay = 0.00>
+ST_17 : Operation 157 [1/1] (1.76ns)   --->   "store i16 %prev_DC_Cr, i16* %prev_DC_Cr_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 157 'store' <Predicate = true> <Delay = 1.76>
+
+State 18 <SV = 15> <Delay = 3.62>
+ST_18 : Operation 158 [2/2] (3.62ns)   --->   "%call_ret5 = call fastcc { i32, i32, i8 } @_write_bitstring_(i8 %JpegEncoder_outhebyt_3, [128 x i32]* %outputBitString_cr_l, [128 x i32]* %outputBitString_cr_v, i32 %bitStringCounts_cr, i32 %newByte_2, i32 %newBytePos_2, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:661]   --->   Operation 158 'call' 'call_ret5' <Predicate = true> <Delay = 3.62> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 16> <Delay = 1.76>
+ST_19 : Operation 159 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str37) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:634]   --->   Operation 159 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 160 [1/2] (0.00ns)   --->   "%call_ret5 = call fastcc { i32, i32, i8 } @_write_bitstring_(i8 %JpegEncoder_outhebyt_3, [128 x i32]* %outputBitString_cr_l, [128 x i32]* %outputBitString_cr_v, i32 %bitStringCounts_cr, i32 %newByte_2, i32 %newBytePos_2, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:661]   --->   Operation 160 'call' 'call_ret5' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_19 : Operation 161 [1/1] (0.00ns)   --->   "%newBytePos_3 = extractvalue { i32, i32, i8 } %call_ret5, 1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:661]   --->   Operation 161 'extractvalue' 'newBytePos_3' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 162 [1/1] (0.00ns)   --->   "%newByte_3 = extractvalue { i32, i32, i8 } %call_ret5, 0" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:661]   --->   Operation 162 'extractvalue' 'newByte_3' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 163 [1/1] (0.00ns)   --->   "%JpegEncoder_outhebyt_4 = extractvalue { i32, i32, i8 } %call_ret5, 2" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:661]   --->   Operation 163 'extractvalue' 'JpegEncoder_outhebyt_4' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 164 [1/1] (1.76ns)   --->   "store i32 %newBytePos_3, i32* %newBytePos_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 164 'store' <Predicate = true> <Delay = 1.76>
+ST_19 : Operation 165 [1/1] (1.76ns)   --->   "store i32 %newByte_3, i32* %newByte_1" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 165 'store' <Predicate = true> <Delay = 1.76>
+ST_19 : Operation 166 [1/1] (1.76ns)   --->   "store i8 %JpegEncoder_outhebyt_4, i8* %JpegEncoder_outhebyt" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 166 'store' <Predicate = true> <Delay = 1.76>
+ST_19 : Operation 167 [1/1] (0.00ns)   --->   "br label %4" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:633]   --->   Operation 167 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:293->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) [70]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:293->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) [70]  (0 ns)
+	'getelementptr' operation ('p_anonymous_namespace_11', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) [78]  (0 ns)
+	'load' operation ('p_anonymous_namespace_12', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) on array 'p_anonymous_namespace_7' [79]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('p_anonymous_namespace_12', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) on array 'p_anonymous_namespace_7' [79]  (3.25 ns)
+
+ <State 4>: 2.32ns
+The critical path consists of the following:
+	'getelementptr' operation ('JpegEncoder_m_YTable_1', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) [83]  (0 ns)
+	'store' operation ('store_ln295', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) of variable 'p_anonymous_namespace_12', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:295->../../../Users/fantwen/Desktop/jpeg_V2.cpp:624 on array 'JpegEncoder_m_YTable' [84]  (2.32 ns)
+
+ <State 5>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ret4', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:626) to '_write_jpeg_header' [101]  (0 ns)
+	'store' operation ('store_ln630', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:630) of variable 'call_ret4', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:626 on local variable 'JpegEncoder_outhebyt' [107]  (1.77 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'call' operation ('call_ln632', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:632) to 'readFromBMP' [118]  (3.25 ns)
+
+ <State 7>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('xPos') with incoming values : ('xPos', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:633) [121]  (1.77 ns)
+
+ <State 8>: 1.77ns
+The critical path consists of the following:
+	'phi' operation ('xPos') with incoming values : ('xPos', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:633) [121]  (0 ns)
+	'icmp' operation ('icmp_ln633', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:633) [122]  (1.77 ns)
+
+ <State 9>: 0ns
+The critical path consists of the following:
+
+ <State 10>: 1.81ns
+The critical path consists of the following:
+	'call' operation ('call_ln649', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:649) to '_foword_FDC' [134]  (1.81 ns)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 4.24ns
+The critical path consists of the following:
+	'load' operation ('prev_DC_Y_1_load', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:653) on local variable 'prev_DC_Y' [127]  (0 ns)
+	'call' operation ('call_ret1', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:653) to '_doHuffmanEncoding' [137]  (4.24 ns)
+
+ <State 13>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ret1', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:653) to '_doHuffmanEncoding' [137]  (0 ns)
+	'store' operation ('store_ln633', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:633) of variable 'prev_DC_Y', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:653 on local variable 'prev_DC_Y' [163]  (1.77 ns)
+
+ <State 14>: 4.24ns
+The critical path consists of the following:
+	'load' operation ('prev_DC_Cb_1_load', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:654) on local variable 'prev_DC_Cb' [128]  (0 ns)
+	'call' operation ('call_ret2', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:654) to '_doHuffmanEncoding' [140]  (4.24 ns)
+
+ <State 15>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:654) to '_doHuffmanEncoding' [140]  (0 ns)
+	'store' operation ('store_ln633', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:633) of variable 'prev_DC_Cb', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:654 on local variable 'prev_DC_Cb' [162]  (1.77 ns)
+
+ <State 16>: 4.24ns
+The critical path consists of the following:
+	'load' operation ('prev_DC_Cr_1_load', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:655) on local variable 'prev_DC_Cr' [129]  (0 ns)
+	'call' operation ('call_ret3', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:655) to '_doHuffmanEncoding' [143]  (4.24 ns)
+
+ <State 17>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ret3', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:655) to '_doHuffmanEncoding' [143]  (0 ns)
+	'store' operation ('store_ln633', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:633) of variable 'prev_DC_Cr', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:655 on local variable 'prev_DC_Cr' [161]  (1.77 ns)
+
+ <State 18>: 3.63ns
+The critical path consists of the following:
+	'call' operation ('call_ret5', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:661) to '_write_bitstring_' [154]  (3.63 ns)
+
+ <State 19>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('call_ret5', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:661) to '_write_bitstring_' [154]  (0 ns)
+	'store' operation ('store_ln633', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:633) of variable 'newBytePos', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:661 on local variable 'newBytePos' [159]  (1.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

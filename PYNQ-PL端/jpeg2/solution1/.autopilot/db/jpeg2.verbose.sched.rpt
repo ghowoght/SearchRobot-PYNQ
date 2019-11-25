@@ -1,0 +1,154 @@
+
+
+================================================================
+== Vivado HLS Report for 'jpeg2'
+================================================================
+* Date:           Tue Nov 19 20:39:41 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.520|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+-----------+---------+-----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |   min   |    max    |   min   |    max    |   Type  |
+    +---------+-----------+---------+-----------+---------+
+    |  2540837|  274935543|  2540837|  274935543|   none  |
+    +---------+-----------+---------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%jpeg1_buffer = alloca [15360 x i8], align 1"   --->   Operation 5 'alloca' 'jpeg1_buffer' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%jpeg1_m_YTable = alloca [64 x i8], align 1"   --->   Operation 6 'alloca' 'jpeg1_m_YTable' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%jpeg1_m_CbCrTable = alloca [64 x i8], align 1"   --->   Operation 7 'alloca' 'jpeg1_m_CbCrTable' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%jpeg1_m_Y_DC_Huffman = alloca [12 x i5], align 1"   --->   Operation 8 'alloca' 'jpeg1_m_Y_DC_Huffman' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%jpeg1_m_Y_DC_Huffman_1 = alloca [12 x i16], align 2"   --->   Operation 9 'alloca' 'jpeg1_m_Y_DC_Huffman_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%jpeg1_m_Y_AC_Huffman = alloca [256 x i5], align 1"   --->   Operation 10 'alloca' 'jpeg1_m_Y_AC_Huffman' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%jpeg1_m_Y_AC_Huffman_1 = alloca [256 x i16], align 2"   --->   Operation 11 'alloca' 'jpeg1_m_Y_AC_Huffman_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%jpeg1_m_CbCr_DC_Huff = alloca [12 x i5], align 1"   --->   Operation 12 'alloca' 'jpeg1_m_CbCr_DC_Huff' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%jpeg1_m_CbCr_DC_Huff_1 = alloca [12 x i16], align 2"   --->   Operation 13 'alloca' 'jpeg1_m_CbCr_DC_Huff_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%jpeg1_m_CbCr_AC_Huff = alloca [256 x i5], align 1"   --->   Operation 14 'alloca' 'jpeg1_m_CbCr_AC_Huff' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%jpeg1_m_CbCr_AC_Huff_1 = alloca [256 x i16], align 2"   --->   Operation 15 'alloca' 'jpeg1_m_CbCr_AC_Huff_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [2/2] (0.00ns)   --->   "call fastcc void @encodeToJPG([15360 x i8]* %jpeg1_buffer, [64 x i8]* %jpeg1_m_YTable, [64 x i8]* %jpeg1_m_CbCrTable, [12 x i5]* %jpeg1_m_Y_DC_Huffman, [12 x i16]* %jpeg1_m_Y_DC_Huffman_1, [256 x i5]* %jpeg1_m_Y_AC_Huffman, [256 x i16]* %jpeg1_m_Y_AC_Huffman_1, [12 x i5]* %jpeg1_m_CbCr_DC_Huff, [12 x i16]* %jpeg1_m_CbCr_DC_Huff_1, [256 x i5]* %jpeg1_m_CbCr_AC_Huff, [256 x i16]* %jpeg1_m_CbCr_AC_Huff_1, i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:669]   --->   Operation 16 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 17 [1/2] (0.00ns)   --->   "call fastcc void @encodeToJPG([15360 x i8]* %jpeg1_buffer, [64 x i8]* %jpeg1_m_YTable, [64 x i8]* %jpeg1_m_CbCrTable, [12 x i5]* %jpeg1_m_Y_DC_Huffman, [12 x i16]* %jpeg1_m_Y_DC_Huffman_1, [256 x i5]* %jpeg1_m_Y_AC_Huffman, [256 x i16]* %jpeg1_m_Y_AC_Huffman_1, [12 x i5]* %jpeg1_m_CbCr_DC_Huff, [12 x i16]* %jpeg1_m_CbCr_DC_Huff_1, [256 x i5]* %jpeg1_m_CbCr_AC_Huff, [256 x i16]* %jpeg1_m_CbCr_AC_Huff_1, i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:669]   --->   Operation 17 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.76>
+ST_3 : Operation 18 [1/1] (1.76ns)   --->   "%empty = call fastcc i8 @_write_byte_(i1 false, i8 -1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:670]   --->   Operation 18 'call' 'empty' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.76>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %rgb_in_V_data_V), !map !206"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i3* %rgb_in_V_keep_V), !map !210"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i3* %rgb_in_V_strb_V), !map !214"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %rgb_in_V_last_V), !map !218"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %jpeg_out_V_data_V), !map !222"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %jpeg_out_V_keep_V), !map !226"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %jpeg_out_V_strb_V), !map !230"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %jpeg_out_V_last_V), !map !234"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @jpeg2_str) nounwind"   --->   Operation 27 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:667]   --->   Operation 28 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:667]   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str40, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:667]   --->   Operation 30 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (1.76ns)   --->   "%empty_34 = call fastcc i8 @_write_byte_(i1 true, i8 -39, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:672]   --->   Operation 31 'call' 'empty_34' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "ret void" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:673]   --->   Operation 32 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('empty', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:670) to '_write_byte_' [46]  (1.77 ns)
+
+ <State 4>: 1.77ns
+The critical path consists of the following:
+	'call' operation ('empty_34', ../../../Users/fantwen/Desktop/jpeg_V2.cpp:672) to '_write_byte_' [47]  (1.77 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,189 @@
+
+
+================================================================
+== Vivado HLS Report for 'jpeg2'
+================================================================
+* Date:           Tue Nov 19 20:40:06 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.520|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+-----------+---------+-----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |   min   |    max    |   min   |    max    |   Type  |
+    +---------+-----------+---------+-----------+---------+
+    |  2540837|  274935543|  2540837|  274935543|   none  |
+    +---------+-----------+---------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+----------------+---------+-----------+---------+-----------+----------+
+        |                           |                |       Latency       |       Interval      | Pipeline |
+        |          Instance         |     Module     |   min   |    max    |   min   |    max    |   Type   |
+        +---------------------------+----------------+---------+-----------+---------+-----------+----------+
+        |grp_encodeToJPG_fu_116     |encodeToJPG     |  2540834|  274935540|  2540834|  274935540|   none   |
+        |grp_p_write_byte_s_fu_184  |p_write_byte_s  |        0|          0|        1|          1| function |
+        +---------------------------+----------------+---------+-----------+---------+-----------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|      4|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |       23|    115|   15388|  33506|    0|
+|Memory           |       12|      -|     116|     24|    0|
+|Multiplexer      |        -|      -|       -|    150|    -|
+|Register         |        -|      -|       5|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |       35|    115|   15509|  33684|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |       12|     52|      14|     63|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+    |          Instance         |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+    |grp_encodeToJPG_fu_116     |encodeToJPG           |       23|    115|  15351|  33457|    0|
+    |jpeg2_AXILiteS_s_axi_U     |jpeg2_AXILiteS_s_axi  |        0|      0|     36|     40|    0|
+    |grp_p_write_byte_s_fu_184  |p_write_byte_s        |        0|      0|      1|      9|    0|
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+    |Total                      |                      |       23|    115|  15388|  33506|    0|
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |          Memory          |        Module        | BRAM_18K| FF | LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |jpeg1_buffer_U            |jpeg2_jpeg1_buffer    |        8|   0|   0|    0|  15360|    8|     1|       122880|
+    |jpeg1_m_YTable_U          |jpeg2_jpeg1_m_YTabbk  |        0|  16|   8|    0|     64|    8|     1|          512|
+    |jpeg1_m_CbCrTable_U       |jpeg2_jpeg1_m_YTabbk  |        0|  16|   8|    0|     64|    8|     1|          512|
+    |jpeg1_m_Y_AC_Huffman_U    |jpeg2_jpeg1_m_Y_Abfk  |        1|   0|   0|    0|    256|    5|     1|         1280|
+    |jpeg1_m_CbCr_AC_Huff_U    |jpeg2_jpeg1_m_Y_Abfk  |        1|   0|   0|    0|    256|    5|     1|         1280|
+    |jpeg1_m_Y_AC_Huffman_1_U  |jpeg2_jpeg1_m_Y_Abgk  |        1|   0|   0|    0|    256|   16|     1|         4096|
+    |jpeg1_m_CbCr_AC_Huff_1_U  |jpeg2_jpeg1_m_Y_Abgk  |        1|   0|   0|    0|    256|   16|     1|         4096|
+    |jpeg1_m_Y_DC_Huffman_U    |jpeg2_jpeg1_m_Y_Dbdk  |        0|  10|   1|    0|     12|    5|     1|           60|
+    |jpeg1_m_CbCr_DC_Huff_U    |jpeg2_jpeg1_m_Y_Dbdk  |        0|  10|   1|    0|     12|    5|     1|           60|
+    |jpeg1_m_Y_DC_Huffman_1_U  |jpeg2_jpeg1_m_Y_Dbek  |        0|  32|   3|    0|     12|   16|     1|          192|
+    |jpeg1_m_CbCr_DC_Huff_1_U  |jpeg2_jpeg1_m_Y_Dbek  |        0|  32|   3|    0|     12|   16|     1|          192|
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |Total                     |                      |       12| 116|  24|    0|  16560|  108|    11|       135160|
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |grp_encodeToJPG_fu_116_jpeg_out_TREADY     |    and   |      0|  0|   2|           1|           1|
+    |grp_p_write_byte_s_fu_184_jpeg_out_TREADY  |    or    |      0|  0|   2|           1|           1|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                      |          |      0|  0|   4|           2|           2|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |                             Name                            | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                                    |  27|          5|    1|          5|
+    |grp_p_write_byte_s_fu_184_JpegEncoder_outhebyte_last_V_read  |  15|          3|    1|          3|
+    |grp_p_write_byte_s_fu_184_value_r                            |  15|          3|    8|         24|
+    |jpeg_out_TDATA                                               |  15|          3|    8|         24|
+    |jpeg_out_TDATA_blk_n                                         |   9|          2|    1|          2|
+    |jpeg_out_TKEEP                                               |  15|          3|    1|          3|
+    |jpeg_out_TLAST                                               |  15|          3|    1|          3|
+    |jpeg_out_TSTRB                                               |  15|          3|    1|          3|
+    |jpeg_out_TVALID                                              |  15|          3|    1|          3|
+    |rgb_in_TREADY                                                |   9|          2|    1|          2|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                        | 150|         30|   24|         72|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+---+----+-----+-----------+
+    |                 Name                | FF| LUT| Bits| Const Bits|
+    +-------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                            |  4|   0|    4|          0|
+    |grp_encodeToJPG_fu_116_ap_start_reg  |  1|   0|    1|          0|
+    +-------------------------------------+---+----+-----+-----------+
+    |Total                                |  5|   0|    5|          0|
+    +-------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++------------------------+-----+-----+------------+-------------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_AWADDR   |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARADDR   |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |      AXILiteS     |  return void |
+|ap_clk                  |  in |    1| ap_ctrl_hs |       jpeg2       | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |       jpeg2       | return value |
+|interrupt               | out |    1| ap_ctrl_hs |       jpeg2       | return value |
+|rgb_in_TDATA            |  in |   24|    axis    |  rgb_in_V_data_V  |    pointer   |
+|rgb_in_TVALID           |  in |    1|    axis    |  rgb_in_V_last_V  |    pointer   |
+|rgb_in_TREADY           | out |    1|    axis    |  rgb_in_V_last_V  |    pointer   |
+|rgb_in_TLAST            |  in |    1|    axis    |  rgb_in_V_last_V  |    pointer   |
+|rgb_in_TKEEP            |  in |    3|    axis    |  rgb_in_V_keep_V  |    pointer   |
+|rgb_in_TSTRB            |  in |    3|    axis    |  rgb_in_V_strb_V  |    pointer   |
+|jpeg_out_TDATA          | out |    8|    axis    | jpeg_out_V_data_V |    pointer   |
+|jpeg_out_TVALID         | out |    1|    axis    | jpeg_out_V_last_V |    pointer   |
+|jpeg_out_TREADY         |  in |    1|    axis    | jpeg_out_V_last_V |    pointer   |
+|jpeg_out_TLAST          | out |    1|    axis    | jpeg_out_V_last_V |    pointer   |
+|jpeg_out_TKEEP          | out |    1|    axis    | jpeg_out_V_keep_V |    pointer   |
+|jpeg_out_TSTRB          | out |    1|    axis    | jpeg_out_V_strb_V |    pointer   |
++------------------------+-----+-----+------------+-------------------+--------------+
+

@@ -1,0 +1,83 @@
+<InterfaceSummary>
+<RtlPorts>
+<name>rgb_in_V_data_V</name>
+<CType>
+<TypeName>ap_int 24</TypeName>
+<TypeWidth>24</TypeWidth>
+<PhysicalWidth>24</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>rgb_in_V_keep_V</name>
+<CType>
+<TypeName>ap_uint 3</TypeName>
+<TypeWidth>3</TypeWidth>
+<PhysicalWidth>3</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>rgb_in_V_strb_V</name>
+<CType>
+<TypeName>ap_uint 3</TypeName>
+<TypeWidth>3</TypeWidth>
+<PhysicalWidth>3</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>rgb_in_V_last_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>jpeg_out_V_data_V</name>
+<CType>
+<TypeName>ap_int 8</TypeName>
+<TypeWidth>8</TypeWidth>
+<PhysicalWidth>8</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>jpeg_out_V_keep_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>jpeg_out_V_strb_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+<RtlPorts>
+<name>jpeg_out_V_last_V</name>
+<CType>
+<TypeName>ap_uint 1</TypeName>
+<TypeWidth>1</TypeWidth>
+<PhysicalWidth>1</PhysicalWidth>
+</CType>
+<CFractionWidth>0</CFractionWidth>
+<InvalidType>0</InvalidType>
+</RtlPorts>
+</InterfaceSummary>
+

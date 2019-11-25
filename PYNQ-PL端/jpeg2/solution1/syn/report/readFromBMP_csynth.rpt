@@ -1,0 +1,208 @@
+
+
+================================================================
+== Vivado HLS Report for 'readFromBMP'
+================================================================
+* Date:           Tue Nov 19 20:39:47 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.254|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  8321|  8321|  8321|  8321|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- RB      |  8320|  8320|        13|          -|          -|   640|    no    |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    695|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    268|    -|
+|Register         |        -|      -|     379|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     379|    963|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |     Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |add_ln163_fu_803_p2    |     +    |      0|  0|  17|           4|          13|
+    |add_ln167_1_fu_558_p2  |     +    |      0|  0|  23|           1|          16|
+    |add_ln167_2_fu_689_p2  |     +    |      0|  0|  23|           1|          16|
+    |add_ln167_3_fu_825_p2  |     +    |      0|  0|  23|           1|          16|
+    |add_ln167_fu_428_p2    |     +    |      0|  0|  23|           1|          16|
+    |add_ln168_1_fu_509_p2  |     +    |      0|  0|  23|           2|          16|
+    |add_ln168_2_fu_567_p2  |     +    |      0|  0|  23|           2|          16|
+    |add_ln168_3_fu_698_p2  |     +    |      0|  0|  23|           2|          16|
+    |add_ln168_4_fu_770_p2  |     +    |      0|  0|  23|           2|          16|
+    |add_ln168_5_fu_834_p2  |     +    |      0|  0|  23|           2|          16|
+    |add_ln168_fu_437_p2    |     +    |      0|  0|  23|           2|          16|
+    |sub_ln166_1_fu_400_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln166_2_fu_480_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln166_3_fu_536_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln166_4_fu_610_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln166_5_fu_661_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln166_6_fu_741_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln166_7_fu_797_p2  |     -    |      0|  0|  23|          16|          16|
+    |sub_ln166_fu_349_p2    |     -    |      0|  0|  23|          16|          16|
+    |icmp_ln163_fu_331_p2   |   icmp   |      0|  0|  13|          13|          13|
+    |or_ln163_1_fu_458_p2   |    or    |      0|  0|  13|          13|           2|
+    |or_ln163_2_fu_514_p2   |    or    |      0|  0|  13|          13|           2|
+    |or_ln163_3_fu_588_p2   |    or    |      0|  0|  13|          13|           3|
+    |or_ln163_4_fu_639_p2   |    or    |      0|  0|  13|          13|           3|
+    |or_ln163_5_fu_719_p2   |    or    |      0|  0|  13|          13|           3|
+    |or_ln163_6_fu_775_p2   |    or    |      0|  0|  13|          13|           3|
+    |or_ln163_fu_378_p2     |    or    |      0|  0|  13|          13|           1|
+    |or_ln167_1_fu_494_p2   |    or    |      0|  0|  32|          32|           1|
+    |or_ln167_2_fu_624_p2   |    or    |      0|  0|  32|          32|           1|
+    |or_ln167_3_fu_755_p2   |    or    |      0|  0|  32|          32|           1|
+    |or_ln167_fu_363_p2     |    or    |      0|  0|  32|          32|           1|
+    |or_ln168_1_fu_667_p2   |    or    |      0|  0|  16|          16|           2|
+    |or_ln168_fu_406_p2     |    or    |      0|  0|  16|          16|           2|
+    +-----------------------+----------+-------+---+----+------------+------------+
+    |Total                  |          |      0|  0| 695|         412|         339|
+    +-----------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |JpegEncoder_buffer_address0  |  56|         13|   14|        182|
+    |JpegEncoder_buffer_address1  |  56|         13|   14|        182|
+    |JpegEncoder_buffer_d0        |  38|          7|    8|         56|
+    |JpegEncoder_buffer_d1        |  38|          7|    8|         56|
+    |ap_NS_fsm                    |  62|         15|    1|         15|
+    |i_0_0_reg_283                |   9|          2|   13|         26|
+    |rgb_in_TDATA_blk_n           |   9|          2|    1|          2|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 268|         59|   59|        519|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |add_ln163_reg_985      |  13|   0|   13|          0|
+    |add_ln167_1_reg_914    |  14|   0|   16|          2|
+    |add_ln167_2_reg_947    |  15|   0|   16|          1|
+    |add_ln167_3_reg_990    |  13|   0|   16|          3|
+    |add_ln167_reg_876      |  15|   0|   16|          1|
+    |add_ln168_1_reg_902    |  16|   0|   16|          0|
+    |add_ln168_2_reg_924    |  14|   0|   16|          2|
+    |add_ln168_3_reg_957    |  15|   0|   16|          1|
+    |add_ln168_4_reg_973    |  16|   0|   16|          0|
+    |add_ln168_5_reg_1000   |  13|   0|   16|          3|
+    |add_ln168_reg_886      |  15|   0|   16|          1|
+    |ap_CS_fsm              |  14|   0|   14|          0|
+    |i_0_0_reg_283          |  13|   0|   13|          0|
+    |reg_322                |   8|   0|    8|          0|
+    |sub_ln166_1_reg_869    |  15|   0|   16|          1|
+    |sub_ln166_2_reg_891    |  16|   0|   16|          0|
+    |sub_ln166_3_reg_907    |  14|   0|   16|          2|
+    |sub_ln166_4_reg_929    |  16|   0|   16|          0|
+    |sub_ln166_5_reg_940    |  15|   0|   16|          1|
+    |sub_ln166_6_reg_962    |  16|   0|   16|          0|
+    |sub_ln166_7_reg_978    |  13|   0|   16|          3|
+    |sub_ln166_reg_858      |  16|   0|   16|          0|
+    |trunc_ln168_1_reg_881  |   8|   0|    8|          0|
+    |trunc_ln168_2_reg_897  |   8|   0|    8|          0|
+    |trunc_ln168_3_reg_919  |   8|   0|    8|          0|
+    |trunc_ln168_4_reg_935  |   8|   0|    8|          0|
+    |trunc_ln168_5_reg_952  |   8|   0|    8|          0|
+    |trunc_ln168_6_reg_968  |   8|   0|    8|          0|
+    |trunc_ln168_7_reg_995  |   8|   0|    8|          0|
+    |trunc_ln168_reg_864    |   8|   0|    8|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  | 379|   0|  400|         21|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+--------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++-----------------------------+-----+-----+------------+--------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_hs |     readFromBMP    | return value |
+|ap_rst                       |  in |    1| ap_ctrl_hs |     readFromBMP    | return value |
+|ap_start                     |  in |    1| ap_ctrl_hs |     readFromBMP    | return value |
+|ap_done                      | out |    1| ap_ctrl_hs |     readFromBMP    | return value |
+|ap_idle                      | out |    1| ap_ctrl_hs |     readFromBMP    | return value |
+|ap_ready                     | out |    1| ap_ctrl_hs |     readFromBMP    | return value |
+|JpegEncoder_buffer_address0  | out |   14|  ap_memory | JpegEncoder_buffer |     array    |
+|JpegEncoder_buffer_ce0       | out |    1|  ap_memory | JpegEncoder_buffer |     array    |
+|JpegEncoder_buffer_we0       | out |    1|  ap_memory | JpegEncoder_buffer |     array    |
+|JpegEncoder_buffer_d0        | out |    8|  ap_memory | JpegEncoder_buffer |     array    |
+|JpegEncoder_buffer_address1  | out |   14|  ap_memory | JpegEncoder_buffer |     array    |
+|JpegEncoder_buffer_ce1       | out |    1|  ap_memory | JpegEncoder_buffer |     array    |
+|JpegEncoder_buffer_we1       | out |    1|  ap_memory | JpegEncoder_buffer |     array    |
+|JpegEncoder_buffer_d1        | out |    8|  ap_memory | JpegEncoder_buffer |     array    |
+|rgb_in_TDATA                 |  in |   24|    axis    |   rgb_in_V_data_V  |    pointer   |
+|rgb_in_TVALID                |  in |    1|    axis    |   rgb_in_V_data_V  |    pointer   |
+|rgb_in_TREADY                | out |    1|    axis    |   rgb_in_V_last_V  |    pointer   |
+|rgb_in_TLAST                 |  in |    1|    axis    |   rgb_in_V_last_V  |    pointer   |
+|rgb_in_TKEEP                 |  in |    3|    axis    |   rgb_in_V_keep_V  |    pointer   |
+|rgb_in_TSTRB                 |  in |    3|    axis    |   rgb_in_V_strb_V  |    pointer   |
++-----------------------------+-----+-----+------------+--------------------+--------------+
+

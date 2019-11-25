@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'p_write_jpeg_header'" level="0">
+<item name = "Date">Tue Nov 19 20:39:21 2019
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">jpeg2</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">5.00, 3.360, 0.63</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">1199, 1199, 1199, 1199, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_p_write_162bytes_s_fu_98">p_write_162bytes_s, 325, 325, 325, 325, none</column>
+<column name="grp_p_write_64bytes_s_fu_113">p_write_64bytes_s, 129, 129, 129, 129, none</column>
+<column name="grp_p_write_16bytes_s_fu_128">p_write_16bytes_s, 33, 33, 33, 33, none</column>
+<column name="grp_p_write_12bytes_s_fu_145">p_write_12bytes_s, 25, 25, 25, 25, none</column>
+<column name="grp_p_write_5bytes_s_fu_160">p_write_5bytes_s, 11, 11, 11, 11, none</column>
+<column name="grp_p_write_word_s_fu_174">p_write_word_s, 1, 1, 1, 1, none</column>
+<column name="grp_p_write_byte_s_fu_205">p_write_byte_s, 0, 0, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="jpeg2" xd:componentRef="jpeg2" xd:initiationInterval="274935544" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="rgb_in.data" xd:originalName="rgb_in" xd:direction="in" xd:interfaceRef="rgb_in" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:arg xd:name="rgb_in.keep" xd:originalName="rgb_in" xd:direction="in" xd:interfaceRef="rgb_in" xd:busTypeRef="axis" xd:dataWidth="3"/>
+  <xd:arg xd:name="rgb_in.strb" xd:originalName="rgb_in" xd:direction="in" xd:interfaceRef="rgb_in" xd:busTypeRef="axis" xd:dataWidth="3"/>
+  <xd:arg xd:name="rgb_in.last" xd:originalName="rgb_in" xd:direction="in" xd:interfaceRef="rgb_in" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="jpeg_out.data" xd:originalName="jpeg_out" xd:direction="out" xd:interfaceRef="jpeg_out" xd:busTypeRef="axis" xd:dataWidth="8"/>
+  <xd:arg xd:name="jpeg_out.keep" xd:originalName="jpeg_out" xd:direction="out" xd:interfaceRef="jpeg_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="jpeg_out.strb" xd:originalName="jpeg_out" xd:direction="out" xd:interfaceRef="jpeg_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="jpeg_out.last" xd:originalName="jpeg_out" xd:direction="out" xd:interfaceRef="jpeg_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="2540837" xd:worst-case="274935543" xd:average-case="71664823"/>
+  <xd:resourceEstimates xd:LUT="33684" xd:FF="15509" xd:BRAM="35" xd:DSP="115"/>
+</xd:acceleratorMap>

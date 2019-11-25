@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../../../Users/fantwen/Desktop/jpeg_V2.cpp&apos; ..."/>
+	<Message severity="WARNING" prefix="[HLS 200-40]" key="HLS_40_1378" tag="" content="In file included from ../../../Users/fantwen/Desktop/jpeg_V2.cpp:1:
+In file included from ../../../Users/fantwen/Desktop/jpeg_V2.cpp:3:
+../../../Users/fantwen/Desktop/jpeg_V2.h:48:13: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ int m_width=640;
+            ^
+../../../Users/fantwen/Desktop/jpeg_V2.h:49:14: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+ int m_height=480;
+             ^
+2 warnings generated."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 173.906 ; gain = 83.559"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 173.906 ; gain = 83.559"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:24 . Memory (MB): peak = 173.906 ; gain = 83.559"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;JpegEncoder::_initQualityTables&apos; into &apos;JpegEncoder::encodeToJPG&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;JpegEncoder::_initHuffmanTables&apos; into &apos;JpegEncoder::encodeToJPG&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:625) automatically."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:25 . Memory (MB): peak = 173.906 ; gain = 83.559"/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;JpegEncoder::_getBitCode&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:362)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;JpegEncoder::_write_bitstring_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:579)."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_250" tag="" content="Unrolling all loops for pipelining in function &apos;JpegEncoder::_doHuffmanEncoding&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:376)."/>
+	<Message severity="WARNING" prefix="[XFORM 203-505]" key="XFORM_UNROLL_DEAD_PIPELINE_247" tag="" content="Ignored pipeline directive for loop &apos;huff1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:396) because its parent loop or function is pipelined."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;FDC1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:186) in function &apos;JpegEncoder::_foword_FDC&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;conver_col1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:346) in function &apos;JpegEncoder::_convertColorSpace&apos; for pipelining."/>
+	<Message severity="WARNING" prefix="[XFORM 203-505]" key="XFORM_UNROLL_DEAD_PIPELINE_247" tag="" content="Ignored pipeline directive for loop &apos;conver_col2&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:349) because its parent loop or function is pipelined."/>
+	<Message severity="WARNING" prefix="[XFORM 203-561]" key="XFORM_LOOPBOUND_INVALID_405" tag="" content="Updating loop lower bound from 0 to 1 for loop &apos;huff4&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:411:1) in function &apos;JpegEncoder::_doHuffmanEncoding&apos;."/>
+	<Message severity="INFO" prefix="[XFORM 203-501]" key="XFORM_UNROLL_STATUS_310" tag="" content="Unrolling loop &apos;RB&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:164) in function &apos;JpegEncoder::readFromBMP&apos; partially with a factor of 8."/>
+	<Message severity="WARNING" prefix="[XFORM 203-503]" key="XFORM_UNROLL_INVALID_314" tag="LOOP,SDX_LOOP" content="Cannot unroll loop &apos;en2&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:634) in function &apos;JpegEncoder::encodeToJPG&apos; completely: variable loop bound."/>
+	<Message severity="WARNING" prefix="[XFORM 203-503]" key="XFORM_UNROLL_INVALID_314" tag="LOOP,SDX_LOOP" content="Cannot unroll loop &apos;bit1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:368) in function &apos;JpegEncoder::_getBitCode&apos; completely: variable loop bound."/>
+	<Message severity="WARNING" prefix="[XFORM 203-503]" key="XFORM_UNROLL_INVALID_321" tag="LOOP,SDX_LOOP" content="Cannot unroll loop &apos;wb1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:584) in function &apos;JpegEncoder::_write_bitstring_&apos;: cannot completely unroll a loop with a variable trip count."/>
+	<Message severity="WARNING" prefix="[XFORM 203-503]" key="XFORM_UNROLL_INVALID_314" tag="LOOP,SDX_LOOP" content="Cannot unroll loop &apos;wb2&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:591) in function &apos;JpegEncoder::_write_bitstring_&apos; completely: variable loop bound."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;huff1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:396) in function &apos;JpegEncoder::_doHuffmanEncoding&apos; completely with a factor of 63."/>
+	<Message severity="WARNING" prefix="[XFORM 203-503]" key="XFORM_UNROLL_INVALID_314" tag="LOOP,SDX_LOOP" content="Cannot unroll loop &apos;huff2&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:400) in function &apos;JpegEncoder::_doHuffmanEncoding&apos; completely: variable loop bound."/>
+	<Message severity="WARNING" prefix="[XFORM 203-503]" key="XFORM_UNROLL_INVALID_314" tag="LOOP,SDX_LOOP" content="Cannot unroll loop &apos;huff3&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:403) in function &apos;JpegEncoder::_doHuffmanEncoding&apos; completely: variable loop bound."/>
+	<Message severity="WARNING" prefix="[XFORM 203-503]" key="XFORM_UNROLL_INVALID_321" tag="LOOP,SDX_LOOP" content="Cannot unroll loop &apos;huff4&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:410) in function &apos;JpegEncoder::_doHuffmanEncoding&apos;: cannot completely unroll a loop with a variable trip count."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1.1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:187) in function &apos;JpegEncoder::_foword_FDC&apos; completely with a factor of 8."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;FDC5&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:235) in function &apos;JpegEncoder::_foword_FDC&apos; completely with a factor of 8."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;FDC9&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:280) in function &apos;JpegEncoder::_foword_FDC&apos; completely with a factor of 64."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;conver_col2&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:349) in function &apos;JpegEncoder::_convertColorSpace&apos; completely with a factor of 8."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_120" tag="" content="Partitioning array &apos;reg_in.V&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:177) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_120" tag="" content="Partitioning array &apos;sec&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:179) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_120" tag="" content="Partitioning array &apos;(anonymous namespace)::Luminance_RS&apos; automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-102]" key="XFORM_AUTO_PARTITION_STATUS_120" tag="" content="Partitioning array &apos;(anonymous namespace)::Chrominance_RS&apos; automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_111" tag="" content="Partitioning array &apos;yData&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:635) in dimension 1 with a block factor 8."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_111" tag="" content="Partitioning array &apos;cbData&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:635) in dimension 1 with a block factor 8."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_111" tag="" content="Partitioning array &apos;crData&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:635) in dimension 1 with a block factor 8."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;JpegEncoder::_initQualityTables&apos; into &apos;JpegEncoder::encodeToJPG&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:624) automatically."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;JpegEncoder::_initHuffmanTables&apos; into &apos;JpegEncoder::encodeToJPG&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:625) automatically."/>
+	<Message severity="WARNING" prefix="[XFORM 203-561]" key="XFORM_LOOPBOUND_INVALID_402" tag="" content="Updating loop upper bound from 81 to 80 for loop &apos;en2&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:635:1) in function &apos;JpegEncoder::encodeToJPG&apos;."/>
+	<Message severity="WARNING" prefix="[XFORM 203-561]" key="XFORM_LOOPBOUND_INVALID_405" tag="" content="Updating loop lower bound from 0 to 80 for loop &apos;en2&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:635:1) in function &apos;JpegEncoder::encodeToJPG&apos;."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:591:4) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:598:4) in function &apos;JpegEncoder::_write_bitstring_&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:371:2) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:373:2) in function &apos;JpegEncoder::_getBitCode&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:237:15) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:285:1) in function &apos;JpegEncoder::_foword_FDC&apos;... converting 161 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:395:8) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:399:19) in function &apos;JpegEncoder::_doHuffmanEncoding&apos;... converting 64 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:356:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) to (../../../Users/fantwen/Desktop/jpeg_V2.cpp:357:27) in function &apos;JpegEncoder::_convertColorSpace&apos;... converting 3 basic blocks."/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;JpegEncoder::_getBitCode&apos; into &apos;JpegEncoder::_doHuffmanEncoding&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:389) automatically."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:11 ; elapsed = 00:00:34 . Memory (MB): peak = 209.523 ; gain = 119.176"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::readFromBMP&apos; to &apos;readFromBMP&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:158)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::encodeToJPG&apos; to &apos;encodeToJPG&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:620)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_word_&apos; to &apos;_write_word_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:516)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_jpeg_header&apos; to &apos;_write_jpeg_header&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:427)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_byte_&apos; to &apos;_write_byte_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:509)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_bitstring_&apos; to &apos;_write_bitstring_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:579)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_64bytes_&apos; to &apos;_write_64bytes_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:534)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_5bytes_&apos; to &apos;_write_5bytes_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:570)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_16bytes_&apos; to &apos;_write_16bytes_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:543)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_162bytes_&apos; to &apos;_write_162bytes_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:561)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_write_12bytes_&apos; to &apos;_write_12bytes_&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:552)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_foword_FDC&apos; to &apos;_foword_FDC&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:174)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_doHuffmanEncoding&apos; to &apos;_doHuffmanEncoding&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:376)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_convertColorSpace&apos; to &apos;_convertColorSpace&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:337)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_computeHuffmanTable.1&apos; to &apos;_computeHuffmanTable.1&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:315:47)"/>
+	<Message severity="WARNING" prefix="[XFORM 203-631]" key="XFORM_FRN_STATUS_336" tag="" content="Renaming function &apos;JpegEncoder::_computeHuffmanTable&apos; to &apos;_computeHuffmanTable&apos; (../../../Users/fantwen/Desktop/jpeg_V2.cpp:310)"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:21 ; elapsed = 00:00:44 . Memory (MB): peak = 380.410 ; gain = 290.063"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;jpeg2&apos; ..."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_computeHuffmanTable.1&apos; to &apos;p_computeHuffmanTable_1&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_computeHuffmanTable&apos; to &apos;p_computeHuffmanTable&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_word_&apos; to &apos;p_write_word_s&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_5bytes_&apos; to &apos;p_write_5bytes_s&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_byte_&apos; to &apos;p_write_byte_s&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_64bytes_&apos; to &apos;p_write_64bytes_s&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_16bytes_&apos; to &apos;p_write_16bytes_s&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_12bytes_&apos; to &apos;p_write_12bytes_s&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_162bytes_&apos; to &apos;p_write_162bytes_s&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_jpeg_header&apos; to &apos;p_write_jpeg_header&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_convertColorSpace&apos; to &apos;p_convertColorSpace&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_foword_FDC&apos; to &apos;p_foword_FDC&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_doHuffmanEncoding&apos; to &apos;p_doHuffmanEncoding&apos;."/>
+	<Message severity="WARNING" prefix="[SYN 201-103]" key="SYN_MODULE_NAME_ILLEGAL_445" tag="" content="Legalizing function name &apos;_write_bitstring_&apos; to &apos;p_write_bitstring_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_computeHuffmanTable_1&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 44.746 seconds; current allocated memory: 323.194 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-434]" key="HLS 200-434" tag="SDX" content="Only 0 loops out of a total 2 loops have been pipelined in this design."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.167 seconds; current allocated memory: 323.384 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_computeHuffmanTable&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.181 seconds; current allocated memory: 323.543 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.153 seconds; current allocated memory: 323.689 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_word_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.155 seconds; current allocated memory: 323.710 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.115 seconds; current allocated memory: 323.768 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_5bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.152 seconds; current allocated memory: 323.807 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.151 seconds; current allocated memory: 323.887 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_byte_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;_write_byte_&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.156 seconds; current allocated memory: 323.906 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.134 seconds; current allocated memory: 323.960 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_64bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.131 seconds; current allocated memory: 323.997 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.142 seconds; current allocated memory: 324.076 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_16bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.147 seconds; current allocated memory: 324.129 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.121 seconds; current allocated memory: 324.207 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_12bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.137 seconds; current allocated memory: 324.245 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.127 seconds; current allocated memory: 324.323 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_162bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.129 seconds; current allocated memory: 324.361 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.126 seconds; current allocated memory: 324.440 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_jpeg_header&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.176 seconds; current allocated memory: 324.687 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.213 seconds; current allocated memory: 325.091 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;readFromBMP&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.272 seconds; current allocated memory: 325.502 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.267 seconds; current allocated memory: 326.009 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_convertColorSpace&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;conver_col1&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;JpegEncoder_buffer_l_3&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:351) on array &apos;JpegEncoder_buffer&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;JpegEncoder_buffer&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 12, Depth = 29."/>
+	<Message severity="WARNING" prefix="[SCHED 204-21]" key="SCHED_DELAY_EXCEEDED_76" tag="SDX_KERNEL,SCHEDULE" content="Estimated clock period (4.52ns) exceeds the target (target clock period: 5ns, clock uncertainty: 0.625ns, effective delay budget: 4.375ns)."/>
+	<Message severity="WARNING" prefix="[SCHED 204-21]" key="SCHED_DELAY_EXCEEDED_74" tag="SDX_KERNEL,SCHEDULE" content="The critical path in module &apos;p_convertColorSpace&apos; consists of the following:
+	&apos;mul&apos; operation (&apos;mul_ln1192&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:354) [258]  (4.52 ns)"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.454 seconds; current allocated memory: 329.105 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.088 seconds; current allocated memory: 332.046 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_foword_FDC&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;FDC1&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;p_foword_FDC&apos; (Loop: FDC1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between &apos;store&apos; operation (&apos;mid_V_addr_14_write_ln231&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:231) of variable &apos;sext_ln708_5&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:218 on array &apos;mid.V&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:178 and &apos;store&apos; operation (&apos;mid_V_addr_8_write_ln225&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:225) of variable &apos;sext_ln703_76&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:215 on array &apos;mid.V&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:178."/>
+	<Message severity="WARNING" prefix="[SCHED 204-68]" key="SCHED_CARRIED_CONSTRAINT_NOT_MET_32" tag="LOOP,SDX_LOOP,SCHEDULE" content="The II Violation in module &apos;p_foword_FDC&apos; (Loop: FDC1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between &apos;store&apos; operation (&apos;mid_V_addr_15_write_ln232&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:232) of variable &apos;trunc_ln708_13&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:232 on array &apos;mid.V&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:178 and &apos;store&apos; operation (&apos;mid_V_addr_10_write_ln227&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:227) of variable &apos;sext_ln708_4&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:217 on array &apos;mid.V&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:178."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;channel_data_0_load_6&apos;, ../../../Users/fantwen/Desktop/jpeg_V2.cpp:189) on array &apos;channel_data_0&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;channel_data_0&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 4, Depth = 20."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 3.175 seconds; current allocated memory: 338.413 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 4.505 seconds; current allocated memory: 346.524 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_doHuffmanEncoding&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 3.538 seconds; current allocated memory: 348.749 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.677 seconds; current allocated memory: 350.552 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;p_write_bitstring_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="WARNING" prefix="[SCHED 204-65]" key="SCHED_PIPELINE_REPORT_FAILURE_1080" tag="SCHEDULE" content="Unable to satisfy pipeline directive: Function contains subloop(s) not being unrolled."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.67 seconds; current allocated memory: 350.801 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.218 seconds; current allocated memory: 351.056 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;encodeToJPG&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.274 seconds; current allocated memory: 351.422 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 2.118 seconds; current allocated memory: 353.407 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;jpeg2&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.503 seconds; current allocated memory: 354.501 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.489 seconds; current allocated memory: 355.690 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_computeHuffmanTable_1&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_computeHuffmanTable_1&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.483 seconds; current allocated memory: 356.987 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_computeHuffmanTable&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_computeHuffmanTable&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.305 seconds; current allocated memory: 357.369 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_word_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_word_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.296 seconds; current allocated memory: 357.566 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_5bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_5bytes_s_JFIF0&apos; to &apos;p_write_5bytes_s_bkb&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_5bytes_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.231 seconds; current allocated memory: 357.743 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_byte_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_byte_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.248 seconds; current allocated memory: 357.859 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_64bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_64bytes_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.207 seconds; current allocated memory: 358.006 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_16bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_16bytes_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.253 seconds; current allocated memory: 358.138 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_12bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_12bytes_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.242 seconds; current allocated memory: 358.285 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_162bytes_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_162bytes_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.24 seconds; current allocated memory: 358.418 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_jpeg_header&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace_5&apos; to &apos;p_write_jpeg_headcud&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace&apos; to &apos;p_write_jpeg_headdEe&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace_10&apos; to &apos;p_write_jpeg_headeOg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace_1&apos; to &apos;p_write_jpeg_headfYi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace_3&apos; to &apos;p_write_jpeg_headg8j&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace_4&apos; to &apos;p_write_jpeg_headhbi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace_8&apos; to &apos;p_write_jpeg_headibs&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_jpeg_header_p_anonymous_namespace_9&apos; to &apos;p_write_jpeg_headjbC&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_jpeg_header&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.471 seconds; current allocated memory: 360.032 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;readFromBMP&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;readFromBMP&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.513 seconds; current allocated memory: 360.871 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_convertColorSpace&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_9ns_8ns_17ns_17_3_1&apos; to &apos;jpeg2_mac_muladd_kbM&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_10ns_8ns_17ns_17_3_1&apos; to &apos;jpeg2_mac_muladd_lbW&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_7ns_8ns_17ns_17_3_1&apos; to &apos;jpeg2_mac_muladd_mb6&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_kbM&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_lbW&apos;: 7 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_mb6&apos;: 8 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_convertColorSpace&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.99 seconds; current allocated memory: 365.259 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_foword_FDC&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_am_addmul_18s_18s_11ns_30_3_1&apos; to &apos;jpeg2_am_addmul_1ncg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_9s_18s_30s_31_3_1&apos; to &apos;jpeg2_mac_muladd_ocq&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_11s_18s_30s_31_3_1&apos; to &apos;jpeg2_mac_muladd_pcA&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_mulsub_29s_18s_30s_31_3_1&apos; to &apos;jpeg2_mac_mulsub_qcK&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_am_addmul_19s_19s_10ns_30_3_1&apos; to &apos;jpeg2_am_addmul_1rcU&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_29s_19s_30s_31_3_1&apos; to &apos;jpeg2_mac_muladd_sc4&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_mulsub_30s_19s_30s_31_3_1&apos; to &apos;jpeg2_mac_mulsub_tde&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mul_mul_10ns_24s_33_3_1&apos; to &apos;jpeg2_mul_mul_10nudo&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mul_mul_11ns_25s_33_3_1&apos; to &apos;jpeg2_mul_mul_11nvdy&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_9s_24s_33ns_33_3_1&apos; to &apos;jpeg2_mac_muladd_wdI&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mac_muladd_11s_24s_33ns_33_3_1&apos; to &apos;jpeg2_mac_muladd_xdS&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mul_mul_10ns_25s_33_3_1&apos; to &apos;jpeg2_mul_mul_10nyd2&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mul_mul_10ns_24s_34_3_1&apos; to &apos;jpeg2_mul_mul_10nzec&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mul_mul_11ns_24s_35_3_1&apos; to &apos;jpeg2_mul_mul_11nAem&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_mul_mul_10ns_16s_26_3_1&apos; to &apos;jpeg2_mul_mul_10nBew&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_am_addmul_1ncg&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_am_addmul_1rcU&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_ocq&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_pcA&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_sc4&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_wdI&apos;: 8 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_muladd_xdS&apos;: 24 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_mulsub_qcK&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mac_mulsub_tde&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mul_mul_10nBew&apos;: 16 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mul_mul_10nudo&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mul_mul_10nyd2&apos;: 8 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mul_mul_10nzec&apos;: 8 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mul_mul_11nAem&apos;: 8 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mul_mul_11nvdy&apos;: 16 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_mux_832_8_1_1&apos;: 2 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_foword_FDC&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 4.184 seconds; current allocated memory: 380.424 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_doHuffmanEncoding&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_shl_32ns_32s_32_2_1&apos; to &apos;jpeg2_shl_32ns_32CeG&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_shl_32ns_32ns_32_2_1&apos; to &apos;jpeg2_shl_32ns_32DeQ&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_shl_32ns_32CeG&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;jpeg2_shl_32ns_32DeQ&apos;: 1 instance(s)."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_doHuffmanEncoding&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 8.405 seconds; current allocated memory: 387.633 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;p_write_bitstring_s&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;p_write_bitstring_s_mask1&apos; to &apos;p_write_bitstringEe0&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;p_write_bitstring_s&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.557 seconds; current allocated memory: 388.307 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;encodeToJPG&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_7&apos; to &apos;encodeToJPG_p_anoFfa&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_6&apos; to &apos;encodeToJPG_p_anoGfk&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_5&apos; to &apos;encodeToJPG_p_anoHfu&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace&apos; to &apos;encodeToJPG_p_anoIfE&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_10&apos; to &apos;encodeToJPG_p_anoJfO&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_1&apos; to &apos;encodeToJPG_p_anoKfY&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_3&apos; to &apos;encodeToJPG_p_anoLf8&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_4&apos; to &apos;encodeToJPG_p_anoMgi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_8&apos; to &apos;encodeToJPG_p_anoNgs&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_p_anonymous_namespace_9&apos; to &apos;encodeToJPG_p_anoOgC&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_0&apos; to &apos;encodeToJPG_cbDatPgM&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_1&apos; to &apos;encodeToJPG_cbDatQgW&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_2&apos; to &apos;encodeToJPG_cbDatRg6&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_3&apos; to &apos;encodeToJPG_cbDatShg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_4&apos; to &apos;encodeToJPG_cbDatThq&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_5&apos; to &apos;encodeToJPG_cbDatUhA&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_6&apos; to &apos;encodeToJPG_cbDatVhK&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_cbData_7&apos; to &apos;encodeToJPG_cbDatWhU&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_0&apos; to &apos;encodeToJPG_crDatXh4&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_1&apos; to &apos;encodeToJPG_crDatYie&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_2&apos; to &apos;encodeToJPG_crDatZio&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_3&apos; to &apos;encodeToJPG_crDat0iy&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_4&apos; to &apos;encodeToJPG_crDat1iI&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_5&apos; to &apos;encodeToJPG_crDat2iS&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_6&apos; to &apos;encodeToJPG_crDat3i2&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_crData_7&apos; to &apos;encodeToJPG_crDat4jc&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_outputBitString_y_le&apos; to &apos;encodeToJPG_outpu5jm&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_outputBitString_y_va&apos; to &apos;encodeToJPG_outpu6jw&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_outputBitString_cr_l&apos; to &apos;encodeToJPG_outpu7jG&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_outputBitString_cr_v&apos; to &apos;encodeToJPG_outpu8jQ&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_outputBitString_cb_l&apos; to &apos;encodeToJPG_outpu9j0&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;encodeToJPG_outputBitString_cb_v&apos; to &apos;encodeToJPG_outpubak&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;encodeToJPG&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.546 seconds; current allocated memory: 391.511 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;jpeg2&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/rgb_in_V_data_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/rgb_in_V_keep_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/rgb_in_V_strb_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/rgb_in_V_last_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/jpeg_out_V_data_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/jpeg_out_V_keep_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/jpeg_out_V_strb_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;jpeg2/jpeg_out_V_last_V&apos; to &apos;axis&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;jpeg2&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;return&apos; to AXI-Lite port AXILiteS."/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_YTable&apos; to &apos;jpeg2_jpeg1_m_YTabbk&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_CbCrTable&apos; to &apos;jpeg2_jpeg1_m_CbCbck&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_Y_DC_Huffman&apos; to &apos;jpeg2_jpeg1_m_Y_Dbdk&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_Y_DC_Huffman_1&apos; to &apos;jpeg2_jpeg1_m_Y_Dbek&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_Y_AC_Huffman&apos; to &apos;jpeg2_jpeg1_m_Y_Abfk&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_Y_AC_Huffman_1&apos; to &apos;jpeg2_jpeg1_m_Y_Abgk&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_CbCr_DC_Huff&apos; to &apos;jpeg2_jpeg1_m_CbCbhl&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_CbCr_DC_Huff_1&apos; to &apos;jpeg2_jpeg1_m_CbCbil&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_CbCr_AC_Huff&apos; to &apos;jpeg2_jpeg1_m_CbCbjl&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;jpeg2_jpeg1_m_CbCr_AC_Huff_1&apos; to &apos;jpeg2_jpeg1_m_CbCbkl&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;jpeg2&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 2.808 seconds; current allocated memory: 393.961 MB."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_5bytes_s_bkb_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headcud&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headcud_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headdEe&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headdEe_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headeOg&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headeOg_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headfYi&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headfYi_rom&apos; using block ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headg8j&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headg8j_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headhbi&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headhbi_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headibs&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headibs_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;p_write_jpeg_headjbC&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_jpeg_headjbC_rom&apos; using block ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;p_foword_FDC_mid_V_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-286]" key="RTMG_286_1800" tag="" content="Generating pipelined shifter : &apos;jpeg2_shl_32ns_32CeG&apos;"/>
+	<Message severity="INFO" prefix="[RTMG 210-286]" key="RTMG_286_1800" tag="" content="Generating pipelined shifter : &apos;jpeg2_shl_32ns_32DeQ&apos;"/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;p_write_bitstringEe0_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoFfa_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_ZigZag_rom&apos; using distributed ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoGfk_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoHfu&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoHfu_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoIfE&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoIfE_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoJfO&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoJfO_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoKfY&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoKfY_rom&apos; using block ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoLf8&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoLf8_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoMgi&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoMgi_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoNgs&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoNgs_rom&apos; using distributed ROMs."/>
+	<Message severity="WARNING" prefix="[RTMG 210-274]" key="RTMG_274_1758" tag="" content="Memory &apos;encodeToJPG_p_anoOgC&apos; is read-only, switch it to a ROM."/>
+	<Message severity="INFO" prefix="[RTMG 210-279]" key="RTMG_279_1793" tag="" content="Implementing memory &apos;encodeToJPG_p_anoOgC_rom&apos; using block ROMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;encodeToJPG_yData_0_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;encodeToJPG_cbDatPgM_ram (RAM)&apos; using distributed RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;encodeToJPG_yQuant_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;encodeToJPG_outpu5jm_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;jpeg2_jpeg1_buffer_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;jpeg2_jpeg1_m_YTabbk_ram (RAM)&apos; using distributed RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;jpeg2_jpeg1_m_Y_Dbdk_ram (RAM)&apos; using distributed RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;jpeg2_jpeg1_m_Y_Dbek_ram (RAM)&apos; using distributed RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;jpeg2_jpeg1_m_Y_Abfk_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;jpeg2_jpeg1_m_Y_Abgk_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:01:01 ; elapsed = 00:01:44 . Memory (MB): peak = 538.844 ; gain = 448.496"/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for jpeg2."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for jpeg2."/>
+</Messages>

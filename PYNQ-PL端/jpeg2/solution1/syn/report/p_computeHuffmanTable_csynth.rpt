@@ -1,0 +1,162 @@
+
+
+================================================================
+== Vivado HLS Report for 'p_computeHuffmanTable'
+================================================================
+* Date:           Tue Nov 19 20:39:44 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     3.684|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-------+-----+-------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    | min |  max  | min |  max  |   Type  |
+    +-----+-------+-----+-------+---------+
+    |   65|  10305|   65|  10305|   none  |
+    +-----+-------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+-----+-------+----------+-----------+-----------+---------+----------+
+        |             |   Latency   | Iteration|  Initiation Interval  |   Trip  |          |
+        |  Loop Name  | min |  max  |  Latency |  achieved |   target  |  Count  | Pipelined|
+        +-------------+-----+-------+----------+-----------+-----------+---------+----------+
+        |- comhuff1   |   64|  10304|  4 ~ 644 |          -|          -|       16|    no    |
+        | + comhuff2  |    2|    642|         5|          -|          -| 0 ~ 128 |    no    |
+        +-------------+-----+-------+----------+-----------+-----------+---------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    136|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       -|      -|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     86|    -|
+|Register         |        -|      -|     135|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     135|    222|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |add_ln317_fu_162_p2     |     +    |      0|  0|  15|           5|           2|
+    |code_value_3_fu_224_p2  |     +    |      0|  0|  23|          16|           1|
+    |j_fu_196_p2             |     +    |      0|  0|  39|          32|           1|
+    |k_fu_213_p2             |     +    |      0|  0|  15|           1|           5|
+    |pos_in_table_fu_190_p2  |     +    |      0|  0|  15|           8|           1|
+    |icmp_ln315_fu_156_p2    |   icmp   |      0|  0|  11|           5|           5|
+    |icmp_ln317_fu_176_p2    |   icmp   |      0|  0|  18|          32|          32|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0| 136|          99|          47|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  41|          8|    1|          8|
+    |code_value_0_reg_103  |   9|          2|   15|         30|
+    |code_value_1_reg_128  |   9|          2|   16|         32|
+    |j_0_reg_140           |   9|          2|   32|         64|
+    |k_0_reg_115           |   9|          2|    5|         10|
+    |pos_in_table_2_fu_48  |   9|          2|    8|         16|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  86|         18|   77|        160|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------+----+----+-----+-----------+
+    |          Name          | FF | LUT| Bits| Const Bits|
+    +------------------------+----+----+-----+-----------+
+    |ap_CS_fsm               |   7|   0|    7|          0|
+    |code_value_0_reg_103    |  15|   0|   16|          1|
+    |code_value_1_reg_128    |  16|   0|   16|          0|
+    |j_0_reg_140             |  32|   0|   32|          0|
+    |j_reg_258               |  32|   0|   32|          0|
+    |k_0_reg_115             |   5|   0|    5|          0|
+    |nr_codes_addr_reg_240   |   4|   0|    4|          0|
+    |nr_codes_load_reg_245   |   8|   0|    8|          0|
+    |pos_in_table_2_fu_48    |   8|   0|    8|          0|
+    |std_table_load_reg_273  |   8|   0|    8|          0|
+    +------------------------+----+----+-----+-----------+
+    |Total                   | 135|   0|  136|          1|
+    +------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+----------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                         |  in |    1| ap_ctrl_hs | _computeHuffmanTable | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs | _computeHuffmanTable | return value |
+|ap_start                       |  in |    1| ap_ctrl_hs | _computeHuffmanTable | return value |
+|ap_done                        | out |    1| ap_ctrl_hs | _computeHuffmanTable | return value |
+|ap_idle                        | out |    1| ap_ctrl_hs | _computeHuffmanTable | return value |
+|ap_ready                       | out |    1| ap_ctrl_hs | _computeHuffmanTable | return value |
+|nr_codes_address0              | out |    4|  ap_memory |       nr_codes       |     array    |
+|nr_codes_ce0                   | out |    1|  ap_memory |       nr_codes       |     array    |
+|nr_codes_q0                    |  in |    8|  ap_memory |       nr_codes       |     array    |
+|std_table_address0             | out |    8|  ap_memory |       std_table      |     array    |
+|std_table_ce0                  | out |    1|  ap_memory |       std_table      |     array    |
+|std_table_q0                   |  in |    8|  ap_memory |       std_table      |     array    |
+|huffman_table_length_address0  | out |    8|  ap_memory | huffman_table_length |     array    |
+|huffman_table_length_ce0       | out |    1|  ap_memory | huffman_table_length |     array    |
+|huffman_table_length_we0       | out |    1|  ap_memory | huffman_table_length |     array    |
+|huffman_table_length_d0        | out |    5|  ap_memory | huffman_table_length |     array    |
+|huffman_table_value_address0   | out |    8|  ap_memory |  huffman_table_value |     array    |
+|huffman_table_value_ce0        | out |    1|  ap_memory |  huffman_table_value |     array    |
+|huffman_table_value_we0        | out |    1|  ap_memory |  huffman_table_value |     array    |
+|huffman_table_value_d0         | out |   16|  ap_memory |  huffman_table_value |     array    |
++-------------------------------+-----+-----+------------+----------------------+--------------+
+

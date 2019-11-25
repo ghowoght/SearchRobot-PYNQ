@@ -1,0 +1,1070 @@
+
+
+================================================================
+== Vivado HLS Report for 'jpeg2'
+================================================================
+* Date:           Tue Nov 19 20:40:07 2019
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        jpeg2
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.520|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +---------+-----------+---------+-----------+---------+
+    |       Latency       |       Interval      | Pipeline|
+    |   min   |    max    |   min   |    max    |   Type  |
+    +---------+-----------+---------+-----------+---------+
+    |  2540837|  274935543|  2540837|  274935543|   none  |
+    +---------+-----------+---------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+----------------+---------+-----------+---------+-----------+----------+
+        |                           |                |       Latency       |       Interval      | Pipeline |
+        |          Instance         |     Module     |   min   |    max    |   min   |    max    |   Type   |
+        +---------------------------+----------------+---------+-----------+---------+-----------+----------+
+        |grp_encodeToJPG_fu_116     |encodeToJPG     |  2540834|  274935540|  2540834|  274935540|   none   |
+        |grp_p_write_byte_s_fu_184  |p_write_byte_s  |        0|          0|        1|          1| function |
+        +---------------------------+----------------+---------+-----------+---------+-----------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|      4|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |       23|    115|   15388|  33506|    0|
+|Memory           |       12|      -|     116|     24|    0|
+|Multiplexer      |        -|      -|       -|    150|    -|
+|Register         |        -|      -|       5|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |       35|    115|   15509|  33684|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |       12|     52|      14|     63|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+    |          Instance         |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+    |grp_encodeToJPG_fu_116     |encodeToJPG           |       23|    115|  15351|  33457|    0|
+    |jpeg2_AXILiteS_s_axi_U     |jpeg2_AXILiteS_s_axi  |        0|      0|     36|     40|    0|
+    |grp_p_write_byte_s_fu_184  |p_write_byte_s        |        0|      0|      1|      9|    0|
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+    |Total                      |                      |       23|    115|  15388|  33506|    0|
+    +---------------------------+----------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |          Memory          |        Module        | BRAM_18K| FF | LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |jpeg1_buffer_U            |jpeg2_jpeg1_buffer    |        8|   0|   0|    0|  15360|    8|     1|       122880|
+    |jpeg1_m_YTable_U          |jpeg2_jpeg1_m_YTabbk  |        0|  16|   8|    0|     64|    8|     1|          512|
+    |jpeg1_m_CbCrTable_U       |jpeg2_jpeg1_m_YTabbk  |        0|  16|   8|    0|     64|    8|     1|          512|
+    |jpeg1_m_Y_AC_Huffman_U    |jpeg2_jpeg1_m_Y_Abfk  |        1|   0|   0|    0|    256|    5|     1|         1280|
+    |jpeg1_m_CbCr_AC_Huff_U    |jpeg2_jpeg1_m_Y_Abfk  |        1|   0|   0|    0|    256|    5|     1|         1280|
+    |jpeg1_m_Y_AC_Huffman_1_U  |jpeg2_jpeg1_m_Y_Abgk  |        1|   0|   0|    0|    256|   16|     1|         4096|
+    |jpeg1_m_CbCr_AC_Huff_1_U  |jpeg2_jpeg1_m_Y_Abgk  |        1|   0|   0|    0|    256|   16|     1|         4096|
+    |jpeg1_m_Y_DC_Huffman_U    |jpeg2_jpeg1_m_Y_Dbdk  |        0|  10|   1|    0|     12|    5|     1|           60|
+    |jpeg1_m_CbCr_DC_Huff_U    |jpeg2_jpeg1_m_Y_Dbdk  |        0|  10|   1|    0|     12|    5|     1|           60|
+    |jpeg1_m_Y_DC_Huffman_1_U  |jpeg2_jpeg1_m_Y_Dbek  |        0|  32|   3|    0|     12|   16|     1|          192|
+    |jpeg1_m_CbCr_DC_Huff_1_U  |jpeg2_jpeg1_m_Y_Dbek  |        0|  32|   3|    0|     12|   16|     1|          192|
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+    |Total                     |                      |       12| 116|  24|    0|  16560|  108|    11|       135160|
+    +--------------------------+----------------------+---------+----+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |grp_encodeToJPG_fu_116_jpeg_out_TREADY     |    and   |      0|  0|   2|           1|           1|
+    |grp_p_write_byte_s_fu_184_jpeg_out_TREADY  |    or    |      0|  0|   2|           1|           1|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                      |          |      0|  0|   4|           2|           2|
+    +-------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |                             Name                            | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                                    |  27|          5|    1|          5|
+    |grp_p_write_byte_s_fu_184_JpegEncoder_outhebyte_last_V_read  |  15|          3|    1|          3|
+    |grp_p_write_byte_s_fu_184_value_r                            |  15|          3|    8|         24|
+    |jpeg_out_TDATA                                               |  15|          3|    8|         24|
+    |jpeg_out_TDATA_blk_n                                         |   9|          2|    1|          2|
+    |jpeg_out_TKEEP                                               |  15|          3|    1|          3|
+    |jpeg_out_TLAST                                               |  15|          3|    1|          3|
+    |jpeg_out_TSTRB                                               |  15|          3|    1|          3|
+    |jpeg_out_TVALID                                              |  15|          3|    1|          3|
+    |rgb_in_TREADY                                                |   9|          2|    1|          2|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                                        | 150|         30|   24|         72|
+    +-------------------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------+---+----+-----+-----------+
+    |                 Name                | FF| LUT| Bits| Const Bits|
+    +-------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                            |  4|   0|    4|          0|
+    |grp_encodeToJPG_fu_116_ap_start_reg  |  1|   0|    1|          0|
+    +-------------------------------------+---+----+-----+-----------+
+    |Total                                |  5|   0|    5|          0|
+    +-------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+-------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++------------------------+-----+-----+------------+-------------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_AWADDR   |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_ARADDR   |  in |    4|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |      AXILiteS     |  return void |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |      AXILiteS     |  return void |
+|ap_clk                  |  in |    1| ap_ctrl_hs |       jpeg2       | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |       jpeg2       | return value |
+|interrupt               | out |    1| ap_ctrl_hs |       jpeg2       | return value |
+|rgb_in_TDATA            |  in |   24|    axis    |  rgb_in_V_data_V  |    pointer   |
+|rgb_in_TVALID           |  in |    1|    axis    |  rgb_in_V_last_V  |    pointer   |
+|rgb_in_TREADY           | out |    1|    axis    |  rgb_in_V_last_V  |    pointer   |
+|rgb_in_TLAST            |  in |    1|    axis    |  rgb_in_V_last_V  |    pointer   |
+|rgb_in_TKEEP            |  in |    3|    axis    |  rgb_in_V_keep_V  |    pointer   |
+|rgb_in_TSTRB            |  in |    3|    axis    |  rgb_in_V_strb_V  |    pointer   |
+|jpeg_out_TDATA          | out |    8|    axis    | jpeg_out_V_data_V |    pointer   |
+|jpeg_out_TVALID         | out |    1|    axis    | jpeg_out_V_last_V |    pointer   |
+|jpeg_out_TREADY         |  in |    1|    axis    | jpeg_out_V_last_V |    pointer   |
+|jpeg_out_TLAST          | out |    1|    axis    | jpeg_out_V_last_V |    pointer   |
+|jpeg_out_TKEEP          | out |    1|    axis    | jpeg_out_V_keep_V |    pointer   |
+|jpeg_out_TSTRB          | out |    1|    axis    | jpeg_out_V_strb_V |    pointer   |
++------------------------+-----+-----+------------+-------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.25>
+ST_1 : Operation 5 [1/1] (3.25ns)   --->   "%jpeg1_buffer = alloca [15360 x i8], align 1"   --->   Operation 5 'alloca' 'jpeg1_buffer' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 6 [1/1] (2.32ns)   --->   "%jpeg1_m_YTable = alloca [64 x i8], align 1"   --->   Operation 6 'alloca' 'jpeg1_m_YTable' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 7 [1/1] (2.32ns)   --->   "%jpeg1_m_CbCrTable = alloca [64 x i8], align 1"   --->   Operation 7 'alloca' 'jpeg1_m_CbCrTable' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 8 [1/1] (2.32ns)   --->   "%jpeg1_m_Y_DC_Huffman = alloca [12 x i5], align 1"   --->   Operation 8 'alloca' 'jpeg1_m_Y_DC_Huffman' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 9 [1/1] (2.32ns)   --->   "%jpeg1_m_Y_DC_Huffman_1 = alloca [12 x i16], align 2"   --->   Operation 9 'alloca' 'jpeg1_m_Y_DC_Huffman_1' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 10 [1/1] (3.25ns)   --->   "%jpeg1_m_Y_AC_Huffman = alloca [256 x i5], align 1"   --->   Operation 10 'alloca' 'jpeg1_m_Y_AC_Huffman' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 11 [1/1] (3.25ns)   --->   "%jpeg1_m_Y_AC_Huffman_1 = alloca [256 x i16], align 2"   --->   Operation 11 'alloca' 'jpeg1_m_Y_AC_Huffman_1' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 12 [1/1] (2.32ns)   --->   "%jpeg1_m_CbCr_DC_Huff = alloca [12 x i5], align 1"   --->   Operation 12 'alloca' 'jpeg1_m_CbCr_DC_Huff' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 13 [1/1] (2.32ns)   --->   "%jpeg1_m_CbCr_DC_Huff_1 = alloca [12 x i16], align 2"   --->   Operation 13 'alloca' 'jpeg1_m_CbCr_DC_Huff_1' <Predicate = true> <Delay = 2.32>
+ST_1 : Operation 14 [1/1] (3.25ns)   --->   "%jpeg1_m_CbCr_AC_Huff = alloca [256 x i5], align 1"   --->   Operation 14 'alloca' 'jpeg1_m_CbCr_AC_Huff' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 15 [1/1] (3.25ns)   --->   "%jpeg1_m_CbCr_AC_Huff_1 = alloca [256 x i16], align 2"   --->   Operation 15 'alloca' 'jpeg1_m_CbCr_AC_Huff_1' <Predicate = true> <Delay = 3.25>
+ST_1 : Operation 16 [2/2] (0.00ns)   --->   "call fastcc void @encodeToJPG([15360 x i8]* %jpeg1_buffer, [64 x i8]* %jpeg1_m_YTable, [64 x i8]* %jpeg1_m_CbCrTable, [12 x i5]* %jpeg1_m_Y_DC_Huffman, [12 x i16]* %jpeg1_m_Y_DC_Huffman_1, [256 x i5]* %jpeg1_m_Y_AC_Huffman, [256 x i16]* %jpeg1_m_Y_AC_Huffman_1, [12 x i5]* %jpeg1_m_CbCr_DC_Huff, [12 x i16]* %jpeg1_m_CbCr_DC_Huff_1, [256 x i5]* %jpeg1_m_CbCr_AC_Huff, [256 x i16]* %jpeg1_m_CbCr_AC_Huff_1, i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:669]   --->   Operation 16 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 17 [1/2] (0.00ns)   --->   "call fastcc void @encodeToJPG([15360 x i8]* %jpeg1_buffer, [64 x i8]* %jpeg1_m_YTable, [64 x i8]* %jpeg1_m_CbCrTable, [12 x i5]* %jpeg1_m_Y_DC_Huffman, [12 x i16]* %jpeg1_m_Y_DC_Huffman_1, [256 x i5]* %jpeg1_m_Y_AC_Huffman, [256 x i16]* %jpeg1_m_Y_AC_Huffman_1, [12 x i5]* %jpeg1_m_CbCr_DC_Huff, [12 x i16]* %jpeg1_m_CbCr_DC_Huff_1, [256 x i5]* %jpeg1_m_CbCr_AC_Huff, [256 x i16]* %jpeg1_m_CbCr_AC_Huff_1, i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:669]   --->   Operation 17 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.76>
+ST_3 : Operation 18 [1/1] (1.76ns)   --->   "%empty = call fastcc i8 @_write_byte_(i1 false, i8 -1, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:670]   --->   Operation 18 'call' 'empty' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 1.76>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i24* %rgb_in_V_data_V), !map !206"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i3* %rgb_in_V_keep_V), !map !210"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i3* %rgb_in_V_strb_V), !map !214"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %rgb_in_V_last_V), !map !218"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %jpeg_out_V_data_V), !map !222"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %jpeg_out_V_keep_V), !map !226"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %jpeg_out_V_strb_V), !map !230"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %jpeg_out_V_last_V), !map !234"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([6 x i8]* @jpeg2_str) nounwind"   --->   Operation 27 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:667]   --->   Operation 28 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i24* %rgb_in_V_data_V, i3* %rgb_in_V_keep_V, i3* %rgb_in_V_strb_V, i1* %rgb_in_V_last_V, [5 x i8]* @p_str39, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:667]   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str40, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:667]   --->   Operation 30 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (1.76ns)   --->   "%empty_34 = call fastcc i8 @_write_byte_(i1 true, i8 -39, i8* %jpeg_out_V_data_V, i1* %jpeg_out_V_keep_V, i1* %jpeg_out_V_strb_V, i1* %jpeg_out_V_last_V)" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:672]   --->   Operation 31 'call' 'empty_34' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "ret void" [../../../Users/fantwen/Desktop/jpeg_V2.cpp:673]   --->   Operation 32 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ rgb_in_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ rgb_in_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ rgb_in_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ rgb_in_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ jpeg_out_V_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ jpeg_out_V_keep_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ jpeg_out_V_strb_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ jpeg_out_V_last_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=0; pingpong=0; private_global=0; IO mode=axis:ce=0
+Port [ p_anonymous_namespace_7]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ ZigZag]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_6]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_5]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_10]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_3]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_4]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_8]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_anonymous_namespace_9]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ JFIF0]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+Port [ mask1]:  wired=0; compound=1; hidden=1; nouse=1; global=1; static=1; extern=0; dir=0; type=1; pingpong=0; private_global=0; linkage=7; visibility=0; MemPort=[1]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+jpeg1_buffer           (alloca       ) [ 00100]
+jpeg1_m_YTable         (alloca       ) [ 00100]
+jpeg1_m_CbCrTable      (alloca       ) [ 00100]
+jpeg1_m_Y_DC_Huffman   (alloca       ) [ 00100]
+jpeg1_m_Y_DC_Huffman_1 (alloca       ) [ 00100]
+jpeg1_m_Y_AC_Huffman   (alloca       ) [ 00100]
+jpeg1_m_Y_AC_Huffman_1 (alloca       ) [ 00100]
+jpeg1_m_CbCr_DC_Huff   (alloca       ) [ 00100]
+jpeg1_m_CbCr_DC_Huff_1 (alloca       ) [ 00100]
+jpeg1_m_CbCr_AC_Huff   (alloca       ) [ 00100]
+jpeg1_m_CbCr_AC_Huff_1 (alloca       ) [ 00100]
+call_ln669             (call         ) [ 00000]
+empty                  (call         ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+specbitsmap_ln0        (specbitsmap  ) [ 00000]
+spectopmodule_ln0      (spectopmodule) [ 00000]
+specinterface_ln667    (specinterface) [ 00000]
+specinterface_ln667    (specinterface) [ 00000]
+specinterface_ln667    (specinterface) [ 00000]
+empty_34               (call         ) [ 00000]
+ret_ln673              (ret          ) [ 00000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="rgb_in_V_data_V">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rgb_in_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="rgb_in_V_keep_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rgb_in_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="rgb_in_V_strb_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rgb_in_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="rgb_in_V_last_V">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="rgb_in_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="jpeg_out_V_data_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="jpeg_out_V_data_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="jpeg_out_V_keep_V">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="jpeg_out_V_keep_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="jpeg_out_V_strb_V">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="jpeg_out_V_strb_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="jpeg_out_V_last_V">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="jpeg_out_V_last_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="p_anonymous_namespace_7">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_7"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="ZigZag">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ZigZag"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="p_anonymous_namespace_6">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_6"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="p_anonymous_namespace_5">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_5"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="p_anonymous_namespace">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="p_anonymous_namespace_10">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_10"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="p_anonymous_namespace_1">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_1"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1000" name="p_anonymous_namespace_3">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_3"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1000" name="p_anonymous_namespace_4">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_4"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1000" name="p_anonymous_namespace_8">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_8"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1000" name="p_anonymous_namespace_9">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_anonymous_namespace_9"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1000" name="JFIF0">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="JFIF0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1000" name="mask1">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="mask1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="encodeToJPG"/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_write_byte_"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="jpeg2_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str39"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str40"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1001" name="const_70">
+<pin_list>
+<pin id="71" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="jpeg1_buffer_alloca_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="1" slack="0"/>
+<pin id="74" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_buffer/1 "/>
+</bind>
+</comp>
+
+<comp id="76" class="1004" name="jpeg1_m_YTable_alloca_fu_76">
+<pin_list>
+<pin id="77" dir="0" index="0" bw="1" slack="0"/>
+<pin id="78" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_YTable/1 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="jpeg1_m_CbCrTable_alloca_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="1" slack="0"/>
+<pin id="82" dir="1" index="1" bw="8" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_CbCrTable/1 "/>
+</bind>
+</comp>
+
+<comp id="84" class="1004" name="jpeg1_m_Y_DC_Huffman_alloca_fu_84">
+<pin_list>
+<pin id="85" dir="0" index="0" bw="1" slack="0"/>
+<pin id="86" dir="1" index="1" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_Y_DC_Huffman/1 "/>
+</bind>
+</comp>
+
+<comp id="88" class="1004" name="jpeg1_m_Y_DC_Huffman_1_alloca_fu_88">
+<pin_list>
+<pin id="89" dir="0" index="0" bw="1" slack="0"/>
+<pin id="90" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_Y_DC_Huffman_1/1 "/>
+</bind>
+</comp>
+
+<comp id="92" class="1004" name="jpeg1_m_Y_AC_Huffman_alloca_fu_92">
+<pin_list>
+<pin id="93" dir="0" index="0" bw="1" slack="0"/>
+<pin id="94" dir="1" index="1" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_Y_AC_Huffman/1 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="jpeg1_m_Y_AC_Huffman_1_alloca_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="1" slack="0"/>
+<pin id="98" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_Y_AC_Huffman_1/1 "/>
+</bind>
+</comp>
+
+<comp id="100" class="1004" name="jpeg1_m_CbCr_DC_Huff_alloca_fu_100">
+<pin_list>
+<pin id="101" dir="0" index="0" bw="1" slack="0"/>
+<pin id="102" dir="1" index="1" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_CbCr_DC_Huff/1 "/>
+</bind>
+</comp>
+
+<comp id="104" class="1004" name="jpeg1_m_CbCr_DC_Huff_1_alloca_fu_104">
+<pin_list>
+<pin id="105" dir="0" index="0" bw="1" slack="0"/>
+<pin id="106" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_CbCr_DC_Huff_1/1 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="jpeg1_m_CbCr_AC_Huff_alloca_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="1" slack="0"/>
+<pin id="110" dir="1" index="1" bw="5" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_CbCr_AC_Huff/1 "/>
+</bind>
+</comp>
+
+<comp id="112" class="1004" name="jpeg1_m_CbCr_AC_Huff_1_alloca_fu_112">
+<pin_list>
+<pin id="113" dir="0" index="0" bw="1" slack="0"/>
+<pin id="114" dir="1" index="1" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="jpeg1_m_CbCr_AC_Huff_1/1 "/>
+</bind>
+</comp>
+
+<comp id="116" class="1004" name="grp_encodeToJPG_fu_116">
+<pin_list>
+<pin id="117" dir="0" index="0" bw="0" slack="0"/>
+<pin id="118" dir="0" index="1" bw="8" slack="0"/>
+<pin id="119" dir="0" index="2" bw="8" slack="0"/>
+<pin id="120" dir="0" index="3" bw="8" slack="0"/>
+<pin id="121" dir="0" index="4" bw="5" slack="0"/>
+<pin id="122" dir="0" index="5" bw="16" slack="0"/>
+<pin id="123" dir="0" index="6" bw="5" slack="0"/>
+<pin id="124" dir="0" index="7" bw="16" slack="0"/>
+<pin id="125" dir="0" index="8" bw="5" slack="0"/>
+<pin id="126" dir="0" index="9" bw="16" slack="0"/>
+<pin id="127" dir="0" index="10" bw="5" slack="0"/>
+<pin id="128" dir="0" index="11" bw="16" slack="0"/>
+<pin id="129" dir="0" index="12" bw="24" slack="0"/>
+<pin id="130" dir="0" index="13" bw="3" slack="0"/>
+<pin id="131" dir="0" index="14" bw="3" slack="0"/>
+<pin id="132" dir="0" index="15" bw="1" slack="0"/>
+<pin id="133" dir="0" index="16" bw="8" slack="0"/>
+<pin id="134" dir="0" index="17" bw="1" slack="0"/>
+<pin id="135" dir="0" index="18" bw="1" slack="0"/>
+<pin id="136" dir="0" index="19" bw="1" slack="0"/>
+<pin id="137" dir="0" index="20" bw="8" slack="0"/>
+<pin id="138" dir="0" index="21" bw="6" slack="0"/>
+<pin id="139" dir="0" index="22" bw="8" slack="0"/>
+<pin id="140" dir="0" index="23" bw="8" slack="0"/>
+<pin id="141" dir="0" index="24" bw="8" slack="0"/>
+<pin id="142" dir="0" index="25" bw="8" slack="0"/>
+<pin id="143" dir="0" index="26" bw="8" slack="0"/>
+<pin id="144" dir="0" index="27" bw="8" slack="0"/>
+<pin id="145" dir="0" index="28" bw="8" slack="0"/>
+<pin id="146" dir="0" index="29" bw="8" slack="0"/>
+<pin id="147" dir="0" index="30" bw="8" slack="0"/>
+<pin id="148" dir="0" index="31" bw="7" slack="0"/>
+<pin id="149" dir="0" index="32" bw="16" slack="0"/>
+<pin id="150" dir="1" index="33" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ln669/1 "/>
+</bind>
+</comp>
+
+<comp id="184" class="1004" name="grp_p_write_byte_s_fu_184">
+<pin_list>
+<pin id="185" dir="0" index="0" bw="8" slack="0"/>
+<pin id="186" dir="0" index="1" bw="1" slack="0"/>
+<pin id="187" dir="0" index="2" bw="7" slack="0"/>
+<pin id="188" dir="0" index="3" bw="8" slack="0"/>
+<pin id="189" dir="0" index="4" bw="1" slack="0"/>
+<pin id="190" dir="0" index="5" bw="1" slack="0"/>
+<pin id="191" dir="0" index="6" bw="1" slack="0"/>
+<pin id="192" dir="1" index="7" bw="8" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="empty/3 empty_34/4 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="75"><net_src comp="42" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="79"><net_src comp="42" pin="0"/><net_sink comp="76" pin=0"/></net>
+
+<net id="83"><net_src comp="42" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="87"><net_src comp="42" pin="0"/><net_sink comp="84" pin=0"/></net>
+
+<net id="91"><net_src comp="42" pin="0"/><net_sink comp="88" pin=0"/></net>
+
+<net id="95"><net_src comp="42" pin="0"/><net_sink comp="92" pin=0"/></net>
+
+<net id="99"><net_src comp="42" pin="0"/><net_sink comp="96" pin=0"/></net>
+
+<net id="103"><net_src comp="42" pin="0"/><net_sink comp="100" pin=0"/></net>
+
+<net id="107"><net_src comp="42" pin="0"/><net_sink comp="104" pin=0"/></net>
+
+<net id="111"><net_src comp="42" pin="0"/><net_sink comp="108" pin=0"/></net>
+
+<net id="115"><net_src comp="42" pin="0"/><net_sink comp="112" pin=0"/></net>
+
+<net id="151"><net_src comp="44" pin="0"/><net_sink comp="116" pin=0"/></net>
+
+<net id="152"><net_src comp="72" pin="1"/><net_sink comp="116" pin=1"/></net>
+
+<net id="153"><net_src comp="76" pin="1"/><net_sink comp="116" pin=2"/></net>
+
+<net id="154"><net_src comp="80" pin="1"/><net_sink comp="116" pin=3"/></net>
+
+<net id="155"><net_src comp="84" pin="1"/><net_sink comp="116" pin=4"/></net>
+
+<net id="156"><net_src comp="88" pin="1"/><net_sink comp="116" pin=5"/></net>
+
+<net id="157"><net_src comp="92" pin="1"/><net_sink comp="116" pin=6"/></net>
+
+<net id="158"><net_src comp="96" pin="1"/><net_sink comp="116" pin=7"/></net>
+
+<net id="159"><net_src comp="100" pin="1"/><net_sink comp="116" pin=8"/></net>
+
+<net id="160"><net_src comp="104" pin="1"/><net_sink comp="116" pin=9"/></net>
+
+<net id="161"><net_src comp="108" pin="1"/><net_sink comp="116" pin=10"/></net>
+
+<net id="162"><net_src comp="112" pin="1"/><net_sink comp="116" pin=11"/></net>
+
+<net id="163"><net_src comp="0" pin="0"/><net_sink comp="116" pin=12"/></net>
+
+<net id="164"><net_src comp="2" pin="0"/><net_sink comp="116" pin=13"/></net>
+
+<net id="165"><net_src comp="4" pin="0"/><net_sink comp="116" pin=14"/></net>
+
+<net id="166"><net_src comp="6" pin="0"/><net_sink comp="116" pin=15"/></net>
+
+<net id="167"><net_src comp="8" pin="0"/><net_sink comp="116" pin=16"/></net>
+
+<net id="168"><net_src comp="10" pin="0"/><net_sink comp="116" pin=17"/></net>
+
+<net id="169"><net_src comp="12" pin="0"/><net_sink comp="116" pin=18"/></net>
+
+<net id="170"><net_src comp="14" pin="0"/><net_sink comp="116" pin=19"/></net>
+
+<net id="171"><net_src comp="16" pin="0"/><net_sink comp="116" pin=20"/></net>
+
+<net id="172"><net_src comp="18" pin="0"/><net_sink comp="116" pin=21"/></net>
+
+<net id="173"><net_src comp="20" pin="0"/><net_sink comp="116" pin=22"/></net>
+
+<net id="174"><net_src comp="22" pin="0"/><net_sink comp="116" pin=23"/></net>
+
+<net id="175"><net_src comp="24" pin="0"/><net_sink comp="116" pin=24"/></net>
+
+<net id="176"><net_src comp="26" pin="0"/><net_sink comp="116" pin=25"/></net>
+
+<net id="177"><net_src comp="28" pin="0"/><net_sink comp="116" pin=26"/></net>
+
+<net id="178"><net_src comp="30" pin="0"/><net_sink comp="116" pin=27"/></net>
+
+<net id="179"><net_src comp="32" pin="0"/><net_sink comp="116" pin=28"/></net>
+
+<net id="180"><net_src comp="34" pin="0"/><net_sink comp="116" pin=29"/></net>
+
+<net id="181"><net_src comp="36" pin="0"/><net_sink comp="116" pin=30"/></net>
+
+<net id="182"><net_src comp="38" pin="0"/><net_sink comp="116" pin=31"/></net>
+
+<net id="183"><net_src comp="40" pin="0"/><net_sink comp="116" pin=32"/></net>
+
+<net id="193"><net_src comp="46" pin="0"/><net_sink comp="184" pin=0"/></net>
+
+<net id="194"><net_src comp="48" pin="0"/><net_sink comp="184" pin=1"/></net>
+
+<net id="195"><net_src comp="50" pin="0"/><net_sink comp="184" pin=2"/></net>
+
+<net id="196"><net_src comp="8" pin="0"/><net_sink comp="184" pin=3"/></net>
+
+<net id="197"><net_src comp="10" pin="0"/><net_sink comp="184" pin=4"/></net>
+
+<net id="198"><net_src comp="12" pin="0"/><net_sink comp="184" pin=5"/></net>
+
+<net id="199"><net_src comp="14" pin="0"/><net_sink comp="184" pin=6"/></net>
+
+<net id="200"><net_src comp="68" pin="0"/><net_sink comp="184" pin=1"/></net>
+
+<net id="201"><net_src comp="70" pin="0"/><net_sink comp="184" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: jpeg_out_V_data_V | {1 2 3 4 }
+	Port: jpeg_out_V_keep_V | {1 2 3 4 }
+	Port: jpeg_out_V_strb_V | {1 2 3 4 }
+	Port: jpeg_out_V_last_V | {1 2 3 4 }
+ - Input state : 
+	Port: jpeg2 : rgb_in_V_data_V | {1 2 }
+	Port: jpeg2 : rgb_in_V_keep_V | {1 2 }
+	Port: jpeg2 : rgb_in_V_strb_V | {1 2 }
+	Port: jpeg2 : rgb_in_V_last_V | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_7 | {1 2 }
+	Port: jpeg2 : ZigZag | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_6 | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_5 | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_10 | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_1 | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_3 | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_4 | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_8 | {1 2 }
+	Port: jpeg2 : p_anonymous_namespace_9 | {1 2 }
+	Port: jpeg2 : JFIF0 | {1 2 }
+	Port: jpeg2 : mask1 | {1 2 }
+  - Chain level:
+	State 1
+		call_ln669 : 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|---------------------------|---------|---------|---------|---------|---------|---------|
+| Operation|      Functional Unit      |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |   URAM  |
+|----------|---------------------------|---------|---------|---------|---------|---------|---------|
+|   call   |   grp_encodeToJPG_fu_116  |    19   |   115   | 605.101 |  20983  |  27373  |    0    |
+|          | grp_p_write_byte_s_fu_184 |    0    |    0    |    0    |    0    |    0    |    0    |
+|----------|---------------------------|---------|---------|---------|---------|---------|---------|
+|   Total  |                           |    19   |   115   | 605.101 |  20983  |  27373  |    0    |
+|----------|---------------------------|---------|---------|---------|---------|---------|---------|
+
+Memories:
++------------------------+--------+--------+--------+--------+
+|                        |  BRAM  |   FF   |   LUT  |  URAM  |
++------------------------+--------+--------+--------+--------+
+|          JFIF0         |    0   |    7   |    1   |    -   |
+|         ZigZag         |    0   |    6   |    6   |    -   |
+|      jpeg1_buffer      |    8   |    0   |    0   |    0   |
+|    jpeg1_m_CbCrTable   |    0   |   16   |    8   |    0   |
+|  jpeg1_m_CbCr_AC_Huff  |    1   |    0   |    0   |    0   |
+| jpeg1_m_CbCr_AC_Huff_1 |    1   |    0   |    0   |    0   |
+|  jpeg1_m_CbCr_DC_Huff  |    0   |   10   |    1   |    0   |
+| jpeg1_m_CbCr_DC_Huff_1 |    0   |   32   |    3   |    0   |
+|     jpeg1_m_YTable     |    0   |   16   |    8   |    0   |
+|  jpeg1_m_Y_AC_Huffman  |    1   |    0   |    0   |    0   |
+| jpeg1_m_Y_AC_Huffman_1 |    1   |    0   |    0   |    0   |
+|  jpeg1_m_Y_DC_Huffman  |    0   |   10   |    1   |    0   |
+| jpeg1_m_Y_DC_Huffman_1 |    0   |   32   |    3   |    0   |
+|          mask1         |    0   |   16   |    4   |    -   |
+|  p_anonymous_namespace |    0   |   16   |    2   |    0   |
+| p_anonymous_namespace_1|    1   |    0   |    0   |    0   |
+|p_anonymous_namespace_10|    0   |   16   |    2   |    0   |
+| p_anonymous_namespace_3|    0   |   16   |    2   |    0   |
+| p_anonymous_namespace_4|    0   |   16   |    2   |    0   |
+| p_anonymous_namespace_5|    0   |   16   |    2   |    0   |
+| p_anonymous_namespace_6|    0   |    8   |    8   |    -   |
+| p_anonymous_namespace_7|    0   |    8   |    8   |    -   |
+| p_anonymous_namespace_8|    0   |   16   |    2   |    0   |
+| p_anonymous_namespace_9|    1   |    0   |    0   |    0   |
++------------------------+--------+--------+--------+--------+
+|          Total         |   14   |   257  |   63   |    0   |
++------------------------+--------+--------+--------+--------+
+
+* Register list:
+N/A
+
+* Multiplexer (MUX) list: 
+|---------------------------|------|------|------|--------||---------|
+|            Comp           |  Pin | Size |  BW  | S x BW ||  Delay  |
+|---------------------------|------|------|------|--------||---------|
+| grp_p_write_byte_s_fu_184 |  p1  |   2  |   1  |    2   |
+| grp_p_write_byte_s_fu_184 |  p2  |   2  |   7  |   14   |
+|---------------------------|------|------|------|--------||---------|
+|           Total           |      |      |      |   16   ||  3.538  |
+|---------------------------|------|------|------|--------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |   19   |   115  |   605  |  20983 |  27373 |    0   |
+|   Memory  |   14   |    -   |    -   |   257  |   63   |    0   |
+|Multiplexer|    -   |    -   |    3   |    -   |    -   |    -   |
+|  Register |    -   |    -   |    -   |    -   |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |   33   |   115  |   608  |  21240 |  27436 |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="jpeg_V2.cpp" path="C:\Users\fantwen\Desktop\jpeg_V2.cpp"/>
+    <originFiles name="jpeg_V2.h" path="C:\Users\fantwen\Desktop\jpeg_V2.h"/>
+  </source>
+  <testbench>
+    <originFiles name="test.cpp" path="C:\tutorial\hls\jpeg2\jpeg2\test.cpp"/>
+    <originFiles name="jpeg_V2.h" path="C:\Users\fantwen\Desktop\jpeg_V2.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
