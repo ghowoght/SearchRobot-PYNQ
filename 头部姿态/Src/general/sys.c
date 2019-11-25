@@ -1,0 +1,27 @@
+#include "sys.h"
+#include "Scheduler.h"
+
+void delay_us(int i)
+{
+	int n = 1*i;
+	while(n--);
+//	u32 temp;
+//	SysTick->LOAD=10.5*i;         //设置重装数值, 168MHZ时
+//	SysTick->CTRL=0X01;         //使能，减到零是无动作，采用外部时钟源
+//	SysTick->VAL=0;                //清零计数器
+//	do
+//	{
+//		temp=SysTick->CTRL;           //读取当前倒计数值
+//	}
+//	while((temp&0x01)&&(!(temp&(1<<16))));     //等待时间到达
+//	SysTick->CTRL=0;    //关闭计数器
+//	SysTick->VAL=0;        //清空计数器
+}
+void delay_ms(int i)
+{
+	for(;i>0;i--)
+	{
+		delay_us(1000);
+	}
+}
+

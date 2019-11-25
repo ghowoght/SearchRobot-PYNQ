@@ -1,0 +1,120 @@
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\SearchRobot_pc.exe.config
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\SearchRobot_pc.exe
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\SearchRobot_pc.pdb
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csprojResolveAssemblyReference.cache
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.Form1.resources
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.Properties.Resources.resources
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.GenerateResource.cache
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.CoreCompileInputs.cache
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.exe
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.pdb
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\concrt140.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\cvextern.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\msvcp140.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\opencv_videoio_ffmpeg411_64.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\vcruntime140.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\concrt140.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\cvextern.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\msvcp140.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\opencv_videoio_ffmpeg411.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\vcruntime140.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.UI.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.World.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\ZedGraph.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.UI.xml
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.World.xml
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\ZedGraph.xml
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\25503\source\repos\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.CopyComplete
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\concrt140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\cvextern.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\msvcp140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\opencv_videoio_ffmpeg411_64.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x64\vcruntime140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\concrt140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\cvextern.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\msvcp140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\opencv_videoio_ffmpeg411.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\x86\vcruntime140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\SearchRobot_pc.exe.config
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\SearchRobot_pc.exe
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\SearchRobot_pc.pdb
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.UI.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.World.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\ZedGraph.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.UI.xml
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\Emgu.CV.World.xml
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\ZedGraph.xml
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\de\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\es\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\fr\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\hu\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\it\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\ja\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\pt\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\ru\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\sk\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\sv\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\tr\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\zh-cn\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\bin\Debug\zh-tw\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csprojResolveAssemblyReference.cache
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.Form1.resources
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.Properties.Resources.resources
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.GenerateResource.cache
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.CoreCompileInputs.cache
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.CopyComplete
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.exe
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_pc\SearchRobot_pc\obj\Debug\SearchRobot_pc.pdb
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x64\concrt140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x64\cvextern.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x64\msvcp140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x64\opencv_videoio_ffmpeg411_64.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x64\vcruntime140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x86\concrt140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x86\cvextern.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x86\msvcp140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x86\opencv_videoio_ffmpeg411.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\x86\vcruntime140.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\SearchRobot_pc.exe.config
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\SearchRobot_pc.exe
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\SearchRobot_pc.pdb
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\Emgu.CV.UI.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\Emgu.CV.World.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\ZedGraph.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\Emgu.CV.UI.xml
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\Emgu.CV.World.xml
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\ZedGraph.xml
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\de\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\es\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\fr\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\hu\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\it\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\ja\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\pt\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\ru\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\sk\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\sv\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\tr\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\zh-cn\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\bin\Debug\zh-tw\ZedGraph.resources.dll
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.csprojResolveAssemblyReference.cache
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.Form1.resources
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.Properties.Resources.resources
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.GenerateResource.cache
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.CoreCompileInputs.cache
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.csproj.CopyComplete
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.exe
+E:\Tencent Files\2550319354\1A 鬼木士\嵌入式\搜寻机器人\SearchRobot_v1\上位机\SearchRobot_pc\obj\Debug\SearchRobot_pc.pdb
