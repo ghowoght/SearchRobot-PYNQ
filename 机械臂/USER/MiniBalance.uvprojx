@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>STM32F103C8</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.2.3.0</PackID>
+          <PackID>Keil.STM32F1xx_DFP.2.2.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x00005000) IROM(0x08000000,0x00010000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -324,7 +324,7 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_ HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\MiniBalance_COER;..\STM32F10x_FWLib\inc;..\MiniBalance_HARDWARE;..\SYSTEM;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\MiniBalance_HARDWARE\OLED;..\MiniBalance\show;..\MiniBalance_HARDWARE\LED;..\MiniBalance_HARDWARE\KEY;..\MiniBalance_HARDWARE\ADC;..\MiniBalance_HARDWARE\MOTOR;..\MiniBalance_HARDWARE\TIMER;..\MiniBalance_HARDWARE\USART3;..\MiniBalance_HARDWARE\DataScope_DP;..\MiniBalance\filter;..\MiniBalance_HARDWARE;..\MiniBalance_HARDWARE\STMFLASH;..\MiniBalance_HARDWARE\PS2</IncludePath>
+              <IncludePath>..\USER;..\MiniBalance_COER;..\STM32F10x_FWLib\inc;..\MiniBalance_HARDWARE;..\SYSTEM;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\MiniBalance_HARDWARE\OLED;..\MiniBalance\show;..\MiniBalance_HARDWARE\LED;..\MiniBalance_HARDWARE\KEY;..\MiniBalance_HARDWARE\ADC;..\MiniBalance_HARDWARE\MOTOR;..\MiniBalance_HARDWARE\TIMER;..\MiniBalance_HARDWARE\USART3;..\MiniBalance_HARDWARE\DataScope_DP;..\MiniBalance\filter;..\MiniBalance_HARDWARE;..\MiniBalance_HARDWARE\STMFLASH;..\MiniBalance_HARDWARE\PS2;..\Algorithm\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -621,6 +621,21 @@
               <FileName>DataScope_DP.C</FileName>
               <FileType>1</FileType>
               <FilePath>..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.C</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Algorithm</GroupName>
+          <Files>
+            <File>
+              <FileName>UART3_FSM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MiniBalance_HARDWARE\USART3\UART3_FSM.c</FilePath>
+            </File>
+            <File>
+              <FileName>MachineBi_FSM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\MachineBi_FSM.c</FilePath>
             </File>
           </Files>
         </Group>

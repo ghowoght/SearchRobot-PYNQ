@@ -3,7 +3,7 @@
 ..\obj\stmflash.o: ..\SYSTEM\sys\sys.h
 ..\obj\stmflash.o: ..\USER\stm32f10x.h
 ..\obj\stmflash.o: ..\MiniBalance_COER\core_cm3.h
-..\obj\stmflash.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\stmflash.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\stmflash.o: ..\USER\system_stm32f10x.h
 ..\obj\stmflash.o: ..\USER\stm32f10x_conf.h
 ..\obj\stmflash.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
@@ -36,7 +36,7 @@
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\KEY\key.h
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\OLED\oled.h
 ..\obj\stmflash.o: ..\SYSTEM\usart\usart.h
-..\obj\stmflash.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\stmflash.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\USART3\usart3.h
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\ADC\adc.h
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\TIMER\timer.h
@@ -45,6 +45,6 @@
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.h
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\STMFLASH\stmflash.h
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\PS2\pstwo.h
-..\obj\stmflash.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\stmflash.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\stmflash.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\stmflash.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\stmflash.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\stmflash.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

@@ -1,7 +1,7 @@
 ..\obj\minibalance.o: MiniBalance.c
 ..\obj\minibalance.o: stm32f10x.h
 ..\obj\minibalance.o: ..\MiniBalance_COER\core_cm3.h
-..\obj\minibalance.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\minibalance.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\minibalance.o: system_stm32f10x.h
 ..\obj\minibalance.o: stm32f10x_conf.h
 ..\obj\minibalance.o: ..\STM32F10x_FWLib\inc\stm32f10x_adc.h
@@ -35,7 +35,7 @@
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\KEY\key.h
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\OLED\oled.h
 ..\obj\minibalance.o: ..\SYSTEM\usart\usart.h
-..\obj\minibalance.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\minibalance.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\USART3\usart3.h
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\ADC\adc.h
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\TIMER\timer.h
@@ -44,6 +44,6 @@
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\DataScope_DP\DataScope_DP.h
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\STMFLASH\stmflash.h
 ..\obj\minibalance.o: ..\MiniBalance_HARDWARE\PS2\pstwo.h
-..\obj\minibalance.o: D:\Keil5\ARM\ARMCC\Bin\..\include\string.h
-..\obj\minibalance.o: D:\Keil5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\obj\minibalance.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
+..\obj\minibalance.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\minibalance.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\minibalance.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

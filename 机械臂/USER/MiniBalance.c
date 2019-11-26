@@ -1,10 +1,6 @@
 #include "stm32f10x.h"
 #include "sys.h"
 
-  /**************************************************************************
-作者：平衡小车之家
-我的淘宝小店：http://shop114407458.taobao.com/
-**************************************************************************/
 u8 Flag_Way=1,Flag_Show=0;                 //停止标志位和 显示标志位 默认停止 显示打开
 int Servo1,Servo2,Servo3,Servo4,Servo5;     //电机PWM变量
 float Velocity1,Velocity2,Velocity3,Velocity4,Velocity5,Velocity6;     //电机PWM变量

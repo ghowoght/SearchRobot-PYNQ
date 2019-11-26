@@ -5,7 +5,6 @@
 作者：平衡小车之家
 我的淘宝小店：http://shop114407458.taobao.com/
 **************************************************************************/
-#define PI 3.14159265
 #define FILTERING_TIMES  10
 extern	int Balance_Pwm,Velocity_Pwm,Turn_Pwm;
 int EXTI15_10_IRQHandler(void);

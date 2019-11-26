@@ -1,18 +1,13 @@
 #include "control.h"	
-  /**************************************************************************
-作者：平衡小车之家
-我的淘宝小店：http://shop114407458.taobao.com/
-**************************************************************************/
+#include "MachineBi_FSM.h"
+#include "UART3_FSM.h"
 int Balance_Pwm,Velocity_Pwm,Turn_Pwm;
 u8 Flag_Target;
 u32 Flash_R_Count;
 int Voltage_Temp,Voltage_Count,Voltage_All;
 extern float TargetX,TargetY,Target_Beta,Target_Alpha;
 float Last_TargetX,Last_TargetY;
-#define l0 0.105f
-#define l1 0.078f
-#define l2 0.055f
-#define Ratio 5.111f
+
 
 /**************************************************************************
 函数功能：数学模型
@@ -21,67 +16,67 @@ float Last_TargetX,Last_TargetY;
 **************************************************************************/
 u8 Kinematic_Analysis(float x,float y,float Beta,float Alpha,float Gamma)
 {  
-	      float m,n,k,a,b,c,theta1,theta2,theta3,s1ps2;
-				m=l2*cos(Alpha)-x;   //中间变量
-				n=l2*sin(Alpha)-y;   //中间变量
-	      k=(l1*l1-l0*l0-m*m-n*n)/2/l0;//中间变量
-	      a=m*m+n*n;             //解一元二次方程
-	      b=-2*n*k;
-	      c=k*k-m*m;
-	   
-	      if(b*b-4*a*c<=0) 
-        { 
-				TargetX=Last_TargetX;		
-			  TargetY=Last_TargetY;		
-				return 0; //防止出现非实数解
-				}
-	
-	      theta1=(-b+sqrt(b*b-4*a*c))/2/a;  //得到一元二次方程的解，只取其中一个，另外一个解是(-b+sqrt(b*b-4*a*c))/2/a
-	      theta1=asin(theta1)*180/PI;       //弧度换成角度
+//	      float m,n,k,a,b,c,theta1,theta2,theta3,s1ps2;
+//				m=l2*cos(Alpha)-x;   //中间变量
+//				n=l2*sin(Alpha)-y;   //中间变量
+//	      k=(l1*l1-l0*l0-m*m-n*n)/2/l0;//中间变量
+//	      a=m*m+n*n;             //解一元二次方程
+//	      b=-2*n*k;
+//	      c=k*k-m*m;
+//	   
+//	      if(b*b-4*a*c<=0) 
+//        { 
+//				TargetX=Last_TargetX;		
+//			  TargetY=Last_TargetY;		
+//				return 0; //防止出现非实数解
+//				}
+//	
+//	      theta1=(-b+sqrt(b*b-4*a*c))/2/a;  //得到一元二次方程的解，只取其中一个，另外一个解是(-b+sqrt(b*b-4*a*c))/2/a
+//	      theta1=asin(theta1)*180/PI;       //弧度换成角度
 
-	      if(theta1>90)theta1=90;           //控制舵机的最大角度±90°
-				if(theta1<-90)theta1=-90;
-	
-	      k=(l0*l0-l1*l1-m*m-n*n)/2/l1;     //过程系数
-				a=m*m+n*n;                        //解一元二次方程
-				b=-2*n*k;
-				c=k*k-m*m;
-	
-	      if(b*b-4*a*c<=0)  
-				{	
-				TargetX=Last_TargetX;		
-			  TargetY=Last_TargetY;
-				return 0;         //防止出现非实数解
-				}
-	      s1ps2=(-b-sqrt(b*b-4*a*c))/2/a;      //得到一元二次方程的解，只取其中一个，另外一个解是(-b+sqrt(b*b-4*a*c))/2/a
-	      s1ps2=asin(s1ps2)*180/PI;            //弧度换成角度
-	
-				if(s1ps2>90)theta2=90;    
-				if(s1ps2<-90)theta2=-90;  
-				
-	      theta2=s1ps2-theta1;
-			  if(theta2>90)theta2=90;      //控制舵机的最大角度±90°
-				if(theta2<-90)theta2=-90;    //控制舵机的最大角度±90°
-	
-	      theta3=Alpha*180/PI-theta1-theta2;   //求关节3角度
-				if(theta3>90)theta3=90;
-				if(theta3<-90)theta3=-90;	    //控制舵机的最大角度±90°
+//	      if(theta1>90)theta1=90;           //控制舵机的最大角度±90°
+//				if(theta1<-90)theta1=-90;
+//	
+//	      k=(l0*l0-l1*l1-m*m-n*n)/2/l1;     //过程系数
+//				a=m*m+n*n;                        //解一元二次方程
+//				b=-2*n*k;
+//				c=k*k-m*m;
+//	
+//	      if(b*b-4*a*c<=0)  
+//				{	
+//				TargetX=Last_TargetX;		
+//			  TargetY=Last_TargetY;
+//				return 0;         //防止出现非实数解
+//				}
+//	      s1ps2=(-b-sqrt(b*b-4*a*c))/2/a;      //得到一元二次方程的解，只取其中一个，另外一个解是(-b+sqrt(b*b-4*a*c))/2/a
+//	      s1ps2=asin(s1ps2)*180/PI;            //弧度换成角度
+//	
+//				if(s1ps2>90)theta2=90;    
+//				if(s1ps2<-90)theta2=-90;  
+//				
+//	      theta2=s1ps2-theta1;
+//			  if(theta2>90)theta2=90;      //控制舵机的最大角度±90°
+//				if(theta2<-90)theta2=-90;    //控制舵机的最大角度±90°
+//	
+//	      theta3=Alpha*180/PI-theta1-theta2;   //求关节3角度
+//				if(theta3>90)theta3=90;
+//				if(theta3<-90)theta3=-90;	    //控制舵机的最大角度±90°
 
-        Target1   = 750-(Beta)*Ratio;   //作用到输出  
-        Target2   = 789-(theta1-90)*Ratio;
-	      Target3   = 717+(theta2)*Ratio;
-	      Target4   = 750+(theta3)*Ratio;  
-				Target6   = 800-(Gamma)*Ratio;   //6自由度额外增加的自由度  
-				Last_TargetX=TargetX;
-				Last_TargetY=TargetY;
-				return 0;
+//        Target1   = 750-(Beta)*Ratio;   //作用到输出  
+//        Target2   = 789-(theta1-90)*Ratio;
+//	      Target3   = 717+(theta2)*Ratio;
+//	      Target4   = 750+(theta3)*Ratio;  
+//				Target6   = 800-(Gamma)*Ratio;   //6自由度额外增加的自由度  
+//				Last_TargetX=TargetX;
+//				Last_TargetY=TargetY;
+//				return 0;
+					return 1;
 }
 /**************************************************************************
 函数功能：定时中断函数 所有的控制代码都在这里面		 
 **************************************************************************/
 int TIM2_IRQHandler(void)
 {    
-	u8 temp;
 	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET) //检查指定的TIM中断发生与否:TIM 中断源 
 	{   
 				TIM_ClearITPendingBit(TIM2, TIM_IT_Update  );  //清除TIMx的中断待处理位:TIM 中断源
@@ -94,10 +89,7 @@ int TIM2_IRQHandler(void)
 		{
 			if(Flag_Way==1)     //进行运动学分析之后的控制
 			{
-//				 Control(Speed/10000);	  //PS2遥控坐标
-				 
-				 Target_Beta = 0;
-			   temp=Kinematic_Analysis(TargetX,TargetY,Target_Beta,Target_Alpha,Target_Gamma);  //运动学分析
+			   MachineBiStateMachine(&MachineBi_SM_Arg);
 			}
 			else	
 			{

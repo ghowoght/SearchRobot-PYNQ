@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "machinebi_fsm.h": "c",
+        "uart3_fsm.h": "c",
+        "usart3.h": "c"
+    }
+}

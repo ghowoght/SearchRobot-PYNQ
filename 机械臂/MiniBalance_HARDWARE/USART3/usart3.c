@@ -1,8 +1,5 @@
 #include "usart3.h"
-  /**************************************************************************
-作者：平衡小车之家
-我的淘宝小店：http://shop114407458.taobao.com/
-**************************************************************************/
+#include "UART3_FSM.h"
 u8 Usart3_Receive;
 
 /**************************************************************************
@@ -54,61 +51,38 @@ void uart3_init(u32 bound)
 返回  值：无
 **************************************************************************/
 void USART3_IRQHandler(void)
-{	
+{
+	u8 Receive_Data;
 	if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET) //接收到数据
-	{	  
-//		static	int uart_receive=0;//蓝牙接收相关变量
-//		static u8 Flag_PID,i,j,Receive[50];
-//		static float Data;
-//  	 uart_receive=USART_ReceiveData(USART3); 
-//		Usart3_Receive=uart_receive;
-//		
-//	  if(uart_receive>10)  //默认使用app为：MiniBalanceV3.5 因为MiniBalanceV3.5的遥控指令为A~H 其HEX都大于10
-//    {			
-//  	}
-//		if(uart_receive<10)     //备用app为：MiniBalanceV1.0  因为MiniBalanceV1.0的遥控指令为0~8 其HEX都小于10
-//		{	
-//  //////刹车
-//  	}	
-
-//		
-//		if(Usart3_Receive==0x7B) Flag_PID=1;  //指令起始位
-//		if(Usart3_Receive==0x7D) Flag_PID=2;  //指令停止位
-//		 if(Flag_PID==1)                      //记录参数
-//		 {
-//			Receive[i]=Usart3_Receive;
-//			i++;
-//		 }
-//		 if(Flag_PID==2)   //执行
-//		 {
-//			     if(Receive[3]==0x50) 	       PID_Send=1;  //获取设备参数
-//			     else  if(Receive[3]==0x57) 	 Flash_Send=1;   //掉电保存参数
-//					 else  if(Receive[1]!=0x23)                    //更新PID参数
-//					 {								
-//						for(j=i;j>=4;j--)
-//						{
-//						  Data+=(Receive[j-1]-48)*pow(10,i-j);
-//						}
-//						switch(Receive[1])
-//						 {
-//							 case 0x30:  Balance_Kp=Data/100;break;
-//							 case 0x31:  Balance_Kd=Data/100;break;
-//							 case 0x32:  Velocity_Kp=Data/100;break;
-//							 case 0x33:  Velocity_Ki=Data/100;break;
-//							 case 0x34:  break;
-//							 case 0x35:  break;
-//							 case 0x36:  break;
-//							 case 0x37:  break;
-//							 case 0x38:  break;
-//						 }
-//					 }				 
-//					 Flag_PID=0;   //相关标志位清零
-//					 i=0;
-//					 j=0;
-//					 Data=0;
-//					 memset(Receive, 0, sizeof(u8)*50);
-//		 } 
+	{	
+		USART_ClearITPendingBit(USART3,USART_IT_RXNE);
+		Receive_Data = Uart3_ReceiveByte();
+		Uart3_SM_Arg.ReceiveData = Receive_Data;
+		UartStateMachine(&Uart3_SM_Arg);
 	}  											 
 } 
 
+void Uart3_SendByte(u8 Data)
+{
+	USART_SendData(USART1,Data);
+	while(USART_GetFlagStatus(USART3,USART_FLAG_TXE) == RESET);
+}
+
+void Uart3_SendString(char *str)
+{
+	while((*str)!='\0')
+	{
+		Uart3_SendByte(*str);
+		str++;
+	}
+	while(USART_GetFlagStatus(USART3,USART_FLAG_TC) == RESET);
+}
+
+u8 Uart3_ReceiveByte(void)
+{
+	u8 Receive_Data;
+	Receive_Data = USART_ReceiveData(USART3);
+//	while(USART_GetFlagStatus(USART1,USART_FLAG_RXNE) == RESET);
+	return Receive_Data;
+}
 
