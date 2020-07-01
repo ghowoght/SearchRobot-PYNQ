@@ -1,4 +1,6 @@
 # SearchRobot-PYNQ
+[海报](https://pic1.zhimg.com/80/v2-dc6ec65e290b1fd853c1aaf619d8b5fe_720w.png)
+
 基于PYNQ的智能搜寻机器人，以下为各个文件夹介绍：
 
 ### MobileNet_SSD
